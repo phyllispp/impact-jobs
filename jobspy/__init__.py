@@ -225,7 +225,10 @@ def scrape_jobs(
         return pd.DataFrame()
 
 
-# Add BDJobs to __all__
+# Export main functions and classes
 __all__ = [
+    "scrape_jobs",
     "BDJobs",
+    "MyCareersFuture",
+    "JobsDB",
 ]

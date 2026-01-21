@@ -27,13 +27,22 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          # Ensure pandas is installed (required for website generation)
-          pip install pandas beautifulsoup4
+          # Install core dependencies required by local jobspy module
+          pip install pandas beautifulsoup4 requests tls-client markdownify numpy regex pydantic
+          # Note: We use the local jobspy directory, not the installed python-jobspy package
+          # The local jobspy has our custom scrapers (MyCareersFuture, JobsDB)
+          # Verify critical packages
+          python -c "import pandas; print(f'✅ pandas {pandas.__version__}')"
+          python -c "import bs4; print('✅ beautifulsoup4')"
+          python -c "import requests; print('✅ requests')"
       
-      - name: Verify jobspy module
+      - name: Verify jobspy module (local)
         run: |
-          python -c "from jobspy import scrape_jobs; from jobspy.mcareersfuture import MyCareersFuture; from jobspy.jobsdb import JobsDB; print('✅ All modules imported successfully')"
+          # Test that we can import from the local jobspy directory
+          # The local directory takes precedence over any installed package
+          python -c "import sys; sys.path.insert(0, '.'); from jobspy import scrape_jobs; print('✅ scrape_jobs imported from local jobspy')"
+          python -c "import sys; sys.path.insert(0, '.'); from jobspy.mcareersfuture import MyCareersFuture; print('✅ MyCareersFuture imported')"
+          python -c "import sys; sys.path.insert(0, '.'); from jobspy.jobsdb import JobsDB; print('✅ JobsDB imported')"
       
       - name: Run job search
         run: |

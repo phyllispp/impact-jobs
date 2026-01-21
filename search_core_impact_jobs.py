@@ -1,7 +1,28 @@
 import csv
-import pandas as pd
-from jobspy import scrape_jobs
-from generate_deployable_website import generate_deployable_website
+import sys
+import os
+
+# Ensure we can import from local jobspy directory
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    import pandas as pd
+except ImportError:
+    print("ERROR: pandas is not installed. Please install it with: pip install pandas")
+    sys.exit(1)
+
+try:
+    from jobspy import scrape_jobs
+except ImportError as e:
+    print(f"ERROR: Failed to import jobspy: {e}")
+    print("Make sure jobspy directory exists and all dependencies are installed.")
+    sys.exit(1)
+
+try:
+    from generate_deployable_website import generate_deployable_website
+except ImportError as e:
+    print(f"ERROR: Failed to import generate_deployable_website: {e}")
+    sys.exit(1)
 
 # Search for CORE impact roles by targeting specific job titles
 # We'll do multiple targeted searches and combine results
