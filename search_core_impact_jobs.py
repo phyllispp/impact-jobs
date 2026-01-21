@@ -559,3 +559,10 @@ if all_jobs:
             print(f"⚠️  Could not generate HTML: {e}")
 else:
     print("\nNo jobs found with any of the search queries.")
+    # Still create empty files so GitHub Actions doesn't fail
+    import os
+    if not os.path.exists("core_impact_jobs_sg_hk.csv"):
+        pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
+    if not os.path.exists("index.html"):
+        with open("index.html", "w") as f:
+            f.write("<!DOCTYPE html><html><head><title>No Jobs Found</title></head><body><h1>No jobs found</h1><p>Please check back later.</p></body></html>")
