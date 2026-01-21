@@ -9,6 +9,10 @@ try:
     import pandas as pd
 except ImportError:
     print("ERROR: pandas is not installed. Please install it with: pip install pandas")
+    print("Creating empty output files and exiting...")
+    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
+    with open("index.html", "w") as f:
+        f.write("<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Missing dependencies</h1><p>Please install required packages.</p></body></html>")
     sys.exit(1)
 
 try:
@@ -16,12 +20,20 @@ try:
 except ImportError as e:
     print(f"ERROR: Failed to import jobspy: {e}")
     print("Make sure jobspy directory exists and all dependencies are installed.")
+    print("Creating empty output files and exiting...")
+    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
+    with open("index.html", "w") as f:
+        f.write(f"<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Failed to import jobspy</h1><p>{str(e)}</p></body></html>")
     sys.exit(1)
 
 try:
     from generate_deployable_website import generate_deployable_website
 except ImportError as e:
     print(f"ERROR: Failed to import generate_deployable_website: {e}")
+    print("Creating empty output files and exiting...")
+    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
+    with open("index.html", "w") as f:
+        f.write(f"<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Failed to import website generator</h1><p>{str(e)}</p></body></html>")
     sys.exit(1)
 
 # Search for CORE impact roles by targeting specific job titles
@@ -143,16 +155,24 @@ for i, query in enumerate(search_queries, 1):
                     search_params.pop("hours_old", None)  # Google doesn't use hours_old
                 
                 print(f"    Searching {site_name}...", end=" ")
-                jobs = scrape_jobs(**search_params)
-                
-                if len(jobs) > 0:
-                    all_jobs.append(jobs)
-                    print(f"Found {len(jobs)} jobs")
-                else:
-                    print("No jobs found")
+                try:
+                    jobs = scrape_jobs(**search_params)
+                    
+                    if len(jobs) > 0:
+                        all_jobs.append(jobs)
+                        print(f"Found {len(jobs)} jobs")
+                    else:
+                        print("No jobs found")
+                except Exception as scrape_error:
+                    print(f"Scraping error: {str(scrape_error)[:100]}")
+                    # Continue to next site instead of failing completely
+                    continue
                     
             except Exception as e:
-                print(f"Error: {str(e)[:50]}")
+                print(f"Error setting up search for {site_name}: {str(e)[:100]}")
+                # Log full error for debugging but continue
+                import traceback
+                print(f"Full error: {traceback.format_exc()[:200]}")
                 continue
 
 # Combine all results
@@ -582,8 +602,15 @@ else:
     print("\nNo jobs found with any of the search queries.")
     # Still create empty files so GitHub Actions doesn't fail
     import os
-    if not os.path.exists("core_impact_jobs_sg_hk.csv"):
-        pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
+    output_filename = "core_impact_jobs_sg_hk.csv"
+    if not os.path.exists(output_filename):
+        pd.DataFrame().to_csv(output_filename, index=False)
+        print(f"Created empty {output_filename}")
     if not os.path.exists("index.html"):
-        with open("index.html", "w") as f:
-            f.write("<!DOCTYPE html><html><head><title>No Jobs Found</title></head><body><h1>No jobs found</h1><p>Please check back later.</p></body></html>")
+        try:
+            generate_deployable_website(output_filename, 'index.html')
+            print("✅ Generated empty website")
+        except Exception as e:
+            print(f"⚠️  Could not generate website: {e}")
+            with open("index.html", "w") as f:
+                f.write("<!DOCTYPE html><html><head><title>No Jobs Found</title></head><body><h1>No jobs found</h1><p>Please check back later.</p></body></html>")

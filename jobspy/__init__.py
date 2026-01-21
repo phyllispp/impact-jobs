@@ -177,7 +177,6 @@ def scrape_jobs(
         except Exception as e:
             create_logger("JobSpy").error(f"Error scraping {site.value}: {str(e)}")
             return site.value, JobResponse(jobs=[])
-        return site.value, scraped_data
 
     site_to_jobs_dict = {}
 
