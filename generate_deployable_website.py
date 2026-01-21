@@ -3,7 +3,7 @@ from datetime import datetime
 import json
 import os
 
-def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', output_file='index.html'):
+def generate_deployable_website(csv_file='core_impact_jobs_sg_hk.csv', output_file='index.html'):
     """Generate a production-ready HTML website with filtering and sorting"""
     
     # Read the CSV file
@@ -20,13 +20,24 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
     # Convert to JSON for JavaScript
     jobs_data = []
     for idx, row in df.iterrows():
+        location_str = str(row.get('location', 'N/A'))
+        
+        # Determine location category (Hong Kong or Singapore)
+        location_category = 'Other'
+        location_lower = location_str.lower()
+        if 'hong kong' in location_lower or 'hk' in location_lower:
+            location_category = 'Hong Kong'
+        elif 'singapore' in location_lower or 'sg' in location_lower:
+            location_category = 'Singapore'
+        
         job = {
             'title': str(row.get('title', 'N/A')),
             'company': str(row.get('company', 'N/A')),
             'date_posted': str(row.get('date_posted', 'N/A')),
             'job_url': str(row.get('job_url', '#')),
             'site': str(row.get('site', 'unknown')).lower(),
-            'location': str(row.get('location', 'N/A'))
+            'location': location_str,
+            'location_category': location_category
         }
         jobs_data.append(job)
     
@@ -43,8 +54,8 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find core impact jobs in Singapore - ESG, Sustainability, Climate, and Social Impact roles">
-    <title>Core Impact Jobs - Singapore</title>
+    <meta name="description" content="Find core impact jobs in Singapore and Hong Kong - ESG, Sustainability, Climate, and Social Impact roles">
+    <title>Core Impact Jobs - Singapore & Hong Kong</title>
     <style>
         * {{
             margin: 0;
@@ -304,6 +315,16 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
             color: white;
         }}
         
+        .site-mcareersfuture {{
+            background: #5e2ca5;
+            color: white;
+        }}
+        
+        .site-jobsdb {{
+            background: #fdc221;
+            color: #2d3748;
+        }}
+        
         .no-results {{
             text-align: center;
             padding: 60px 20px;
@@ -352,7 +373,7 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
     <div class="container">
         <div class="header">
             <h1>🌱 Core Impact Jobs</h1>
-            <p>Singapore • Last 7 Days</p>
+            <p>Singapore & Hong Kong • Last 7 Days</p>
             <div class="stats">
                 <div class="stat-box">
                     <div class="number" id="total-jobs">{len(df)}</div>
@@ -389,6 +410,14 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
                 </select>
             </div>
             <div class="control-group">
+                <label>Filter by Location</label>
+                <div class="filter-tags">
+                    <span class="filter-tag active" data-location="all">All Locations</span>
+                    <span class="filter-tag" data-location="Singapore">Singapore</span>
+                    <span class="filter-tag" data-location="Hong Kong">Hong Kong</span>
+                </div>
+            </div>
+            <div class="control-group">
                 <label>Filter by Site</label>
                 <div class="filter-tags">
                     <span class="filter-tag active" data-site="all">All Sites</span>
@@ -420,7 +449,8 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
         
         <div class="footer">
             <p>Generated on """ + datetime.now().strftime('%B %d, %Y at %I:%M %p') + """</p>
-            <p>Searching across Indeed, LinkedIn, and Google</p>
+            <p>Searching across Indeed, LinkedIn, Google, and MyCareersFuture</p>
+            <p style="margin-top: 5px; font-size: 0.9em;">Jobs from Singapore and Hong Kong</p>
             <p style="margin-top: 10px; font-size: 0.9em;">
                 Looking for impact roles? We filter for genuine ESG, Sustainability, Climate, and Social Impact positions.
             </p>
@@ -433,6 +463,7 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
         
         let filteredJobs = [...jobsData];
         let currentSiteFilter = 'all';
+        let currentLocationFilter = 'all';
         
         // Format date
         function formatDate(dateStr) {
@@ -449,7 +480,9 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
             const badges = {
                 'linkedin': '<span class="site-badge site-linkedin">LinkedIn</span>',
                 'indeed': '<span class="site-badge site-indeed">Indeed</span>',
-                'google': '<span class="site-badge site-google">Google</span>'
+                'google': '<span class="site-badge site-google">Google</span>',
+                'mycareersfuture': '<span class="site-badge site-mcareersfuture">MyCareersFuture</span>',
+                'jobsdb': '<span class="site-badge site-jobsdb">JobsDB</span>'
             };
             return badges[site] || '';
         }
@@ -498,7 +531,7 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
             const searchTerm = document.getElementById('search').value.toLowerCase();
             const sortValue = document.getElementById('sort').value;
             
-            // Filter by search term
+            // Filter by search term, site, and location
             let filtered = jobsData.filter(job => {
                 const matchesSearch = !searchTerm || 
                     job.title.toLowerCase().includes(searchTerm) ||
@@ -507,7 +540,10 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
                 
                 const matchesSite = currentSiteFilter === 'all' || job.site === currentSiteFilter;
                 
-                return matchesSearch && matchesSite;
+                const matchesLocation = currentLocationFilter === 'all' || 
+                    (job.location_category && job.location_category === currentLocationFilter);
+                
+                return matchesSearch && matchesSite && matchesLocation;
             });
             
             // Sort
@@ -537,12 +573,22 @@ def generate_deployable_website(csv_file='singapore_core_impact_jobs.csv', outpu
         document.getElementById('search').addEventListener('input', filterAndSort);
         document.getElementById('sort').addEventListener('change', filterAndSort);
         
-        // Site filter tags
+        // Filter tags (site and location)
         document.querySelectorAll('.filter-tag').forEach(tag => {
             tag.addEventListener('click', function() {
-                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                // Remove active from all tags in the same group
+                const parent = this.parentElement;
+                parent.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
-                currentSiteFilter = this.dataset.site;
+                
+                // Update the appropriate filter
+                if (this.dataset.site !== undefined) {
+                    currentSiteFilter = this.dataset.site || 'all';
+                }
+                if (this.dataset.location !== undefined) {
+                    currentLocationFilter = this.dataset.location || 'all';
+                }
+                
                 filterAndSort();
             });
         });

@@ -62,51 +62,77 @@ search_queries = [
 
 all_jobs = []
 
-print("Searching for core impact roles across Indeed, LinkedIn, and Google...")
+print("Searching for core impact roles across Indeed, LinkedIn, Google, MyCareersFuture, and JobsDB...")
+print("Searching in Singapore and Hong Kong (MyCareersFuture: Singapore only)")
 print("="*80)
+
+# Define locations to search
+locations_to_search = [
+    ("Singapore", "Singapore"),
+    ("Hong Kong", "Hong Kong")
+]
 
 # Search across multiple sites
 sites_to_search = [
-    ("indeed", {"site_name": ["indeed"], "country_indeed": "Singapore"}),
+    ("indeed", {"site_name": ["indeed"]}),
     ("linkedin", {"site_name": ["linkedin"]}),
-    ("google", {"site_name": ["google"]})
+    ("google", {"site_name": ["google"]}),
+    ("mycareersfuture", {"site_name": ["mycareersfuture"]}),  # Singapore only
+    ("jobsdb", {"site_name": ["jobsdb"]})
 ]
 
 for i, query in enumerate(search_queries, 1):
     print(f"\nSearch {i}/{len(search_queries)}: {query[:60]}...")
     
-    # Search each site
-    for site_name, site_params in sites_to_search:
-        try:
-            # Prepare search parameters
-            search_params = {
-                "search_term": query,
-                "location": "Singapore",
-                "hours_old": 168,  # Last 7 days
-                "results_wanted": 30,
-                "verbose": 0,
-                **site_params
-            }
-            
-            # Google needs google_search_term instead of search_term
-            if site_name == "google":
-                google_query = f"{query} jobs in Singapore since 7 days ago"
-                search_params["google_search_term"] = google_query
-                search_params.pop("search_term", None)
-                search_params.pop("hours_old", None)  # Google doesn't use hours_old
-            
-            print(f"  Searching {site_name}...", end=" ")
-            jobs = scrape_jobs(**search_params)
-            
-            if len(jobs) > 0:
-                all_jobs.append(jobs)
-                print(f"Found {len(jobs)} jobs")
-            else:
-                print("No jobs found")
+    # Search each location
+    for location_name, location_value in locations_to_search:
+        # Skip Hong Kong for MyCareersFuture (Singapore-only site)
+        if location_name == "Hong Kong":
+            sites_for_location = [s for s in sites_to_search if s[0] != "mycareersfuture"]
+        else:
+            sites_for_location = sites_to_search
+        
+        print(f"\n  Location: {location_name}")
+        
+        # Search each site for this location
+        for site_name, site_params in sites_for_location:
+            try:
+                # Prepare search parameters
+                search_params = {
+                    "search_term": query,
+                    "location": location_value,
+                    "hours_old": 168,  # Last 7 days
+                    "results_wanted": 30,
+                    "verbose": 0,
+                    **site_params
+                }
                 
-        except Exception as e:
-            print(f"Error: {str(e)[:50]}")
-            continue
+                # Indeed needs country_indeed parameter
+                if site_name == "indeed":
+                    if location_name == "Singapore":
+                        search_params["country_indeed"] = "Singapore"
+                    elif location_name == "Hong Kong":
+                        search_params["country_indeed"] = "Hong Kong"
+                
+                # Google needs google_search_term instead of search_term
+                if site_name == "google":
+                    google_query = f"{query} jobs in {location_value} since 7 days ago"
+                    search_params["google_search_term"] = google_query
+                    search_params.pop("search_term", None)
+                    search_params.pop("hours_old", None)  # Google doesn't use hours_old
+                
+                print(f"    Searching {site_name}...", end=" ")
+                jobs = scrape_jobs(**search_params)
+                
+                if len(jobs) > 0:
+                    all_jobs.append(jobs)
+                    print(f"Found {len(jobs)} jobs")
+                else:
+                    print("No jobs found")
+                    
+            except Exception as e:
+                print(f"Error: {str(e)[:50]}")
+                continue
 
 # Combine all results
 if all_jobs:
@@ -491,7 +517,7 @@ if all_jobs:
             print("-"*80)
         
         # Save results
-        output_filename = "singapore_core_impact_jobs.csv"
+        output_filename = "core_impact_jobs_sg_hk.csv"
         core_impact_jobs.to_csv(output_filename, 
                                 quoting=csv.QUOTE_NONNUMERIC, escapechar="\\", index=False)
         print(f"\n\nResults saved to '{output_filename}'")
@@ -519,13 +545,14 @@ if all_jobs:
             print(f"Company: {row['company']}")
             print(f"URL: {row['job_url']}")
         
-        combined_df.to_csv("singapore_core_impact_jobs.csv", 
+        output_filename = "core_impact_jobs_sg_hk.csv"
+        combined_df.to_csv(output_filename, 
                           quoting=csv.QUOTE_NONNUMERIC, escapechar="\\", index=False)
         
         # Generate HTML website
         print("\n\nGenerating deployable website...")
         try:
-            generate_deployable_website("singapore_core_impact_jobs.csv", 'index.html')
+            generate_deployable_website(output_filename, 'index.html')
             print("✅ Website generated: index.html")
             print("   Ready to deploy to GitHub Pages, Netlify, Vercel, etc.")
         except Exception as e:
