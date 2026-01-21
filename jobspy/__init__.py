@@ -157,13 +157,26 @@ def scrape_jobs(
     )
 
     def scrape_site(site: Site) -> Tuple[str, JobResponse]:
+        if site not in SCRAPER_MAPPING:
+            create_logger("JobSpy").warning(f"Scraper for {site.value} is not available")
+            return site.value, JobResponse(jobs=[])
+        
         scraper_class = SCRAPER_MAPPING[site]
-        scraper = scraper_class(proxies=proxies, ca_cert=ca_cert, user_agent=user_agent)
-        scraped_data: JobResponse = scraper.scrape(scraper_input)
-        cap_name = site.value.capitalize()
-        site_name = "ZipRecruiter" if cap_name == "Zip_recruiter" else cap_name
-        site_name = "LinkedIn" if cap_name == "Linkedin" else cap_name
-        create_logger(site_name).info(f"finished scraping")
+        if scraper_class is None:
+            create_logger("JobSpy").warning(f"Scraper class for {site.value} is None")
+            return site.value, JobResponse(jobs=[])
+        
+        try:
+            scraper = scraper_class(proxies=proxies, ca_cert=ca_cert, user_agent=user_agent)
+            scraped_data: JobResponse = scraper.scrape(scraper_input)
+            cap_name = site.value.capitalize()
+            site_name = "ZipRecruiter" if cap_name == "Zip_recruiter" else cap_name
+            site_name = "LinkedIn" if cap_name == "Linkedin" else site_name
+            create_logger(site_name).info(f"finished scraping")
+            return site.value, scraped_data
+        except Exception as e:
+            create_logger("JobSpy").error(f"Error scraping {site.value}: {str(e)}")
+            return site.value, JobResponse(jobs=[])
         return site.value, scraped_data
 
     site_to_jobs_dict = {}
