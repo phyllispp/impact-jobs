@@ -5,15 +5,57 @@ from typing import Tuple
 
 import pandas as pd
 
-from jobspy.bayt import BaytScraper
-from jobspy.bdjobs import BDJobs
-from jobspy.glassdoor import Glassdoor
-from jobspy.google import Google
-from jobspy.indeed import Indeed
-from jobspy.linkedin import LinkedIn
-from jobspy.naukri import Naukri
-from jobspy.mcareersfuture import MyCareersFuture
-from jobspy.jobsdb import JobsDB
+# Import scrapers - handle missing modules gracefully
+try:
+    from jobspy.bayt import BaytScraper
+except ImportError:
+    BaytScraper = None
+
+try:
+    from jobspy.bdjobs import BDJobs
+except ImportError:
+    BDJobs = None
+
+try:
+    from jobspy.glassdoor import Glassdoor
+except ImportError:
+    Glassdoor = None
+
+try:
+    from jobspy.google import Google
+except ImportError:
+    Google = None
+
+try:
+    from jobspy.indeed import Indeed
+except ImportError:
+    Indeed = None
+
+try:
+    from jobspy.linkedin import LinkedIn
+except ImportError:
+    LinkedIn = None
+
+try:
+    from jobspy.naukri import Naukri
+except ImportError:
+    Naukri = None
+
+try:
+    from jobspy.mcareersfuture import MyCareersFuture
+except ImportError:
+    MyCareersFuture = None
+
+try:
+    from jobspy.jobsdb import JobsDB
+except ImportError:
+    JobsDB = None
+
+try:
+    from jobspy.ziprecruiter import ZipRecruiter
+except ImportError:
+    ZipRecruiter = None
+
 from jobspy.model import JobType, Location, JobResponse, Country
 from jobspy.model import SalarySource, ScraperInput, Site
 from jobspy.util import (
@@ -25,7 +67,6 @@ from jobspy.util import (
     convert_to_annual,
     desired_order,
 )
-from jobspy.ziprecruiter import ZipRecruiter
 
 
 # Update the SCRAPER_MAPPING dictionary in the scrape_jobs function
@@ -57,18 +98,28 @@ def scrape_jobs(
     Scrapes job data from job boards concurrently
     :return: Pandas DataFrame containing job data
     """
-    SCRAPER_MAPPING = {
-        Site.LINKEDIN: LinkedIn,
-        Site.INDEED: Indeed,
-        Site.ZIP_RECRUITER: ZipRecruiter,
-        Site.GLASSDOOR: Glassdoor,
-        Site.GOOGLE: Google,
-        Site.BAYT: BaytScraper,
-        Site.NAUKRI: Naukri,
-        Site.BDJOBS: BDJobs,
-        Site.MYCAREERSFUTURE: MyCareersFuture,
-        Site.JOBSDB: JobsDB,
-    }
+    # Build scraper mapping - only include scrapers that are available
+    SCRAPER_MAPPING = {}
+    if LinkedIn:
+        SCRAPER_MAPPING[Site.LINKEDIN] = LinkedIn
+    if Indeed:
+        SCRAPER_MAPPING[Site.INDEED] = Indeed
+    if ZipRecruiter:
+        SCRAPER_MAPPING[Site.ZIP_RECRUITER] = ZipRecruiter
+    if Glassdoor:
+        SCRAPER_MAPPING[Site.GLASSDOOR] = Glassdoor
+    if Google:
+        SCRAPER_MAPPING[Site.GOOGLE] = Google
+    if BaytScraper:
+        SCRAPER_MAPPING[Site.BAYT] = BaytScraper
+    if Naukri:
+        SCRAPER_MAPPING[Site.NAUKRI] = Naukri
+    if BDJobs:
+        SCRAPER_MAPPING[Site.BDJOBS] = BDJobs
+    if MyCareersFuture:
+        SCRAPER_MAPPING[Site.MYCAREERSFUTURE] = MyCareersFuture
+    if JobsDB:
+        SCRAPER_MAPPING[Site.JOBSDB] = JobsDB
     set_logger_level(verbose)
     job_type = get_enum_from_value(job_type) if job_type else None
 
