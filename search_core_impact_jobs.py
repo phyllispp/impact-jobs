@@ -116,18 +116,18 @@ try:
         
         # Search each location
         for location_name, location_value in locations_to_search:
-        # Use different sites for Hong Kong and Singapore (includes Apify sites)
-        if location_name == "Hong Kong":
+            # Use different sites for Hong Kong and Singapore (includes Apify sites)
+            if location_name == "Hong Kong":
             sites_for_location = sites_to_search_hk
-        elif location_name == "Singapore":
+    elif location_name == "Singapore":
             sites_for_location = sites_to_search_sg
-        else:
+    else:
             sites_for_location = sites_to_search
         
-        print(f"\n  Location: {location_name}")
+    print(f"\n  Location: {location_name}")
         
-        # Search each site for this location
-        for site_name, site_params in sites_for_location:
+    # Search each site for this location
+    for site_name, site_params in sites_for_location:
             try:
                 # Handle Apify sites separately
                 if site_name == "jobstreet_sg_apify":
@@ -339,24 +339,24 @@ try:
                     print(f"  Full {site_name} error: {error_msg}")
                 continue
 
-# Combine all results
-if all_jobs:
-    combined_df = pd.concat(all_jobs, ignore_index=True)
-    # Remove duplicates based on job_url
-    combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
+            # Combine all results
+            if all_jobs:
+        combined_df = pd.concat(all_jobs, ignore_index=True)
+        # Remove duplicates based on job_url
+        combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
     
-    # Filter to only jobs where the title OR description contains impact-related keywords
-    def is_core_impact_role(row):
-        title = str(row.get('title', '')).lower() if pd.notna(row.get('title')) else ''
-        description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
-        company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
-        combined = title + ' ' + description
+        # Filter to only jobs where the title OR description contains impact-related keywords
+        def is_core_impact_role(row):
+    title = str(row.get('title', '')).lower() if pd.notna(row.get('title')) else ''
+    description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
+    company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
+    combined = title + ' ' + description
         
-        # Extract job responsibilities section (before company description)
-        # Many job descriptions have company info sections at the end that mention impact terms
-        # but aren't part of the actual job role
-        job_responsibilities = description.lower()
-        company_desc_markers = [
+    # Extract job responsibilities section (before company description)
+    # Many job descriptions have company info sections at the end that mention impact terms
+    # but aren't part of the actual job role
+    job_responsibilities = description.lower()
+    company_desc_markers = [
             'about ' + company.lower(),  # Company-specific (e.g., "about axa")
             'about our company',
             'about us',
