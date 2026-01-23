@@ -294,14 +294,14 @@ try:
                                     'vacancy_count': None,
                                     'work_from_home_type': None,
                                     })
-                            jobs_df = pd.DataFrame(jobs_list)
+                                jobs_df = pd.DataFrame(jobs_list)
                                 all_jobs.append(jobs_df)
-                            print(f"Found {len(apify_jobs)} jobs")
+                                print(f"Found {len(apify_jobs)} jobs")
                             else:
-                            print("No jobs found")
+                                print("No jobs found")
                         except Exception as e:
-                        error_msg = str(e)
-                        print(f"Error: {error_msg[:100]}")
+                            error_msg = str(e)
+                            print(f"Error: {error_msg[:100]}")
                         continue
                 
                         # Some sites don't support complex OR queries - use simpler keywords
