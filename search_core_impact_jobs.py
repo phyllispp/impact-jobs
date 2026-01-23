@@ -142,17 +142,17 @@ try:
         for location_name, location_value in locations_to_search:
             # Use different sites for Hong Kong and Singapore (includes Apify sites)
             if location_name == "Hong Kong":
-            sites_for_location = sites_to_search_hk
-    elif location_name == "Singapore":
-            sites_for_location = sites_to_search_sg
-    else:
-            sites_for_location = sites_to_search
-        
-    print(f"\n  Location: {location_name}")
-        
-    # Search each site for this location
-    for site_name, site_params in sites_for_location:
-            try:
+                sites_for_location = sites_to_search_hk
+            elif location_name == "Singapore":
+                sites_for_location = sites_to_search_sg
+            else:
+                sites_for_location = sites_to_search
+            
+            print(f"\n  Location: {location_name}")
+            
+            # Search each site for this location
+            for site_name, site_params in sites_for_location:
+                try:
                 # Handle Apify sites separately
                 if site_name == "jobstreet_sg_apify":
                     if not APIFY_AVAILABLE:
@@ -368,16 +368,16 @@ try:
                 else:
                     print("No jobs found")
                     
-            except Exception as e:
-                error_msg = str(e)
-                print(f"Error: {error_msg[:100]}")
-                # Log full error for debugging site-specific issues
-                if site_name in ["mycareersfuture", "jobstreet"]:
-                    import traceback
-                    print(f"  Full {site_name} error: {error_msg}")
-                continue
+                except Exception as e:
+                    error_msg = str(e)
+                    print(f"Error: {error_msg[:100]}")
+                    # Log full error for debugging site-specific issues
+                    if site_name in ["mycareersfuture", "jobstreet"]:
+                        import traceback
+                        print(f"  Full {site_name} error: {error_msg}")
+                    continue
 
-# Combine all results
+    # Combine all results
 if all_jobs:
     combined_df = pd.concat(all_jobs, ignore_index=True)
     # Remove duplicates based on job_url
