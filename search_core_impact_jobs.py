@@ -180,9 +180,9 @@ try:
                         try:
                             apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
                             if len(apify_jobs) > 0:
-                            # Convert to DataFrame format matching scrape_jobs output
-                            jobs_list = []
-                            for job in apify_jobs:
+                                # Convert to DataFrame format matching scrape_jobs output
+                                jobs_list = []
+                                for job in apify_jobs:
                                 jobs_list.append({
                                     'id': job.id,
                                     'site': 'jobstreet_apify',
