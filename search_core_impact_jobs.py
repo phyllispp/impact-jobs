@@ -158,16 +158,16 @@ try:
                         if not APIFY_AVAILABLE or not ApifyJobstreetSG:
                             print(f"    Skipping {site_name} (Apify integration not available)")
                             continue
-                    # Use Apify for JobStreet Singapore
-                    apify_scraper = ApifyJobstreetSG()
-                    # Simplify query for Apify (no complex OR queries)
-                    import re
-                    simplified = re.sub(r'["\']', '', query)
-                    search_query = query  # Initialize with original query as fallback
-                    match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
-                    if match:
+                        # Use Apify for JobStreet Singapore
+                        apify_scraper = ApifyJobstreetSG()
+                        # Simplify query for Apify (no complex OR queries)
+                        import re
+                        simplified = re.sub(r'["\']', '', query)
+                        search_query = query  # Initialize with original query as fallback
+                        match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
+                        if match:
                         search_query = match.group(1)
-                    else:
+                        else:
                         words = simplified.split()
                         for word in words:
                             if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
@@ -176,8 +176,8 @@ try:
                         if search_query == query and words:
                             search_query = words[0]
                     
-                    print(f"    Searching {site_name} via Apify...", end=" ")
-                    try:
+                        print(f"    Searching {site_name} via Apify...", end=" ")
+                        try:
                         apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
                         if len(apify_jobs) > 0:
                             # Convert to DataFrame format matching scrape_jobs output
@@ -224,7 +224,7 @@ try:
                             print(f"Found {len(apify_jobs)} jobs")
                         else:
                             print("No jobs found")
-                    except Exception as e:
+                        except Exception as e:
                         error_msg = str(e)
                         print(f"Error: {error_msg[:100]}")
                         continue
