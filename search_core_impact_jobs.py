@@ -353,14 +353,14 @@ try:
                         print(f"Found {len(jobs)} jobs")
                     else:
                         print("No jobs found")
-                    
-                    except Exception as e:
+                        
+                except Exception as e:
                     error_msg = str(e)
                     print(f"Error: {error_msg[:100]}")
                     # Log full error for debugging site-specific issues
                     if site_name in ["mycareersfuture", "jobstreet"]:
-                    import traceback
-                    print(f"  Full {site_name} error: {error_msg}")
+                        import traceback
+                        print(f"  Full {site_name} error: {error_msg}")
                     continue
 
                     # Combine all results
