@@ -170,9 +170,9 @@ try:
                         else:
                             words = simplified.split()
                             for word in words:
-                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
-                                search_query = word
-                                break
+                                if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                    search_query = word
+                                    break
                             if search_query == query and words:
                                 search_query = words[0]
                     
