@@ -340,10 +340,10 @@ try:
                 
                     # Indeed needs country_indeed parameter
                     if site_name == "indeed":
-                    if location_name == "Singapore":
-                        search_params["country_indeed"] = "Singapore"
-                    elif location_name == "Hong Kong":
-                        search_params["country_indeed"] = "Hong Kong"
+                        if location_name == "Singapore":
+                            search_params["country_indeed"] = "Singapore"
+                        elif location_name == "Hong Kong":
+                            search_params["country_indeed"] = "Hong Kong"
                 
                     print(f"    Searching {site_name}...", end=" ")
                     jobs = scrape_jobs(**search_params)
