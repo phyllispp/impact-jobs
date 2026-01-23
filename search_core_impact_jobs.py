@@ -136,28 +136,35 @@ sites_to_search_sg = [
 
 try:
     for i, query in enumerate(search_queries, 1):
-    print(f"\nSearch {i}/{len(search_queries)}: {query[:60]}...")
-    
-    # Search each location
-    for location_name, location_value in locations_to_search:
-        # Use different sites for Hong Kong and Singapore (includes Apify sites)
-        if location_name == "Hong Kong":
+        print(f"\nSearch {i}/{len(search_queries)}: {query[:60]}...")
+        
+        # Search each location
+        for location_name, location_value in locations_to_search:
+            # Use different sites for Hong Kong and Singapore (includes Apify sites)
+            if location_name == "Hong Kong":
             sites_for_location = sites_to_search_hk
-        elif location_name == "Singapore":
+    elif location_name == "Singapore":
             sites_for_location = sites_to_search_sg
-        else:
+    else:
             sites_for_location = sites_to_search
         
-        print(f"\n  Location: {location_name}")
+    print(f"\n  Location: {location_name}")
         
-        # Search each site for this location
-        for site_name, site_params in sites_for_location:
+    # Search each site for this location
+    for site_name, site_params in sites_for_location:
             try:
                 # Handle Apify sites separately
                 if site_name == "jobstreet_sg_apify":
-                    if not APIFY_AVAILABLE or not ApifyJobstreetSG:
-                        print(f"    Skipping {site_name} (Apify integration not available)")
+                    if not APIFY_AVAILABLE:
+                        print(f"    Skipping {site_name} (Apify integration module not available)")
                         continue
+                    if not ApifyJobstreetSG:
+                        print(f"    Skipping {site_name} (ApifyJobstreetSG class not available)")
+                        continue
+                    if not os.getenv("APIFY_API_TOKEN"):
+                        print(f"    Skipping {site_name} (APIFY_API_TOKEN not set)")
+                        continue
+                    print(f"    ✅ Apify integration available for {site_name}")
                     # Use Apify for JobStreet Singapore
                     apify_scraper = ApifyJobstreetSG()
                     # Simplify query for Apify (no complex OR queries)
@@ -230,9 +237,16 @@ try:
                     continue
                 
                 elif site_name == "jobsdb_hk_apify":
-                    if not APIFY_AVAILABLE or not ApifyJobsDBHK:
-                        print(f"    Skipping {site_name} (Apify integration not available)")
+                    if not APIFY_AVAILABLE:
+                        print(f"    Skipping {site_name} (Apify integration module not available)")
                         continue
+                    if not ApifyJobsDBHK:
+                        print(f"    Skipping {site_name} (ApifyJobsDBHK class not available)")
+                        continue
+                    if not os.getenv("APIFY_API_TOKEN"):
+                        print(f"    Skipping {site_name} (APIFY_API_TOKEN not set)")
+                        continue
+                    print(f"    ✅ Apify integration available for {site_name}")
                     # Use Apify for JobsDB Hong Kong
                     apify_scraper = ApifyJobsDBHK()
                     # Simplify query for Apify

@@ -97,9 +97,13 @@ jobs:
         run: |
           # Check if files exist and have content
           if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+            echo "Files exist. Checking git status..."
+            git status --porcelain
             if [ -n "$(git status --porcelain)" ]; then
+              echo "✅ Changes detected"
               echo "changed=true" >> $GITHUB_OUTPUT
             else
+              echo "ℹ️  No changes detected (files may be identical to previous run)"
               echo "changed=false" >> $GITHUB_OUTPUT
             fi
           else
