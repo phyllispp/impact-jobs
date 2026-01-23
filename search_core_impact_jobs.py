@@ -162,7 +162,7 @@ try:
                         if not APIFY_AVAILABLE or not ApifyJobstreetSG:
                             print(
                                 f"    Skipping {site_name} (Apify integration not available)")
-                            continue
+                        continue
                         # Use Apify for JobStreet Singapore
                         apify_scraper = ApifyJobstreetSG()
                         # Simplify query for Apify (no complex OR queries)
@@ -173,27 +173,27 @@ try:
                         r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR',
                         simplified,
                         re.IGNORECASE)
-                        if match:
-                        search_query = match.group(1)
-                        else:
+                            if match:
+                                search_query = match.group(1)
+                            else:
                         words = simplified.split()
-                        for word in words:
-                        if word.lower() not in [
+                                for word in words:
+                                    if word.lower() not in [
                                     'or', 'and', 'the', 'a', 'an'] and len(word) > 2:
                                 search_query = word
-                                break
-                        if search_query == query and words:
-                            search_query = words[0]
+                                        break
+                                if search_query == query and words:
+                                search_query = words[0]
 
                         print(f"    Searching {site_name} via Apify...", end=" ")
-                        try:
-                        apify_jobs = apify_scraper.scrape(
+                            try:
+                                apify_jobs = apify_scraper.scrape(
                             search_query, results_wanted=30)
-                        if len(apify_jobs) > 0:
+                                if len(apify_jobs) > 0:
                             # Convert to DataFrame format matching scrape_jobs
                             # output
-                            jobs_list = []
-                            for job in apify_jobs:
+                                    jobs_list = []
+                                    for job in apify_jobs:
                                 jobs_list.append(
                                     {
                                         'id': job.id,
@@ -232,14 +232,14 @@ try:
                                         'vacancy_count': None,
                                         'work_from_home_type': None,
                                     })
-                            jobs_df = pd.DataFrame(jobs_list)
-                            all_jobs.append(jobs_df)
-                            print(f"Found {len(apify_jobs)} jobs")
-                        else:
-                            print("No jobs found")
-                        except Exception as e:
-                        error_msg = str(e)
-                        print(f"Error: {error_msg[:100]}")
+                                    jobs_df = pd.DataFrame(jobs_list)
+                                    all_jobs.append(jobs_df)
+                                    print(f"Found {len(apify_jobs)} jobs")
+                            else:
+                                    print("No jobs found")
+                            except Exception as e:
+                                error_msg = str(e)
+                                print(f"Error: {error_msg[:100]}")
                         continue
 
                     elif site_name == "jobsdb_hk_apify":
@@ -324,7 +324,7 @@ try:
                         except Exception as e:
                         error_msg = str(e)
                         print(f"Error: {error_msg[:100]}")
-                    continue
+                        continue
 
                 # Some sites don't support complex OR queries - use simpler
                 # keywords
