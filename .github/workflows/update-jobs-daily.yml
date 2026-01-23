@@ -28,7 +28,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           # Install core dependencies needed by jobspy
-          pip install requests beautifulsoup4 pandas numpy pydantic tls-client markdownify regex
+          pip install requests beautifulsoup4 pandas numpy pydantic tls-client markdownify regex urllib3
           # Ensure current directory is first in Python path so local jobspy modules are found
           # This allows importing jobspy.apify_integration and other custom modules
           echo "PYTHONPATH=${PWD}:${PYTHONPATH}" >> $GITHUB_ENV
