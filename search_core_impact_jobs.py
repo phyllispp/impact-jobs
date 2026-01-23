@@ -303,10 +303,10 @@ try:
                             error_msg = str(e)
                             print(f"Error: {error_msg[:100]}")
                         continue
-                
-                        # Some sites don't support complex OR queries - use simpler keywords
-                        search_query = query
-                        if site_name in ["mycareersfuture"]:
+                    
+                    # Some sites don't support complex OR queries - use simpler keywords
+                    search_query = query
+                    if site_name in ["mycareersfuture"]:
                         import re
                         # Extract key terms from OR query - get the main keyword
                         # Remove quotes
