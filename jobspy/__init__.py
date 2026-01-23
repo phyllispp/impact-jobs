@@ -76,17 +76,36 @@ except ImportError:
 
 from jobspy.model import JobType, Location, JobResponse, Country
 from jobspy.model import SalarySource, ScraperInput, Site
-from jobspy.model import JobType, Location, JobResponse, Country
-from jobspy.model import SalarySource, ScraperInput, Site
-from jobspy.util import (
-    set_logger_level,
-    extract_salary,
-    create_logger,
-    get_enum_from_value,
-    map_str_to_site,
-    convert_to_annual,
-    desired_order,
-)
+
+# Import util functions with error handling
+try:
+    from jobspy.util import (
+        set_logger_level,
+        extract_salary,
+        create_logger,
+        get_enum_from_value,
+        map_str_to_site,
+        convert_to_annual,
+        desired_order,
+    )
+except ImportError as e:
+    # If util can't be imported, create minimal stubs
+    import logging
+    def set_logger_level(verbose: int):
+        logging.basicConfig(level=logging.INFO if verbose > 0 else logging.WARNING)
+    def extract_salary(*args, **kwargs):
+        return None, None, None
+    def create_logger(name: str):
+        return logging.getLogger(f"JobSpy:{name}")
+    def get_enum_from_value(value):
+        return None
+    def map_str_to_site(site_str: str):
+        return None
+    def convert_to_annual(*args, **kwargs):
+        return None
+    def desired_order():
+        return []
+    logging.warning(f"Could not import jobspy.util: {e}. Using minimal stubs.")
 
 
 # Update the SCRAPER_MAPPING dictionary in the scrape_jobs function
