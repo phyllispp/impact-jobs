@@ -2,8 +2,32 @@ import csv
 import pandas as pd
 import os
 import sys
-from jobspy import scrape_jobs
-from generate_deployable_website import generate_deployable_website
+
+# Print startup info for debugging
+print("="*80)
+print("Starting job search script...")
+print(f"Python version: {sys.version}")
+print(f"Working directory: {os.getcwd()}")
+print(f"PYTHONPATH: {os.environ.get('PYTHONPATH', 'Not set')}")
+print("="*80)
+
+try:
+    from jobspy import scrape_jobs
+    print("✅ Successfully imported jobspy.scrape_jobs")
+except Exception as e:
+    print(f"❌ Failed to import jobspy.scrape_jobs: {e}")
+    import traceback
+    traceback.print_exc()
+    sys.exit(1)
+
+try:
+    from generate_deployable_website import generate_deployable_website
+    print("✅ Successfully imported generate_deployable_website")
+except Exception as e:
+    print(f"❌ Failed to import generate_deployable_website: {e}")
+    import traceback
+    traceback.print_exc()
+    sys.exit(1)
 
 # Apify integration (optional - only used if API token is set)
 try:
