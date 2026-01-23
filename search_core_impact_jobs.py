@@ -379,12 +379,12 @@ try:
 
     # Combine all results
     if all_jobs:
-    combined_df = pd.concat(all_jobs, ignore_index=True)
-    # Remove duplicates based on job_url
-    combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
+        combined_df = pd.concat(all_jobs, ignore_index=True)
+        # Remove duplicates based on job_url
+        combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
     
-    # Filter to only jobs where the title OR description contains impact-related keywords
-    def is_core_impact_role(row):
+        # Filter to only jobs where the title OR description contains impact-related keywords
+        def is_core_impact_role(row):
         title = str(row.get('title', '')).lower() if pd.notna(row.get('title')) else ''
         description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
         company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
@@ -850,15 +850,15 @@ try:
             # No matches in title or job responsibilities
             return False
     
-    # Filter by title and description
-    core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
+        # Filter by title and description
+        core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
     
-    print("\n" + "="*80)
-    print(f"Total unique jobs found: {len(combined_df)}")
-    print(f"Core impact roles (title/description contains impact keywords): {len(core_impact_jobs)}")
-    print("="*80)
+        print("\n" + "="*80)
+        print(f"Total unique jobs found: {len(combined_df)}")
+        print(f"Core impact roles (title/description contains impact keywords): {len(core_impact_jobs)}")
+        print("="*80)
     
-    if len(core_impact_jobs) > 0:
+        if len(core_impact_jobs) > 0:
         # Sort by date
         core_impact_jobs = core_impact_jobs.sort_values('date_posted', ascending=False)
         
@@ -908,7 +908,7 @@ try:
             print("   Ready to deploy to GitHub Pages, Netlify, Vercel, etc.")
         except Exception as e:
             print(f"⚠️  Could not generate HTML: {e}")
-    else:
+        else:
         print("\nNo core impact roles found with keywords in job title.")
         print("\nShowing all jobs found (may include some false positives):")
         combined_df = combined_df.sort_values('date_posted', ascending=False)
