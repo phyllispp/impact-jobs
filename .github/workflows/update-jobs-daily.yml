@@ -27,7 +27,23 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          # Install core dependencies needed by jobspy
+          pip install requests beautifulsoup4 pandas numpy pydantic tls-client markdownify regex
+          # Ensure current directory is first in Python path so local jobspy modules are found
+          # This allows importing jobspy.apify_integration and other custom modules
+          echo "PYTHONPATH=${PWD}:${PYTHONPATH}" >> $GITHUB_ENV
+      
+      - name: Verify imports
+        run: |
+          python -c "from jobspy import scrape_jobs; print('✅ jobspy imported successfully')"
+          python -c "from generate_deployable_website import generate_deployable_website; print('✅ generate_deployable_website imported successfully')"
+          python -c "
+          try:
+              from jobspy.apify_integration import ApifyJobstreetSG, ApifyJobsDBHK
+              print('✅ Apify integration available')
+          except ImportError:
+              print('⚠️  Apify integration not available (will skip Apify scrapers)')
+          "
       
       - name: Run job search
         env:
