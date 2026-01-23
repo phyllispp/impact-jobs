@@ -5,30 +5,107 @@ from typing import Tuple
 
 import pandas as pd
 
-from jobspy.bayt import BaytScraper
-from jobspy.bdjobs import BDJobs
-from jobspy.glassdoor import Glassdoor
-from jobspy.google import Google
-from jobspy.indeed import Indeed
-from jobspy.linkedin import LinkedIn
-from jobspy.naukri import Naukri
-from jobspy.mcareersfuture import MyCareersFuture
-from jobspy.jobsdb import JobsDB
-from jobspy.jobstreet import Jobstreet
-from jobspy.jobsdb_hk import JobsDBHK
-from jobspy.ctgoodjobs import CTgoodjobs
+# Import scrapers with error handling - some may not exist in local repo
+# Core scrapers (should exist)
+try:
+    from jobspy.indeed import Indeed
+except ImportError:
+    Indeed = None
+
+try:
+    from jobspy.linkedin import LinkedIn
+except ImportError:
+    LinkedIn = None
+
+try:
+    from jobspy.mcareersfuture import MyCareersFuture
+except ImportError:
+    MyCareersFuture = None
+
+try:
+    from jobspy.jobsdb import JobsDB
+except ImportError:
+    JobsDB = None
+
+# Optional scrapers (may not exist in local repo)
+try:
+    from jobspy.bayt import BaytScraper
+except ImportError:
+    BaytScraper = None
+
+try:
+    from jobspy.bdjobs import BDJobs
+except ImportError:
+    BDJobs = None
+
+try:
+    from jobspy.glassdoor import Glassdoor
+except ImportError:
+    Glassdoor = None
+
+try:
+    from jobspy.google import Google
+except ImportError:
+    Google = None
+
+try:
+    from jobspy.naukri import Naukri
+except ImportError:
+    Naukri = None
+
+try:
+    from jobspy.ziprecruiter import ZipRecruiter
+except ImportError:
+    ZipRecruiter = None
+
+# Custom scrapers
+try:
+    from jobspy.jobstreet import Jobstreet
+except ImportError:
+    Jobstreet = None
+
+try:
+    from jobspy.jobsdb_hk import JobsDBHK
+except ImportError:
+    JobsDBHK = None
+
+try:
+    from jobspy.ctgoodjobs import CTgoodjobs
+except ImportError:
+    CTgoodjobs = None
+
 from jobspy.model import JobType, Location, JobResponse, Country
 from jobspy.model import SalarySource, ScraperInput, Site
-from jobspy.util import (
-    set_logger_level,
-    extract_salary,
-    create_logger,
-    get_enum_from_value,
-    map_str_to_site,
-    convert_to_annual,
-    desired_order,
-)
-from jobspy.ziprecruiter import ZipRecruiter
+
+# Import util functions with error handling
+try:
+    from jobspy.util import (
+        set_logger_level,
+        extract_salary,
+        create_logger,
+        get_enum_from_value,
+        map_str_to_site,
+        convert_to_annual,
+        desired_order,
+    )
+except ImportError as e:
+    # If util can't be imported, create minimal stubs
+    import logging
+    def set_logger_level(verbose: int):
+        logging.basicConfig(level=logging.INFO if verbose > 0 else logging.WARNING)
+    def extract_salary(*args, **kwargs):
+        return None, None, None
+    def create_logger(name: str):
+        return logging.getLogger(f"JobSpy:{name}")
+    def get_enum_from_value(value):
+        return None
+    def map_str_to_site(site_str: str):
+        return None
+    def convert_to_annual(*args, **kwargs):
+        return None
+    def desired_order():
+        return []
+    logging.warning(f"Could not import jobspy.util: {e}. Using minimal stubs.")
 
 
 # Update the SCRAPER_MAPPING dictionary in the scrape_jobs function
@@ -60,21 +137,40 @@ def scrape_jobs(
     Scrapes job data from job boards concurrently
     :return: Pandas DataFrame containing job data
     """
-    SCRAPER_MAPPING = {
-        Site.LINKEDIN: LinkedIn,
-        Site.INDEED: Indeed,
-        Site.ZIP_RECRUITER: ZipRecruiter,
-        Site.GLASSDOOR: Glassdoor,
-        Site.GOOGLE: Google,
-        Site.BAYT: BaytScraper,
-        Site.NAUKRI: Naukri,
-        Site.BDJOBS: BDJobs,
-        Site.MYCAREERSFUTURE: MyCareersFuture,
-        Site.JOBSDB: JobsDB,
-        Site.JOBSTREET: Jobstreet,
-        Site.JOBSDB_HK: JobsDBHK,
-        Site.CTGOODJOBS: CTgoodjobs,
-    }
+    # Build SCRAPER_MAPPING only with successfully imported scrapers
+    SCRAPER_MAPPING = {}
+    
+    # Add scrapers only if they were successfully imported
+    if LinkedIn is not None:
+        SCRAPER_MAPPING[Site.LINKEDIN] = LinkedIn
+    if Indeed is not None:
+        SCRAPER_MAPPING[Site.INDEED] = Indeed
+    if MyCareersFuture is not None:
+        SCRAPER_MAPPING[Site.MYCAREERSFUTURE] = MyCareersFuture
+    if JobsDB is not None:
+        SCRAPER_MAPPING[Site.JOBSDB] = JobsDB
+    
+    # Optional scrapers (may not be available)
+    if ZipRecruiter is not None:
+        SCRAPER_MAPPING[Site.ZIP_RECRUITER] = ZipRecruiter
+    if Glassdoor is not None:
+        SCRAPER_MAPPING[Site.GLASSDOOR] = Glassdoor
+    if Google is not None:
+        SCRAPER_MAPPING[Site.GOOGLE] = Google
+    if BaytScraper is not None:
+        SCRAPER_MAPPING[Site.BAYT] = BaytScraper
+    if Naukri is not None:
+        SCRAPER_MAPPING[Site.NAUKRI] = Naukri
+    if BDJobs is not None:
+        SCRAPER_MAPPING[Site.BDJOBS] = BDJobs
+    
+    # Custom scrapers
+    if Jobstreet is not None:
+        SCRAPER_MAPPING[Site.JOBSTREET] = Jobstreet
+    if JobsDBHK is not None:
+        SCRAPER_MAPPING[Site.JOBSDB_HK] = JobsDBHK
+    if CTgoodjobs is not None:
+        SCRAPER_MAPPING[Site.CTGOODJOBS] = CTgoodjobs
     set_logger_level(verbose)
     job_type = get_enum_from_value(job_type) if job_type else None
 

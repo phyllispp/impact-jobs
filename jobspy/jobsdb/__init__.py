@@ -245,7 +245,10 @@ class JobsDB(Scraper):
                 job_url = urljoin(self.base_url, job_url)
             elif not job_url:
                 # Jora uses different URL structure
-                job_url = f"{self.base_url}/viewjob?jk={job_id}" if job_id else f"{self.base_url}/j/{job_id}"
+                if job_id:
+                    job_url = f"{self.base_url}/viewjob?jk={job_id}"
+                else:
+                    job_url = f"{self.base_url}/j/{job_id}"
 
             # Parse date
             date_posted = None
