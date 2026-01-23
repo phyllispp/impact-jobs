@@ -241,23 +241,23 @@ try:
                         search_query = query  # Initialize with original query as fallback
                         match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
                         if match:
-                        search_query = match.group(1)
+                            search_query = match.group(1)
                         else:
-                        words = simplified.split()
-                        for word in words:
-                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
-                                search_query = word
-                                break
-                        if search_query == query and words:
-                            search_query = words[0]
+                            words = simplified.split()
+                            for word in words:
+                                if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                    search_query = word
+                                    break
+                            if search_query == query and words:
+                                search_query = words[0]
                     
                         print(f"    Searching {site_name} via Apify...", end=" ")
                         try:
-                        apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
-                        if len(apify_jobs) > 0:
-                            # Convert to DataFrame format matching scrape_jobs output
-                            jobs_list = []
-                            for job in apify_jobs:
+                            apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
+                            if len(apify_jobs) > 0:
+                                # Convert to DataFrame format matching scrape_jobs output
+                                jobs_list = []
+                                for job in apify_jobs:
                                 jobs_list.append({
                                     'id': job.id,
                                     'site': 'jobsdb_hk_apify',
@@ -295,9 +295,9 @@ try:
                                     'work_from_home_type': None,
                                 })
                             jobs_df = pd.DataFrame(jobs_list)
-                            all_jobs.append(jobs_df)
+                                all_jobs.append(jobs_df)
                             print(f"Found {len(apify_jobs)} jobs")
-                        else:
+                            else:
                             print("No jobs found")
                         except Exception as e:
                         error_msg = str(e)
