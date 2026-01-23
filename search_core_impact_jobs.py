@@ -156,9 +156,9 @@ try:
 
             # Search each site for this location
             for site_name, site_params in sites_for_location:
-            try:
-                # Handle Apify sites separately
-                if site_name == "jobstreet_sg_apify":
+                try:
+                    # Handle Apify sites separately
+                    if site_name == "jobstreet_sg_apify":
                     if not APIFY_AVAILABLE or not ApifyJobstreetSG:
                         print(
                             f"    Skipping {site_name} (Apify integration not available)")
