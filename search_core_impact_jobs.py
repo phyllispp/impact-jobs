@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import os
+import sys
 from jobspy import scrape_jobs
 from generate_deployable_website import generate_deployable_website
 
@@ -109,7 +110,8 @@ sites_to_search_sg = [
     ("jobstreet_sg_apify", {"site_name": ["jobstreet_sg_apify"]}),  # Singapore only (via Apify)
 ]
 
-for i, query in enumerate(search_queries, 1):
+try:
+    for i, query in enumerate(search_queries, 1):
     print(f"\nSearch {i}/{len(search_queries)}: {query[:60]}...")
     
     # Search each location
@@ -137,6 +139,7 @@ for i, query in enumerate(search_queries, 1):
                     # Simplify query for Apify (no complex OR queries)
                     import re
                     simplified = re.sub(r'["\']', '', query)
+                    search_query = query  # Initialize with original query as fallback
                     match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
                     if match:
                         search_query = match.group(1)
@@ -211,6 +214,7 @@ for i, query in enumerate(search_queries, 1):
                     # Simplify query for Apify
                     import re
                     simplified = re.sub(r'["\']', '', query)
+                    search_query = query  # Initialize with original query as fallback
                     match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
                     if match:
                         search_query = match.group(1)
@@ -889,3 +893,9 @@ if all_jobs:
             print(f"⚠️  Could not generate HTML: {e}")
 else:
     print("\nNo jobs found with any of the search queries.")
+except Exception as e:
+    import traceback
+    print(f"\n❌ Fatal error occurred: {e}")
+    print("\nFull traceback:")
+    traceback.print_exc()
+    sys.exit(1)

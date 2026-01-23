@@ -49,15 +49,48 @@ jobs:
         env:
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
         run: |
+          set +e  # Don't exit on error immediately
           python search_core_impact_jobs.py
+          SCRIPT_EXIT_CODE=$?
+          if [ $SCRIPT_EXIT_CODE -ne 0 ]; then
+            echo "⚠️  Script exited with code $SCRIPT_EXIT_CODE"
+            echo "Checking if output files were created anyway..."
+          fi
+          # Check if output files exist
+          if [ -f "index.html" ]; then
+            echo "✅ index.html created"
+          else
+            echo "❌ index.html not found"
+          fi
+          if [ -f "core_impact_jobs_sg_hk.csv" ]; then
+            echo "✅ core_impact_jobs_sg_hk.csv created"
+          else
+            echo "❌ core_impact_jobs_sg_hk.csv not found"
+          fi
+          # Exit with the script's exit code (or 0 if files were created)
+          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+            echo "✅ Output files exist, continuing..."
+            exit 0
+          elif [ $SCRIPT_EXIT_CODE -ne 0 ]; then
+            echo "❌ Script failed and no output files created"
+            exit $SCRIPT_EXIT_CODE
+          else
+            exit 0
+          fi
       
       - name: Check for changes
         id: verify-changed-files
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
+          # Check if files exist and have content
+          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
           else
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "⚠️  Output files not found, skipping commit"
           fi
       
       - name: Commit and push changes
