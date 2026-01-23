@@ -118,11 +118,11 @@ try:
         for location_name, location_value in locations_to_search:
             # Use different sites for Hong Kong and Singapore (includes Apify sites)
             if location_name == "Hong Kong":
-            sites_for_location = sites_to_search_hk
-    elif location_name == "Singapore":
-            sites_for_location = sites_to_search_sg
-    else:
-            sites_for_location = sites_to_search
+                sites_for_location = sites_to_search_hk
+            elif location_name == "Singapore":
+                sites_for_location = sites_to_search_sg
+            else:
+                sites_for_location = sites_to_search
         
     print(f"\n  Location: {location_name}")
         
