@@ -404,10 +404,10 @@ try:
             'click here to learn more about our benefits'
             ]
             for marker in company_desc_markers:
-            marker_pos = job_responsibilities.find(marker)
-            if marker_pos != -1:
-            job_responsibilities = job_responsibilities[:marker_pos]
-            break
+                marker_pos = job_responsibilities.find(marker)
+                if marker_pos != -1:
+                    job_responsibilities = job_responsibilities[:marker_pos]
+                    break
         
             # Exclude AXA jobs unless they're explicitly ESG/sustainability roles
             # AXA often mentions sustainability/climate in generic company descriptions but roles aren't impact-focused
