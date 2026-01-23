@@ -143,19 +143,19 @@ try:
 
         # Search each location
         for location_name, location_value in locations_to_search:
-        # Use different sites for Hong Kong and Singapore (includes Apify
-        # sites)
-        if location_name == "Hong Kong":
-            sites_for_location = sites_to_search_hk
-        elif location_name == "Singapore":
-            sites_for_location = sites_to_search_sg
-        else:
-            sites_for_location = sites_to_search
+            # Use different sites for Hong Kong and Singapore (includes Apify
+            # sites)
+            if location_name == "Hong Kong":
+                sites_for_location = sites_to_search_hk
+            elif location_name == "Singapore":
+                sites_for_location = sites_to_search_sg
+            else:
+                sites_for_location = sites_to_search
 
-        print(f"\n  Location: {location_name}")
+            print(f"\n  Location: {location_name}")
 
-        # Search each site for this location
-        for site_name, site_params in sites_for_location:
+            # Search each site for this location
+            for site_name, site_params in sites_for_location:
             try:
                 # Handle Apify sites separately
                 if site_name == "jobstreet_sg_apify":
