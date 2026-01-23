@@ -363,9 +363,9 @@ try:
                         print(f"  Full {site_name} error: {error_msg}")
                     continue
 
-                    # Combine all results
-                    if all_jobs:
-                    combined_df = pd.concat(all_jobs, ignore_index=True)
+    # Combine all results
+    if all_jobs:
+        combined_df = pd.concat(all_jobs, ignore_index=True)
                     # Remove duplicates based on job_url
                     combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
     
