@@ -349,10 +349,10 @@ try:
                     jobs = scrape_jobs(**search_params)
                 
                     if len(jobs) > 0:
-                    all_jobs.append(jobs)
-                    print(f"Found {len(jobs)} jobs")
+                        all_jobs.append(jobs)
+                        print(f"Found {len(jobs)} jobs")
                     else:
-                    print("No jobs found")
+                        print("No jobs found")
                     
                     except Exception as e:
                     error_msg = str(e)
