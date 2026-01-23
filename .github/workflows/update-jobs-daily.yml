@@ -48,31 +48,45 @@ jobs:
       - name: Run job search
         env:
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+        timeout-minutes: 30
         run: |
           set +e  # Don't exit on error immediately
-          python search_core_impact_jobs.py
+          echo "Starting job search script..."
+          python search_core_impact_jobs.py 2>&1 | tee script_output.log
           SCRIPT_EXIT_CODE=$?
+          
+          echo ""
+          echo "=== Script Execution Summary ==="
+          echo "Exit code: $SCRIPT_EXIT_CODE"
+          
           if [ $SCRIPT_EXIT_CODE -ne 0 ]; then
             echo "⚠️  Script exited with code $SCRIPT_EXIT_CODE"
+            echo "Last 50 lines of output:"
+            tail -50 script_output.log || echo "No output log available"
+            echo ""
             echo "Checking if output files were created anyway..."
           fi
+          
           # Check if output files exist
           if [ -f "index.html" ]; then
-            echo "✅ index.html created"
+            echo "✅ index.html created ($(wc -c < index.html) bytes)"
           else
             echo "❌ index.html not found"
           fi
           if [ -f "core_impact_jobs_sg_hk.csv" ]; then
-            echo "✅ core_impact_jobs_sg_hk.csv created"
+            echo "✅ core_impact_jobs_sg_hk.csv created ($(wc -l < core_impact_jobs_sg_hk.csv) lines)"
           else
             echo "❌ core_impact_jobs_sg_hk.csv not found"
           fi
+          
           # Exit with the script's exit code (or 0 if files were created)
           if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
             echo "✅ Output files exist, continuing..."
             exit 0
           elif [ $SCRIPT_EXIT_CODE -ne 0 ]; then
             echo "❌ Script failed and no output files created"
+            echo "Full error output:"
+            cat script_output.log || echo "No log available"
             exit $SCRIPT_EXIT_CODE
           else
             exit 0

@@ -14,9 +14,28 @@ from jobspy.linkedin import LinkedIn
 from jobspy.naukri import Naukri
 from jobspy.mcareersfuture import MyCareersFuture
 from jobspy.jobsdb import JobsDB
-from jobspy.jobstreet import Jobstreet
-from jobspy.jobsdb_hk import JobsDBHK
-from jobspy.ctgoodjobs import CTgoodjobs
+
+# Custom scrapers - import with error handling to prevent import failures
+try:
+    from jobspy.jobstreet import Jobstreet
+except ImportError as e:
+    Jobstreet = None
+    import logging
+    logging.warning(f"Could not import Jobstreet scraper: {e}")
+
+try:
+    from jobspy.jobsdb_hk import JobsDBHK
+except ImportError as e:
+    JobsDBHK = None
+    import logging
+    logging.warning(f"Could not import JobsDBHK scraper: {e}")
+
+try:
+    from jobspy.ctgoodjobs import CTgoodjobs
+except ImportError as e:
+    CTgoodjobs = None
+    import logging
+    logging.warning(f"Could not import CTgoodjobs scraper: {e}")
 from jobspy.model import JobType, Location, JobResponse, Country
 from jobspy.model import SalarySource, ScraperInput, Site
 from jobspy.util import (
@@ -71,10 +90,15 @@ def scrape_jobs(
         Site.BDJOBS: BDJobs,
         Site.MYCAREERSFUTURE: MyCareersFuture,
         Site.JOBSDB: JobsDB,
-        Site.JOBSTREET: Jobstreet,
-        Site.JOBSDB_HK: JobsDBHK,
-        Site.CTGOODJOBS: CTgoodjobs,
     }
+    
+    # Add custom scrapers only if they were successfully imported
+    if Jobstreet is not None:
+        SCRAPER_MAPPING[Site.JOBSTREET] = Jobstreet
+    if JobsDBHK is not None:
+        SCRAPER_MAPPING[Site.JOBSDB_HK] = JobsDBHK
+    if CTgoodjobs is not None:
+        SCRAPER_MAPPING[Site.CTGOODJOBS] = CTgoodjobs
     set_logger_level(verbose)
     job_type = get_enum_from_value(job_type) if job_type else None
 
