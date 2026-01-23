@@ -153,8 +153,8 @@ try:
             # Search each site for this location
             for site_name, site_params in sites_for_location:
                 try:
-                # Handle Apify sites separately
-                if site_name == "jobstreet_sg_apify":
+                    # Handle Apify sites separately
+                    if site_name == "jobstreet_sg_apify":
                     if not APIFY_AVAILABLE:
                         print(f"    Skipping {site_name} (Apify integration module not available)")
                         continue
@@ -236,7 +236,7 @@ try:
                         print(f"Error: {error_msg[:100]}")
                     continue
                 
-                elif site_name == "jobsdb_hk_apify":
+                    elif site_name == "jobsdb_hk_apify":
                     if not APIFY_AVAILABLE:
                         print(f"    Skipping {site_name} (Apify integration module not available)")
                         continue
@@ -319,8 +319,8 @@ try:
                     continue
                 
                 # Some sites don't support complex OR queries - use simpler keywords
-                search_query = query
-                if site_name in ["mycareersfuture"]:
+                    search_query = query
+                    if site_name in ["mycareersfuture"]:
                     import re
                     # Extract key terms from OR query - get the main keyword
                     # Remove quotes
@@ -343,32 +343,32 @@ try:
                             search_query = words[0]
                 
                 # Prepare search parameters
-                search_params = {
+                    search_params = {
                     "search_term": search_query,
                     "location": location_value,
                     "hours_old": 168,  # Last 7 days
                     "results_wanted": 30,
                     "verbose": 0,
                     **site_params
-                }
+                    }
                 
                 # Indeed needs country_indeed parameter
-                if site_name == "indeed":
+                    if site_name == "indeed":
                     if location_name == "Singapore":
                         search_params["country_indeed"] = "Singapore"
                     elif location_name == "Hong Kong":
                         search_params["country_indeed"] = "Hong Kong"
                 
-                print(f"    Searching {site_name}...", end=" ")
-                jobs = scrape_jobs(**search_params)
+                    print(f"    Searching {site_name}...", end=" ")
+                    jobs = scrape_jobs(**search_params)
                 
-                if len(jobs) > 0:
+                    if len(jobs) > 0:
                     all_jobs.append(jobs)
                     print(f"Found {len(jobs)} jobs")
-                else:
+                    else:
                     print("No jobs found")
                     
-                except Exception as e:
+                    except Exception as e:
                     error_msg = str(e)
                     print(f"Error: {error_msg[:100]}")
                     # Log full error for debugging site-specific issues
