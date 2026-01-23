@@ -183,7 +183,7 @@ try:
                                 # Convert to DataFrame format matching scrape_jobs output
                                 jobs_list = []
                                 for job in apify_jobs:
-                                jobs_list.append({
+                                    jobs_list.append({
                                     'id': job.id,
                                     'site': 'jobstreet_apify',
                                     'job_url': job.job_url,
@@ -218,12 +218,12 @@ try:
                                     'company_reviews_count': None,
                                     'vacancy_count': None,
                                     'work_from_home_type': None,
-                                })
-                            jobs_df = pd.DataFrame(jobs_list)
-                            all_jobs.append(jobs_df)
-                            print(f"Found {len(apify_jobs)} jobs")
-                        else:
-                            print("No jobs found")
+                                    })
+                                jobs_df = pd.DataFrame(jobs_list)
+                                all_jobs.append(jobs_df)
+                                print(f"Found {len(apify_jobs)} jobs")
+                            else:
+                                print("No jobs found")
                         except Exception as e:
                             error_msg = str(e)
                             print(f"Error: {error_msg[:100]}")
