@@ -1,40 +1,17 @@
 import csv
-import sys
+import pandas as pd
 import os
+from jobspy import scrape_jobs
+from generate_deployable_website import generate_deployable_website
 
-# Ensure we can import from local jobspy directory
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
+# Apify integration (optional - only used if API token is set)
 try:
-    import pandas as pd
+    from jobspy.apify_integration import ApifyJobstreetSG, ApifyJobsDBHK
+    APIFY_AVAILABLE = True
 except ImportError:
-    print("ERROR: pandas is not installed. Please install it with: pip install pandas")
-    print("Creating empty output files and exiting...")
-    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
-    with open("index.html", "w") as f:
-        f.write("<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Missing dependencies</h1><p>Please install required packages.</p></body></html>")
-    sys.exit(1)
-
-try:
-    from jobspy import scrape_jobs
-except ImportError as e:
-    print(f"ERROR: Failed to import jobspy: {e}")
-    print("Make sure jobspy directory exists and all dependencies are installed.")
-    print("Creating empty output files and exiting...")
-    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
-    with open("index.html", "w") as f:
-        f.write(f"<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Failed to import jobspy</h1><p>{str(e)}</p></body></html>")
-    sys.exit(1)
-
-try:
-    from generate_deployable_website import generate_deployable_website
-except ImportError as e:
-    print(f"ERROR: Failed to import generate_deployable_website: {e}")
-    print("Creating empty output files and exiting...")
-    pd.DataFrame().to_csv("core_impact_jobs_sg_hk.csv", index=False)
-    with open("index.html", "w") as f:
-        f.write(f"<!DOCTYPE html><html><head><title>Error</title></head><body><h1>Error: Failed to import website generator</h1><p>{str(e)}</p></body></html>")
-    sys.exit(1)
+    APIFY_AVAILABLE = False
+    ApifyJobstreetSG = None
+    ApifyJobsDBHK = None
 
 # Search for CORE impact roles by targeting specific job titles
 # We'll do multiple targeted searches and combine results
@@ -95,8 +72,12 @@ search_queries = [
 
 all_jobs = []
 
-print("Searching for core impact roles across Indeed, LinkedIn, Google, MyCareersFuture, and JobsDB...")
-print("Searching in Singapore and Hong Kong (MyCareersFuture: Singapore only)")
+print("Searching for core impact roles across Indeed, LinkedIn, MyCareersFuture, and Apify...")
+print("Searching in Singapore and Hong Kong")
+print("Apify integration: JobStreet (SG) and JobsDB (HK)")
+if not os.getenv("APIFY_API_TOKEN"):
+    print("⚠️  WARNING: APIFY_API_TOKEN not set. Apify scraping will be skipped.")
+    print("   Set it with: export APIFY_API_TOKEN='your_token_here'")
 print("="*80)
 
 # Define locations to search
@@ -105,13 +86,27 @@ locations_to_search = [
     ("Hong Kong", "Hong Kong")
 ]
 
-# Search across multiple sites
+# Search across multiple sites (removed Google and JobsDB - not scrapable)
+# Note: Jobstreet is skipped - protected by Cloudflare
 sites_to_search = [
     ("indeed", {"site_name": ["indeed"]}),
     ("linkedin", {"site_name": ["linkedin"]}),
-    ("google", {"site_name": ["google"]}),
     ("mycareersfuture", {"site_name": ["mycareersfuture"]}),  # Singapore only
-    ("jobsdb", {"site_name": ["jobsdb"]})
+]
+
+# Hong Kong-specific sites
+sites_to_search_hk = [
+    ("indeed", {"site_name": ["indeed"]}),
+    ("linkedin", {"site_name": ["linkedin"]}),
+    ("jobsdb_hk_apify", {"site_name": ["jobsdb_hk_apify"]}),  # Hong Kong only (via Apify)
+]
+
+# Singapore-specific sites (including Apify)
+sites_to_search_sg = [
+    ("indeed", {"site_name": ["indeed"]}),
+    ("linkedin", {"site_name": ["linkedin"]}),
+    ("mycareersfuture", {"site_name": ["mycareersfuture"]}),  # Singapore only
+    ("jobstreet_sg_apify", {"site_name": ["jobstreet_sg_apify"]}),  # Singapore only (via Apify)
 ]
 
 for i, query in enumerate(search_queries, 1):
@@ -119,9 +114,11 @@ for i, query in enumerate(search_queries, 1):
     
     # Search each location
     for location_name, location_value in locations_to_search:
-        # Skip Hong Kong for MyCareersFuture (Singapore-only site)
+        # Use different sites for Hong Kong and Singapore (includes Apify sites)
         if location_name == "Hong Kong":
-            sites_for_location = [s for s in sites_to_search if s[0] != "mycareersfuture"]
+            sites_for_location = sites_to_search_hk
+        elif location_name == "Singapore":
+            sites_for_location = sites_to_search_sg
         else:
             sites_for_location = sites_to_search
         
@@ -130,9 +127,182 @@ for i, query in enumerate(search_queries, 1):
         # Search each site for this location
         for site_name, site_params in sites_for_location:
             try:
+                # Handle Apify sites separately
+                if site_name == "jobstreet_sg_apify":
+                    if not APIFY_AVAILABLE or not ApifyJobstreetSG:
+                        print(f"    Skipping {site_name} (Apify integration not available)")
+                        continue
+                    # Use Apify for JobStreet Singapore
+                    apify_scraper = ApifyJobstreetSG()
+                    # Simplify query for Apify (no complex OR queries)
+                    import re
+                    simplified = re.sub(r'["\']', '', query)
+                    match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
+                    if match:
+                        search_query = match.group(1)
+                    else:
+                        words = simplified.split()
+                        for word in words:
+                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                search_query = word
+                                break
+                        if search_query == query and words:
+                            search_query = words[0]
+                    
+                    print(f"    Searching {site_name} via Apify...", end=" ")
+                    try:
+                        apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
+                        if len(apify_jobs) > 0:
+                            # Convert to DataFrame format matching scrape_jobs output
+                            jobs_list = []
+                            for job in apify_jobs:
+                                jobs_list.append({
+                                    'id': job.id,
+                                    'site': 'jobstreet_apify',
+                                    'job_url': job.job_url,
+                                    'job_url_direct': job.job_url,
+                                    'title': job.title,
+                                    'company': job.company_name,
+                                    'location': f"{job.location.city}, {job.location.country.value.title()}" if job.location.city else str(job.location.country.value),
+                                    'date_posted': job.date_posted,
+                                    'job_type': None,
+                                    'salary_source': None,
+                                    'interval': None,
+                                    'min_amount': None,
+                                    'max_amount': None,
+                                    'currency': None,
+                                    'is_remote': job.is_remote,
+                                    'job_level': None,
+                                    'job_function': None,
+                                    'listing_type': None,
+                                    'emails': None,
+                                    'description': job.description or '',
+                                    'company_industry': None,
+                                    'company_url': None,
+                                    'company_logo': None,
+                                    'company_url_direct': None,
+                                    'company_addresses': None,
+                                    'company_num_employees': None,
+                                    'company_revenue': None,
+                                    'company_description': None,
+                                    'skills': None,
+                                    'experience_range': None,
+                                    'company_rating': None,
+                                    'company_reviews_count': None,
+                                    'vacancy_count': None,
+                                    'work_from_home_type': None,
+                                })
+                            jobs_df = pd.DataFrame(jobs_list)
+                            all_jobs.append(jobs_df)
+                            print(f"Found {len(apify_jobs)} jobs")
+                        else:
+                            print("No jobs found")
+                    except Exception as e:
+                        error_msg = str(e)
+                        print(f"Error: {error_msg[:100]}")
+                    continue
+                
+                elif site_name == "jobsdb_hk_apify":
+                    if not APIFY_AVAILABLE or not ApifyJobsDBHK:
+                        print(f"    Skipping {site_name} (Apify integration not available)")
+                        continue
+                    # Use Apify for JobsDB Hong Kong
+                    apify_scraper = ApifyJobsDBHK()
+                    # Simplify query for Apify
+                    import re
+                    simplified = re.sub(r'["\']', '', query)
+                    match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
+                    if match:
+                        search_query = match.group(1)
+                    else:
+                        words = simplified.split()
+                        for word in words:
+                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                search_query = word
+                                break
+                        if search_query == query and words:
+                            search_query = words[0]
+                    
+                    print(f"    Searching {site_name} via Apify...", end=" ")
+                    try:
+                        apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
+                        if len(apify_jobs) > 0:
+                            # Convert to DataFrame format matching scrape_jobs output
+                            jobs_list = []
+                            for job in apify_jobs:
+                                jobs_list.append({
+                                    'id': job.id,
+                                    'site': 'jobsdb_hk_apify',
+                                    'job_url': job.job_url,
+                                    'job_url_direct': job.job_url,
+                                    'title': job.title,
+                                    'company': job.company_name,
+                                    'location': f"{job.location.city}, {job.location.country.value.title()}" if job.location.city else str(job.location.country.value),
+                                    'date_posted': job.date_posted,
+                                    'job_type': None,
+                                    'salary_source': None,
+                                    'interval': None,
+                                    'min_amount': None,
+                                    'max_amount': None,
+                                    'currency': None,
+                                    'is_remote': job.is_remote,
+                                    'job_level': None,
+                                    'job_function': None,
+                                    'listing_type': None,
+                                    'emails': None,
+                                    'description': job.description or '',
+                                    'company_industry': None,
+                                    'company_url': None,
+                                    'company_logo': None,
+                                    'company_url_direct': None,
+                                    'company_addresses': None,
+                                    'company_num_employees': None,
+                                    'company_revenue': None,
+                                    'company_description': None,
+                                    'skills': None,
+                                    'experience_range': None,
+                                    'company_rating': None,
+                                    'company_reviews_count': None,
+                                    'vacancy_count': None,
+                                    'work_from_home_type': None,
+                                })
+                            jobs_df = pd.DataFrame(jobs_list)
+                            all_jobs.append(jobs_df)
+                            print(f"Found {len(apify_jobs)} jobs")
+                        else:
+                            print("No jobs found")
+                    except Exception as e:
+                        error_msg = str(e)
+                        print(f"Error: {error_msg[:100]}")
+                    continue
+                
+                # Some sites don't support complex OR queries - use simpler keywords
+                search_query = query
+                if site_name in ["mycareersfuture"]:
+                    import re
+                    # Extract key terms from OR query - get the main keyword
+                    # Remove quotes
+                    simplified = re.sub(r'["\']', '', query)
+                    # Extract first significant keyword (usually the main term before OR)
+                    # Pattern: "keyword1" OR "keyword2" -> keyword1
+                    match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
+                    if match:
+                        search_query = match.group(1)
+                    else:
+                        # If no OR pattern, take first meaningful word
+                        words = simplified.split()
+                        # Skip common words
+                        for word in words:
+                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                search_query = word
+                                break
+                        # Fallback: use first word
+                        if search_query == query and words:
+                            search_query = words[0]
+                
                 # Prepare search parameters
                 search_params = {
-                    "search_term": query,
+                    "search_term": search_query,
                     "location": location_value,
                     "hours_old": 168,  # Last 7 days
                     "results_wanted": 30,
@@ -147,32 +317,22 @@ for i, query in enumerate(search_queries, 1):
                     elif location_name == "Hong Kong":
                         search_params["country_indeed"] = "Hong Kong"
                 
-                # Google needs google_search_term instead of search_term
-                if site_name == "google":
-                    google_query = f"{query} jobs in {location_value} since 7 days ago"
-                    search_params["google_search_term"] = google_query
-                    search_params.pop("search_term", None)
-                    search_params.pop("hours_old", None)  # Google doesn't use hours_old
-                
                 print(f"    Searching {site_name}...", end=" ")
-                try:
-                    jobs = scrape_jobs(**search_params)
-                    
-                    if len(jobs) > 0:
-                        all_jobs.append(jobs)
-                        print(f"Found {len(jobs)} jobs")
-                    else:
-                        print("No jobs found")
-                except Exception as scrape_error:
-                    print(f"Scraping error: {str(scrape_error)[:100]}")
-                    # Continue to next site instead of failing completely
-                    continue
+                jobs = scrape_jobs(**search_params)
+                
+                if len(jobs) > 0:
+                    all_jobs.append(jobs)
+                    print(f"Found {len(jobs)} jobs")
+                else:
+                    print("No jobs found")
                     
             except Exception as e:
-                print(f"Error setting up search for {site_name}: {str(e)[:100]}")
-                # Log full error for debugging but continue
-                import traceback
-                print(f"Full error: {traceback.format_exc()[:200]}")
+                error_msg = str(e)
+                print(f"Error: {error_msg[:100]}")
+                # Log full error for debugging site-specific issues
+                if site_name in ["mycareersfuture", "jobstreet"]:
+                    import traceback
+                    print(f"  Full {site_name} error: {error_msg}")
                 continue
 
 # Combine all results
@@ -187,6 +347,93 @@ if all_jobs:
         description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
         company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
         combined = title + ' ' + description
+        
+        # Extract job responsibilities section (before company description)
+        # Many job descriptions have company info sections at the end that mention impact terms
+        # but aren't part of the actual job role
+        job_responsibilities = description.lower()
+        company_desc_markers = [
+            'about ' + company.lower(),  # Company-specific (e.g., "about axa")
+            'about our company',
+            'about us',
+            'company overview',
+            'our mission',
+            'our values',
+            'our purpose',
+            'equal opportunity employer',
+            'diversity and inclusion',
+            'click here to learn more',
+            'learn more about',
+            'company description',
+            'who we are',
+            # AXA-specific markers
+            'about axa',
+            'about axa hong kong',
+            'about axa singapore',
+            'axa is an equal opportunity',
+            'axa hong kong and macau is a member',
+            'our purpose is to act for human progress',
+            'click here to learn more about our benefits'
+        ]
+        for marker in company_desc_markers:
+            marker_pos = job_responsibilities.find(marker)
+            if marker_pos != -1:
+                job_responsibilities = job_responsibilities[:marker_pos]
+                break
+        
+        # Exclude AXA jobs unless they're explicitly ESG/sustainability roles
+        # AXA often mentions sustainability/climate in generic company descriptions but roles aren't impact-focused
+        if 'axa' in company:
+            # Must have impact keywords in title - description mentions aren't enough for AXA
+            title_has_real_impact = any(kw in title.lower() for kw in [
+                'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
+                'green', 'csr', 'social impact', 'impact investing', 'impact fund',
+                'sustainability manager', 'sustainability director', 'sustainability officer',
+                'sustainability specialist', 'esg manager', 'esg director', 'esg officer',
+                'climate manager', 'climate director', 'environmental manager'
+            ])
+            
+            # Check if job responsibilities explicitly state this is a sustainability/ESG role
+            # Only check in the job responsibilities section, not in company description
+            desc_explicitly_impact_role = any([
+                'responsible for sustainability' in job_responsibilities,
+                'responsible for esg' in job_responsibilities,
+                'sustainability manager' in job_responsibilities,
+                'sustainability director' in job_responsibilities,
+                'sustainability officer' in job_responsibilities,
+                'sustainability specialist' in job_responsibilities,
+                'esg manager' in job_responsibilities,
+                'esg director' in job_responsibilities,
+                'esg officer' in job_responsibilities,
+                'this role focuses on sustainability' in job_responsibilities,
+                'this role focuses on esg' in job_responsibilities,
+                'primary responsibility.*sustainability' in job_responsibilities,
+                'primary responsibility.*esg' in job_responsibilities,
+                'sustainability strategy' in job_responsibilities,
+                'sustainability initiatives' in job_responsibilities,
+                'sustainability reporting' in job_responsibilities,
+                'esg strategy' in job_responsibilities,
+                'esg initiatives' in job_responsibilities,
+                'esg reporting' in job_responsibilities,
+                'climate change' in job_responsibilities and ('strategy' in job_responsibilities or 'risk' in job_responsibilities),
+                'environmental impact' in job_responsibilities,
+                'sustainable finance' in job_responsibilities,
+                'impact investing' in job_responsibilities,
+            ])
+            
+            # Also check if impact keywords appear in job responsibilities (not just company description)
+            # This catches cases where keywords appear but not in the explicit phrases above
+            impact_keywords_in_responsibilities = any([
+                kw.lower() in job_responsibilities for kw in impact_keywords
+            ])
+            
+            # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
+            # Company description mentions are NOT sufficient
+            # We require either:
+            # 1. Impact keywords in title, OR
+            # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
+            if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
+                return False
         
         # Exclude specific companies/roles that are false positives (check early)
         false_positive_patterns = [
@@ -203,7 +450,9 @@ if all_jobs:
             ('tech data', 'product manager'),
             ('tech data', 'presales consultant'),
             ('wsh experts', 'resident technical officer'),
-            ('surechem', 'electrical and electronics engineering')
+            ('surechem', 'electrical and electronics engineering'),
+            ("st. joseph's institution international", 'social media marketing'),  # Marketing role, not impact
+            ('st. joseph\'s institution international', 'social media marketing'),
         ]
         for company_pattern, title_pattern in false_positive_patterns:
             if company_pattern in company and title_pattern in title:
@@ -211,9 +460,27 @@ if all_jobs:
                 if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
                     return False
         
+        # Exclude all technician jobs (including Laboratory Technician - Environmental Division)
+        # These are technical/support roles, not impact strategy/management roles
+        if 'technician' in title.lower():
+            return False
+        
+        # Exclude intern roles that aren't impact-focused
+        if 'intern' in title.lower() or 'internship' in title.lower():
+            # Only keep if title explicitly mentions impact keywords
+            if not any(kw in title.lower() for kw in [
+                'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
+                'green', 'csr', 'social impact', 'impact'
+            ]):
+                return False
+        
+        # Exclude Asset Management intern/summer programme roles (not impact-focused)
+        if 'asset management' in title.lower() and ('intern' in title.lower() or 'summer' in title.lower() or 'programme' in title.lower()):
+            return False
+        
         # Exclude common false positives by title
         false_positives_titles = [
-            'maintenance', 'housekeeping', 'production', 'technician', 
+            'maintenance', 'housekeeping', 'production',
             'sommelier', 'workplace coordinator', 'property officer',
             'tenancy', 'events coordinator', 'bartender', 'lobby',
             'interior designer', 'facilities engineer', 'site lead',
@@ -226,16 +493,24 @@ if all_jobs:
             'rooms controller',
             'colo regional engineering',  # Amazon data center engineering
             'resident technical officer',  # Construction compliance, not impact
-            'workplace executive'  # Administrative role
+            'workplace executive',  # Administrative role
+            'social media marketing',  # Marketing roles (unless CSR/sustainability marketing)
+            'recruiter',  # Recruiting roles
         ]
         if any(fp in title for fp in false_positives_titles):
             # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
-            if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green']):
+            if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
                 return False
         
         # Skip JLL jobs (they match on "better world" but aren't impact roles)
         if 'jll' in company:
             return False
+        
+        # Exclude ST. JOSEPH'S INSTITUTION INTERNATIONAL LTD jobs (marketing/recruiting, not impact)
+        if "st. joseph's institution international" in company.lower() or "st joseph's institution international" in company.lower():
+            # Only keep if it's explicitly an impact role
+            if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
+                return False
         
         # Exclude jobs where "environmental" only appears in generic contexts
         environmental_false_positives = [
@@ -506,18 +781,32 @@ if all_jobs:
                 if not any(indicator in description.lower() for indicator in strong_impact_indicators):
                     return False
         
-        # Check if any impact keyword appears in title or description
-        # Prioritize matches in title, but also accept description matches
+        # Check if any impact keyword appears in title or job responsibilities
+        # Prioritize matches in title, but also accept matches in job responsibilities
+        # Exclude matches that only appear in company description sections
         matches = []
+        title_matches = []
+        desc_matches = []
+        
         for kw in impact_keywords:
             kw_lower = kw.lower()
             if kw_lower in title:
                 matches.append(f"title:{kw}")
-            elif kw_lower in description:
+                title_matches.append(kw_lower)
+            elif kw_lower in job_responsibilities:
                 matches.append(f"desc:{kw}")
+                desc_matches.append(kw_lower)
         
-        # Must have at least one impact keyword match
-        return len(matches) > 0
+        # Must have at least one impact keyword match in title OR job responsibilities
+        # If only description matches exist, ensure they're in the job responsibilities section
+        if len(title_matches) > 0:
+            return True
+        elif len(desc_matches) > 0:
+            # Description matches are acceptable if they're in job responsibilities
+            return True
+        else:
+            # No matches in title or job responsibilities
+            return False
     
     # Filter by title and description
     core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
@@ -600,17 +889,3 @@ if all_jobs:
             print(f"⚠️  Could not generate HTML: {e}")
 else:
     print("\nNo jobs found with any of the search queries.")
-    # Still create empty files so GitHub Actions doesn't fail
-    import os
-    output_filename = "core_impact_jobs_sg_hk.csv"
-    if not os.path.exists(output_filename):
-        pd.DataFrame().to_csv(output_filename, index=False)
-        print(f"Created empty {output_filename}")
-    if not os.path.exists("index.html"):
-        try:
-            generate_deployable_website(output_filename, 'index.html')
-            print("✅ Generated empty website")
-        except Exception as e:
-            print(f"⚠️  Could not generate website: {e}")
-            with open("index.html", "w") as f:
-                f.write("<!DOCTYPE html><html><head><title>No Jobs Found</title></head><body><h1>No jobs found</h1><p>Please check back later.</p></body></html>")

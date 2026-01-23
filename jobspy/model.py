@@ -295,6 +295,9 @@ class Site(Enum):
     BDJOBS = "bdjobs"
     MYCAREERSFUTURE = "mycareersfuture"
     JOBSDB = "jobsdb"
+    JOBSTREET = "jobstreet"
+    JOBSDB_HK = "jobsdb_hk"
+    CTGOODJOBS = "ctgoodjobs"
 
 
 class SalarySource(Enum):
