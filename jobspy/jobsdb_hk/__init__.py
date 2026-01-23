@@ -27,15 +27,15 @@ from jobspy.util import (
     create_logger,
     remove_attributes,
 )
-from jobspy.jobsdb.constant import headers
-from jobspy.jobsdb.util import parse_location, parse_date, is_job_remote
+from jobspy.jobsdb_hk.constant import headers
+from jobspy.jobsdb_hk.util import parse_location, parse_date, is_job_remote
 
-log = create_logger("JobsDB")
+log = create_logger("JobsDB_HK")
 
 
-class JobsDB(Scraper):
-    base_url = "https://sg.jora.com"
-    search_url = "https://sg.jora.com/j"
+class JobsDBHK(Scraper):
+    base_url = "https://hk.jobsdb.com"
+    search_url = "https://hk.jobsdb.com/jobs"
     delay = 2
     band_delay = 3
     jobs_per_page = 20
@@ -44,9 +44,10 @@ class JobsDB(Scraper):
         self, proxies: list[str] | str | None = None, ca_cert: str | None = None, user_agent: str | None = None
     ):
         """
-        Initializes JobsDB scraper
+        Initializes JobsDB Hong Kong scraper
+        Note: JobsDB HK is protected by Cloudflare and may require JavaScript execution
         """
-        super().__init__(Site.JOBSDB, proxies=proxies, ca_cert=ca_cert)
+        super().__init__(Site.JOBSDB_HK, proxies=proxies, ca_cert=ca_cert)
         self.session = create_session(
             proxies=self.proxies,
             ca_cert=ca_cert,
@@ -61,7 +62,7 @@ class JobsDB(Scraper):
 
     def scrape(self, scraper_input: ScraperInput) -> JobResponse:
         """
-        Scrapes JobsDB for jobs with scraper_input criteria
+        Scrapes JobsDB HK for jobs with scraper_input criteria
         """
         self.scraper_input = scraper_input
         job_list: list[JobPost] = []
@@ -113,10 +114,9 @@ class JobsDB(Scraper):
         Attempts to scrape using API endpoint
         """
         try:
-            # Try Jora/Seek API endpoints (Jora is part of Seek network)
             api_urls = [
-                "https://sg.jora.com/api/chalice-search/v4/search",
-                "https://www.seek.com.sg/api/chalice-search/v4/search",
+                f"{self.base_url}/api/chalice-search/v4/search",
+                f"{self.base_url}/api/job-search",
             ]
             
             params = {
@@ -124,20 +124,20 @@ class JobsDB(Scraper):
                 "page": page,
                 "pageSize": self.jobs_per_page,
             }
-            
-            if self.scraper_input.location:
-                params["l"] = self.scraper_input.location
 
             for api_url in api_urls:
                 try:
                     response = self.session.get(api_url, params=params, timeout=10)
+                    
+                    # Check for Cloudflare
+                    if response.status_code == 403 or "Just a moment" in response.text:
+                        continue
                     
                     if response.status_code == 200:
                         try:
                             data = response.json()
                             jobs = []
                             
-                            # Parse API response - Seek/Jora structure
                             job_items = data.get("results", []) or data.get("jobs", []) or data.get("data", {}).get("jobs", [])
                             
                             for item in job_items:
@@ -153,44 +153,42 @@ class JobsDB(Scraper):
                 except Exception:
                     continue
         except Exception as e:
-            log.debug(f"API scraping failed, trying HTML: {str(e)}")
+            log.debug(f"API scraping failed: {str(e)}")
         
         return [], False
 
     def _scrape_page_html(self, page: int) -> tuple[list[JobPost], bool]:
         """
         Scrapes jobs from HTML page
-        Note: sg.jora.com is protected by Cloudflare, so HTML scraping may not work
+        Note: JobsDB HK is protected by Cloudflare, so HTML scraping may not work
         without JavaScript execution or Cloudflare bypass.
         """
         try:
-            # Jora uses 'q' for query and 'l' for location
-            params = {
-                "q": self.scraper_input.search_term or "",
-            }
+            # JobsDB HK uses URL pattern: https://hk.jobsdb.com/jobs/{search-term}
+            search_term = (self.scraper_input.search_term or "").strip().lower().replace(" ", "-")
             
-            if self.scraper_input.location:
-                params["l"] = self.scraper_input.location
+            if not search_term:
+                return [], False
             
-            if page > 1:
-                params["page"] = page
+            if page == 1:
+                url = f"{self.search_url}/{search_term}"
+            else:
+                url = f"{self.search_url}/{search_term}?page={page}"
 
-            response = self.session.get(self.search_url, params=params, timeout=10)
+            response = self.session.get(url, timeout=10)
             
             # Check for Cloudflare challenge
             if response.status_code == 403 or "Just a moment" in response.text or "challenge-platform" in response.text:
-                log.warning("Cloudflare protection detected. HTML scraping may not work without JavaScript execution.")
+                log.warning("Cloudflare protection detected. JobsDB HK HTML scraping requires JavaScript execution or Cloudflare bypass.")
                 return [], False
             
             if response.status_code != 200:
                 return [], False
 
             soup = BeautifulSoup(response.text, "html.parser")
-            
-            # Try to find job listings in HTML
             jobs = []
             
-            # Look for embedded JSON data (JobsDB uses React)
+            # Look for embedded JSON data
             script_tags = soup.find_all("script", type="application/json")
             for script in script_tags:
                 try:
@@ -207,23 +205,23 @@ class JobsDB(Scraper):
             
             # If no JSON found, try parsing HTML directly
             if not jobs:
-                # Look for job card elements - Jora/Seek structure
-                # Try common selectors for job listings
                 job_selectors = [
-                    ("article", {"data-automation": lambda x: x and "jobCard" in x}),
-                    ("div", {"class": lambda c: c and "job" in (c or "").lower()}),
-                    ("div", {"data-testid": lambda x: x and "job" in (x or "").lower()}),
+                    ("article", {"data-automation": lambda x: x and "jobCard" in str(x) if x else False}),
+                    ("div", {"class": lambda c: c and "job" in str(c).lower() if c else False}),
                 ]
                 
                 for tag_name, attrs in job_selectors:
-                    job_cards = soup.find_all(tag_name, attrs)
-                    if job_cards:
-                        for card in job_cards:
-                            job = self._parse_html_job(card)
-                            if job:
-                                jobs.append(job)
-                        if jobs:
-                            break
+                    try:
+                        job_cards = soup.find_all(tag_name, attrs)
+                        if job_cards:
+                            for card in job_cards:
+                                job = self._parse_html_job(card)
+                                if job:
+                                    jobs.append(job)
+                            if jobs:
+                                break
+                    except:
+                        continue
             
             has_more = len(jobs) == self.jobs_per_page
             return jobs, has_more
@@ -235,32 +233,27 @@ class JobsDB(Scraper):
     def _parse_api_job(self, item: dict) -> Optional[JobPost]:
         """Parse job from API response"""
         try:
-            job_id = item.get("id") or item.get("jobId") or item.get("job_id") or f"jobsdb-{hash(item.get('url', ''))}"
+            job_id = item.get("id") or item.get("jobId") or item.get("job_id") or f"jobsdb-hk-{hash(str(item))}"
             title = item.get("title") or item.get("jobTitle") or item.get("job_title", "N/A")
             company = item.get("company") or item.get("companyName") or item.get("company_name", "N/A")
-            location_text = item.get("location") or item.get("jobLocation") or item.get("job_location", "Singapore")
+            location_text = item.get("location") or item.get("jobLocation") or item.get("job_location", "Hong Kong")
             job_url = item.get("url") or item.get("jobUrl") or item.get("job_url")
             
             if job_url and not job_url.startswith("http"):
                 job_url = urljoin(self.base_url, job_url)
             elif not job_url:
-                # Jora uses different URL structure
-                job_url = f"{self.base_url}/viewjob?jk={job_id}" if job_id else f"{self.base_url}/j/{job_id}"
+                job_url = f"{self.base_url}/job/{job_id}" if job_id else f"{self.base_url}/jobs/{job_id}"
 
-            # Parse date
             date_posted = None
             date_str = item.get("postedDate") or item.get("datePosted") or item.get("posted_date")
             if date_str:
                 date_posted = parse_date(date_str)
 
-            # Parse location
             location = parse_location(location_text)
-
-            # Get description
             description = item.get("description") or item.get("jobDescription") or item.get("job_description", "")
 
             return JobPost(
-                id=f"jobsdb-{job_id}",
+                id=f"jobsdb-hk-{job_id}",
                 title=title,
                 company_name=company,
                 location=location,
@@ -281,7 +274,6 @@ class JobsDB(Scraper):
     def _parse_html_job(self, card) -> Optional[JobPost]:
         """Parse job from HTML card"""
         try:
-            # Find job link
             link = card.find("a", href=True)
             if not link:
                 return None
@@ -290,26 +282,22 @@ class JobsDB(Scraper):
             if not job_url.startswith("http"):
                 job_url = urljoin(self.base_url, job_url)
 
-            # Extract title
             title = link.get_text(strip=True) or "N/A"
             
-            # Extract company
-            company_elem = card.find(["span", "div"], class_=lambda c: c and "company" in (c or "").lower())
+            company_elem = card.find(["span", "div"], class_=lambda c: c and "company" in str(c).lower() if c else False)
             company = company_elem.get_text(strip=True) if company_elem else "N/A"
 
-            # Extract location
-            location_elem = card.find(["span", "div"], class_=lambda c: c and "location" in (c or "").lower())
-            location_text = location_elem.get_text(strip=True) if location_elem else "Singapore"
+            location_elem = card.find(["span", "div"], class_=lambda c: c and "location" in str(c).lower() if c else False)
+            location_text = location_elem.get_text(strip=True) if location_elem else "Hong Kong"
             location = parse_location(location_text)
 
-            # Extract date
-            date_elem = card.find(["span", "div"], class_=lambda c: c and "date" in (c or "").lower())
+            date_elem = card.find(["span", "div"], class_=lambda c: c and "date" in str(c).lower() if c else False)
             date_posted = None
             if date_elem:
                 date_posted = parse_date(date_elem.get_text(strip=True))
 
             return JobPost(
-                id=f"jobsdb-{hash(job_url)}",
+                id=f"jobsdb-hk-{hash(job_url)}",
                 title=title,
                 company_name=company,
                 location=location,

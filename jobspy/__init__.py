@@ -5,57 +5,18 @@ from typing import Tuple
 
 import pandas as pd
 
-# Import scrapers - handle missing modules gracefully
-try:
-    from jobspy.bayt import BaytScraper
-except ImportError:
-    BaytScraper = None
-
-try:
-    from jobspy.bdjobs import BDJobs
-except ImportError:
-    BDJobs = None
-
-try:
-    from jobspy.glassdoor import Glassdoor
-except ImportError:
-    Glassdoor = None
-
-try:
-    from jobspy.google import Google
-except ImportError:
-    Google = None
-
-try:
-    from jobspy.indeed import Indeed
-except ImportError:
-    Indeed = None
-
-try:
-    from jobspy.linkedin import LinkedIn
-except ImportError:
-    LinkedIn = None
-
-try:
-    from jobspy.naukri import Naukri
-except ImportError:
-    Naukri = None
-
-try:
-    from jobspy.mcareersfuture import MyCareersFuture
-except ImportError:
-    MyCareersFuture = None
-
-try:
-    from jobspy.jobsdb import JobsDB
-except ImportError:
-    JobsDB = None
-
-try:
-    from jobspy.ziprecruiter import ZipRecruiter
-except ImportError:
-    ZipRecruiter = None
-
+from jobspy.bayt import BaytScraper
+from jobspy.bdjobs import BDJobs
+from jobspy.glassdoor import Glassdoor
+from jobspy.google import Google
+from jobspy.indeed import Indeed
+from jobspy.linkedin import LinkedIn
+from jobspy.naukri import Naukri
+from jobspy.mcareersfuture import MyCareersFuture
+from jobspy.jobsdb import JobsDB
+from jobspy.jobstreet import Jobstreet
+from jobspy.jobsdb_hk import JobsDBHK
+from jobspy.ctgoodjobs import CTgoodjobs
 from jobspy.model import JobType, Location, JobResponse, Country
 from jobspy.model import SalarySource, ScraperInput, Site
 from jobspy.util import (
@@ -67,6 +28,7 @@ from jobspy.util import (
     convert_to_annual,
     desired_order,
 )
+from jobspy.ziprecruiter import ZipRecruiter
 
 
 # Update the SCRAPER_MAPPING dictionary in the scrape_jobs function
@@ -98,28 +60,21 @@ def scrape_jobs(
     Scrapes job data from job boards concurrently
     :return: Pandas DataFrame containing job data
     """
-    # Build scraper mapping - only include scrapers that are available
-    SCRAPER_MAPPING = {}
-    if LinkedIn:
-        SCRAPER_MAPPING[Site.LINKEDIN] = LinkedIn
-    if Indeed:
-        SCRAPER_MAPPING[Site.INDEED] = Indeed
-    if ZipRecruiter:
-        SCRAPER_MAPPING[Site.ZIP_RECRUITER] = ZipRecruiter
-    if Glassdoor:
-        SCRAPER_MAPPING[Site.GLASSDOOR] = Glassdoor
-    if Google:
-        SCRAPER_MAPPING[Site.GOOGLE] = Google
-    if BaytScraper:
-        SCRAPER_MAPPING[Site.BAYT] = BaytScraper
-    if Naukri:
-        SCRAPER_MAPPING[Site.NAUKRI] = Naukri
-    if BDJobs:
-        SCRAPER_MAPPING[Site.BDJOBS] = BDJobs
-    if MyCareersFuture:
-        SCRAPER_MAPPING[Site.MYCAREERSFUTURE] = MyCareersFuture
-    if JobsDB:
-        SCRAPER_MAPPING[Site.JOBSDB] = JobsDB
+    SCRAPER_MAPPING = {
+        Site.LINKEDIN: LinkedIn,
+        Site.INDEED: Indeed,
+        Site.ZIP_RECRUITER: ZipRecruiter,
+        Site.GLASSDOOR: Glassdoor,
+        Site.GOOGLE: Google,
+        Site.BAYT: BaytScraper,
+        Site.NAUKRI: Naukri,
+        Site.BDJOBS: BDJobs,
+        Site.MYCAREERSFUTURE: MyCareersFuture,
+        Site.JOBSDB: JobsDB,
+        Site.JOBSTREET: Jobstreet,
+        Site.JOBSDB_HK: JobsDBHK,
+        Site.CTGOODJOBS: CTgoodjobs,
+    }
     set_logger_level(verbose)
     job_type = get_enum_from_value(job_type) if job_type else None
 
@@ -157,26 +112,14 @@ def scrape_jobs(
     )
 
     def scrape_site(site: Site) -> Tuple[str, JobResponse]:
-        if site not in SCRAPER_MAPPING:
-            create_logger("JobSpy").warning(f"Scraper for {site.value} is not available")
-            return site.value, JobResponse(jobs=[])
-        
         scraper_class = SCRAPER_MAPPING[site]
-        if scraper_class is None:
-            create_logger("JobSpy").warning(f"Scraper class for {site.value} is None")
-            return site.value, JobResponse(jobs=[])
-        
-        try:
-            scraper = scraper_class(proxies=proxies, ca_cert=ca_cert, user_agent=user_agent)
-            scraped_data: JobResponse = scraper.scrape(scraper_input)
-            cap_name = site.value.capitalize()
-            site_name = "ZipRecruiter" if cap_name == "Zip_recruiter" else cap_name
-            site_name = "LinkedIn" if cap_name == "Linkedin" else site_name
-            create_logger(site_name).info(f"finished scraping")
-            return site.value, scraped_data
-        except Exception as e:
-            create_logger("JobSpy").error(f"Error scraping {site.value}: {str(e)}")
-            return site.value, JobResponse(jobs=[])
+        scraper = scraper_class(proxies=proxies, ca_cert=ca_cert, user_agent=user_agent)
+        scraped_data: JobResponse = scraper.scrape(scraper_input)
+        cap_name = site.value.capitalize()
+        site_name = "ZipRecruiter" if cap_name == "Zip_recruiter" else cap_name
+        site_name = "LinkedIn" if cap_name == "Linkedin" else cap_name
+        create_logger(site_name).info(f"finished scraping")
+        return site.value, scraped_data
 
     site_to_jobs_dict = {}
 
@@ -288,10 +231,7 @@ def scrape_jobs(
         return pd.DataFrame()
 
 
-# Export main functions and classes
+# Add BDJobs to __all__
 __all__ = [
-    "scrape_jobs",
     "BDJobs",
-    "MyCareersFuture",
-    "JobsDB",
 ]

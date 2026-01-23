@@ -449,7 +449,7 @@ def generate_deployable_website(csv_file='core_impact_jobs_sg_hk.csv', output_fi
         
         <div class="footer">
             <p>Generated on """ + datetime.now().strftime('%B %d, %Y at %I:%M %p') + """</p>
-            <p>Searching across Indeed, LinkedIn, Google, and MyCareersFuture</p>
+            <p>Searching across Indeed, LinkedIn, and MyCareersFuture</p>
             <p style="margin-top: 5px; font-size: 0.9em;">Jobs from Singapore and Hong Kong</p>
             <p style="margin-top: 10px; font-size: 0.9em;">
                 Looking for impact roles? We filter for genuine ESG, Sustainability, Climate, and Social Impact positions.
