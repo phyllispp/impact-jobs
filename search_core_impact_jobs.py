@@ -159,7 +159,7 @@ try:
                 try:
                     # Handle Apify sites separately
                     if site_name == "jobstreet_sg_apify":
-                    if not APIFY_AVAILABLE or not ApifyJobstreetSG:
+                        if not APIFY_AVAILABLE or not ApifyJobstreetSG:
                             print(
                                 f"    Skipping {site_name} (Apify integration not available)")
                             continue
@@ -242,11 +242,11 @@ try:
                         print(f"Error: {error_msg[:100]}")
                         continue
 
-                        elif site_name == "jobsdb_hk_apify":
+                    elif site_name == "jobsdb_hk_apify":
                         if not APIFY_AVAILABLE or not ApifyJobsDBHK:
-                        print(
-                            f"    Skipping {site_name} (Apify integration not available)")
-                        continue
+                            print(
+                                f"    Skipping {site_name} (Apify integration not available)")
+                            continue
                         # Use Apify for JobsDB Hong Kong
                         apify_scraper = ApifyJobsDBHK()
                         # Simplify query for Apify
