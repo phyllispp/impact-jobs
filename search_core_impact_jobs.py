@@ -318,57 +318,57 @@ try:
                             print(f"Error: {error_msg[:100]}")
                         continue
                 
-                # Some sites don't support complex OR queries - use simpler keywords
-                search_query = query
-                if site_name in ["mycareersfuture"]:
-                    import re
-                    # Extract key terms from OR query - get the main keyword
-                    # Remove quotes
-                    simplified = re.sub(r'["\']', '', query)
-                    # Extract first significant keyword (usually the main term before OR)
-                    # Pattern: "keyword1" OR "keyword2" -> keyword1
-                    match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
-                    if match:
-                        search_query = match.group(1)
-                    else:
-                        # If no OR pattern, take first meaningful word
-                        words = simplified.split()
-                        # Skip common words
-                        for word in words:
-                            if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
-                                search_query = word
-                                break
-                        # Fallback: use first word
-                        if search_query == query and words:
-                            search_query = words[0]
-                
-                # Prepare search parameters
+                    # Some sites don't support complex OR queries - use simpler keywords
+                    search_query = query
+                    if site_name in ["mycareersfuture"]:
+                        import re
+                        # Extract key terms from OR query - get the main keyword
+                        # Remove quotes
+                        simplified = re.sub(r'["\']', '', query)
+                        # Extract first significant keyword (usually the main term before OR)
+                        # Pattern: "keyword1" OR "keyword2" -> keyword1
+                        match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
+                        if match:
+                            search_query = match.group(1)
+                        else:
+                            # If no OR pattern, take first meaningful word
+                            words = simplified.split()
+                            # Skip common words
+                            for word in words:
+                                if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
+                                    search_query = word
+                                    break
+                            # Fallback: use first word
+                            if search_query == query and words:
+                                search_query = words[0]
+                    
+                    # Prepare search parameters
                     search_params = {
-                    "search_term": search_query,
-                    "location": location_value,
-                    "hours_old": 168,  # Last 7 days
-                    "results_wanted": 30,
-                    "verbose": 0,
-                    **site_params
+                        "search_term": search_query,
+                        "location": location_value,
+                        "hours_old": 168,  # Last 7 days
+                        "results_wanted": 30,
+                        "verbose": 0,
+                        **site_params
                     }
-                
-                # Indeed needs country_indeed parameter
+                    
+                    # Indeed needs country_indeed parameter
                     if site_name == "indeed":
-                    if location_name == "Singapore":
-                        search_params["country_indeed"] = "Singapore"
-                    elif location_name == "Hong Kong":
-                        search_params["country_indeed"] = "Hong Kong"
-                
+                        if location_name == "Singapore":
+                            search_params["country_indeed"] = "Singapore"
+                        elif location_name == "Hong Kong":
+                            search_params["country_indeed"] = "Hong Kong"
+                    
                     print(f"    Searching {site_name}...", end=" ")
                     jobs = scrape_jobs(**search_params)
-                
-                    if len(jobs) > 0:
-                    all_jobs.append(jobs)
-                    print(f"Found {len(jobs)} jobs")
-                    else:
-                    print("No jobs found")
                     
-                    except Exception as e:
+                    if len(jobs) > 0:
+                        all_jobs.append(jobs)
+                        print(f"Found {len(jobs)} jobs")
+                    else:
+                        print("No jobs found")
+                        
+                except Exception as e:
                     error_msg = str(e)
                     print(f"Error: {error_msg[:100]}")
                     # Log full error for debugging site-specific issues
