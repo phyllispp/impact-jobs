@@ -328,53 +328,53 @@ try:
                         if search_query == query and words:
                             search_query = words[0]
                 
-                # Prepare search parameters
-                search_params = {
+                    # Prepare search parameters
+                    search_params = {
                     "search_term": search_query,
                     "location": location_value,
                     "hours_old": 168,  # Last 7 days
                     "results_wanted": 30,
                     "verbose": 0,
                     **site_params
-                }
+                    }
                 
-                # Indeed needs country_indeed parameter
-                if site_name == "indeed":
+                    # Indeed needs country_indeed parameter
+                    if site_name == "indeed":
                     if location_name == "Singapore":
                         search_params["country_indeed"] = "Singapore"
                     elif location_name == "Hong Kong":
                         search_params["country_indeed"] = "Hong Kong"
                 
-                print(f"    Searching {site_name}...", end=" ")
-                jobs = scrape_jobs(**search_params)
+                    print(f"    Searching {site_name}...", end=" ")
+                    jobs = scrape_jobs(**search_params)
                 
-                if len(jobs) > 0:
+                    if len(jobs) > 0:
                     all_jobs.append(jobs)
                     print(f"Found {len(jobs)} jobs")
-                else:
+                    else:
                     print("No jobs found")
                     
-            except Exception as e:
-                error_msg = str(e)
-                print(f"Error: {error_msg[:100]}")
-                # Log full error for debugging site-specific issues
-                if site_name in ["mycareersfuture", "jobstreet"]:
+                    except Exception as e:
+                    error_msg = str(e)
+                    print(f"Error: {error_msg[:100]}")
+                    # Log full error for debugging site-specific issues
+                    if site_name in ["mycareersfuture", "jobstreet"]:
                     import traceback
                     print(f"  Full {site_name} error: {error_msg}")
-                continue
+                    continue
 
-# Combine all results
-if all_jobs:
-    combined_df = pd.concat(all_jobs, ignore_index=True)
-    # Remove duplicates based on job_url
-    combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
+                    # Combine all results
+                    if all_jobs:
+                    combined_df = pd.concat(all_jobs, ignore_index=True)
+                    # Remove duplicates based on job_url
+                    combined_df = combined_df.drop_duplicates(subset=['job_url'], keep='first')
     
-    # Filter to only jobs where the title OR description contains impact-related keywords
-    def is_core_impact_role(row):
-        title = str(row.get('title', '')).lower() if pd.notna(row.get('title')) else ''
-        description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
-        company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
-        combined = title + ' ' + description
+                    # Filter to only jobs where the title OR description contains impact-related keywords
+                    def is_core_impact_role(row):
+                    title = str(row.get('title', '')).lower() if pd.notna(row.get('title')) else ''
+                    description = str(row.get('description', '')).lower() if pd.notna(row.get('description')) else ''
+                    company = str(row.get('company', '')).lower() if pd.notna(row.get('company')) else ''
+                    combined = title + ' ' + description
         
         # Extract job responsibilities section (before company description)
         # Many job descriptions have company info sections at the end that mention impact terms
