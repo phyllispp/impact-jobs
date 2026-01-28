@@ -30,24 +30,14 @@ jobs:
           # Install core dependencies needed by jobspy
           pip install requests beautifulsoup4 pandas numpy pydantic tls-client markdownify regex urllib3
           # Ensure current directory is first in Python path so local jobspy modules are found
-          # This allows importing jobspy.apify_integration and other custom modules
           echo "PYTHONPATH=${PWD}:${PYTHONPATH}" >> $GITHUB_ENV
       
       - name: Verify imports
         run: |
           python -c "from jobspy import scrape_jobs; print('✅ jobspy imported successfully')"
           python -c "from generate_deployable_website import generate_deployable_website; print('✅ generate_deployable_website imported successfully')"
-          python -c "
-          try:
-              from jobspy.apify_integration import ApifyJobstreetSG, ApifyJobsDBHK
-              print('✅ Apify integration available')
-          except ImportError:
-              print('⚠️  Apify integration not available (will skip Apify scrapers)')
-          "
       
       - name: Run job search
-        env:
-          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
         timeout-minutes: 30
         run: |
           set +e  # Don't exit on error immediately
@@ -67,40 +57,17 @@ jobs:
             echo "Checking if output files were created anyway..."
           fi
           
-          # Check if output files exist and show job statistics
+          # Check if output files exist
           if [ -f "index.html" ]; then
             echo "✅ index.html created ($(wc -c < index.html) bytes)"
           else
             echo "❌ index.html not found"
           fi
           if [ -f "core_impact_jobs_sg_hk.csv" ]; then
-            TOTAL_JOBS=$(tail -n +2 core_impact_jobs_sg_hk.csv | wc -l)
-            echo "✅ core_impact_jobs_sg_hk.csv created ($TOTAL_JOBS jobs)"
-            echo ""
-            echo "=== Job Statistics ==="
-            echo "Total jobs found: $TOTAL_JOBS"
-            # Show breakdown by site
-            python3 << 'PYSTATS'
-import pandas as pd
-try:
-    df = pd.read_csv('core_impact_jobs_sg_hk.csv')
-    print(f"\nJobs by site:")
-    print(df['site'].value_counts().to_string())
-    if 'date_posted' in df.columns:
-        print(f"\nDate range:")
-        print(f"  Earliest: {df['date_posted'].min()}")
-        print(f"  Latest: {df['date_posted'].max()}")
-except Exception as e:
-    print(f"Could not analyze CSV: {e}")
-PYSTATS
+            echo "✅ core_impact_jobs_sg_hk.csv created ($(wc -l < core_impact_jobs_sg_hk.csv) lines)"
           else
             echo "❌ core_impact_jobs_sg_hk.csv not found"
           fi
-          
-          # Show last 30 lines of script output for debugging
-          echo ""
-          echo "=== Last 30 lines of script output ==="
-          tail -30 script_output.log 2>/dev/null || echo "No script output log available"
           
           # Exit with the script's exit code (or 0 if files were created)
           if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
@@ -113,6 +80,26 @@ PYSTATS
             exit $SCRIPT_EXIT_CODE
           else
             exit 0
+          fi
+      
+      - name: Ensure files always change for GitHub Pages
+        run: |
+          # Add a unique timestamp comment to HTML to ensure it always changes
+          # This forces GitHub Pages to update even if job data is identical
+          TIMESTAMP=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          if [ -f "index.html" ]; then
+            # Add/update a meta comment at the end of the head section
+            # This ensures the file hash changes every time
+            if grep -q "<!-- Auto-generated timestamp:" index.html; then
+              # Update existing timestamp
+              sed -i.bak "s|<!-- Auto-generated timestamp:.*-->|<!-- Auto-generated timestamp: $TIMESTAMP -->|" index.html
+              rm -f index.html.bak
+            else
+              # Add timestamp comment before </head>
+              sed -i.bak "s|</head>|<!-- Auto-generated timestamp: $TIMESTAMP -->\n</head>|" index.html
+              rm -f index.html.bak
+            fi
+            echo "✅ Added timestamp comment to index.html"
           fi
       
       - name: Check for changes and commit
@@ -134,18 +121,19 @@ PYSTATS
           # Stage the files
           git add index.html core_impact_jobs_sg_hk.csv
           
-          # Check if there are changes to commit
+          # Always commit (the timestamp ensures files always change)
           if [ -n "$(git status --porcelain)" ]; then
             echo "✅ Changes detected, committing..."
             git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
             echo "✅ Committed changes"
           else
-            echo "ℹ️  No content changes detected, but committing anyway to update GitHub Pages timestamp"
-            # Create an empty commit to trigger GitHub Pages update
-            # The HTML file has a timestamp that changes, so there should usually be changes
-            # But if not, we'll still commit to ensure Pages updates
-            git commit --allow-empty -m "Auto-update trigger - $(date +'%Y-%m-%d %H:%M UTC')"
-            echo "✅ Created empty commit to trigger update"
+            echo "⚠️  No changes detected after adding timestamp - this shouldn't happen"
+            echo "Forcing commit anyway..."
+            # Touch the file to ensure it changes
+            touch index.html
+            git add index.html
+            git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
+            echo "✅ Committed with forced update"
           fi
           
           # Push changes

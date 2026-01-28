@@ -29,14 +29,7 @@ except Exception as e:
     traceback.print_exc()
     sys.exit(1)
 
-# Apify integration (optional - only used if API token is set)
-try:
-    from jobspy.apify_integration import ApifyJobstreetSG, ApifyJobsDBHK
-    APIFY_AVAILABLE = True
-except ImportError:
-    APIFY_AVAILABLE = False
-    ApifyJobstreetSG = None
-    ApifyJobsDBHK = None
+# Apify integration removed - using only LinkedIn, Indeed, and MyCareersFuture
 
 # Search for CORE impact roles by targeting specific job titles
 # We'll do multiple targeted searches and combine results
@@ -97,12 +90,9 @@ search_queries = [
 
 all_jobs = []
 
-print("Searching for core impact roles across Indeed, LinkedIn, MyCareersFuture, and Apify...")
+print("Searching for core impact roles across Indeed, LinkedIn, and MyCareersFuture...")
 print("Searching in Singapore and Hong Kong")
-print("Apify integration: JobStreet (SG) and JobsDB (HK)")
-if not os.getenv("APIFY_API_TOKEN"):
-    print("⚠️  WARNING: APIFY_API_TOKEN not set. Apify scraping will be skipped.")
-    print("   Set it with: export APIFY_API_TOKEN='your_token_here'")
+print("Sites: LinkedIn, Indeed, MyCareersFuture (Singapore only)")
 print("="*80)
 
 # Define locations to search
@@ -111,27 +101,24 @@ locations_to_search = [
     ("Hong Kong", "Hong Kong")
 ]
 
-# Search across multiple sites (removed Google and JobsDB - not scrapable)
-# Note: Jobstreet is skipped - protected by Cloudflare
+# Search across multiple sites - LinkedIn, Indeed, and MyCareersFuture only
 sites_to_search = [
     ("indeed", {"site_name": ["indeed"]}),
     ("linkedin", {"site_name": ["linkedin"]}),
     ("mycareersfuture", {"site_name": ["mycareersfuture"]}),  # Singapore only
 ]
 
-# Hong Kong-specific sites
+# Hong Kong-specific sites (MyCareersFuture is Singapore only)
 sites_to_search_hk = [
     ("indeed", {"site_name": ["indeed"]}),
     ("linkedin", {"site_name": ["linkedin"]}),
-    ("jobsdb_hk_apify", {"site_name": ["jobsdb_hk_apify"]}),  # Hong Kong only (via Apify)
 ]
 
-# Singapore-specific sites (including Apify)
+# Singapore-specific sites
 sites_to_search_sg = [
     ("indeed", {"site_name": ["indeed"]}),
     ("linkedin", {"site_name": ["linkedin"]}),
     ("mycareersfuture", {"site_name": ["mycareersfuture"]}),  # Singapore only
-    ("jobstreet_sg_apify", {"site_name": ["jobstreet_sg_apify"]}),  # Singapore only (via Apify)
 ]
 
 try:
@@ -153,157 +140,6 @@ try:
             # Search each site for this location
             for site_name, site_params in sites_for_location:
                 try:
-                    # Handle Apify sites separately
-                    if site_name == "jobstreet_sg_apify":
-                        if not APIFY_AVAILABLE or not ApifyJobstreetSG:
-                            print(f"    Skipping {site_name} (Apify integration not available)")
-                            continue
-                        # Use Apify for JobStreet Singapore
-                        apify_scraper = ApifyJobstreetSG()
-                        # Simplify query for Apify (no complex OR queries)
-                        import re
-                        simplified = re.sub(r'["\']', '', query)
-                        search_query = query  # Initialize with original query as fallback
-                        match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
-                        if match:
-                            search_query = match.group(1)
-                        else:
-                            words = simplified.split()
-                            for word in words:
-                                if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
-                                    search_query = word
-                                    break
-                            if search_query == query and words:
-                                search_query = words[0]
-                    
-                        print(f"    Searching {site_name} via Apify...", end=" ")
-                        try:
-                            apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
-                            if len(apify_jobs) > 0:
-                                # Convert to DataFrame format matching scrape_jobs output
-                                jobs_list = []
-                                for job in apify_jobs:
-                                    jobs_list.append({
-                                    'id': job.id,
-                                    'site': 'jobstreet_apify',
-                                    'job_url': job.job_url,
-                                    'job_url_direct': job.job_url,
-                                    'title': job.title,
-                                    'company': job.company_name,
-                                    'location': f"{job.location.city}, {job.location.country.value.title()}" if job.location.city else str(job.location.country.value),
-                                    'date_posted': job.date_posted,
-                                    'job_type': None,
-                                    'salary_source': None,
-                                    'interval': None,
-                                    'min_amount': None,
-                                    'max_amount': None,
-                                    'currency': None,
-                                    'is_remote': job.is_remote,
-                                    'job_level': None,
-                                    'job_function': None,
-                                    'listing_type': None,
-                                    'emails': None,
-                                    'description': job.description or '',
-                                    'company_industry': None,
-                                    'company_url': None,
-                                    'company_logo': None,
-                                    'company_url_direct': None,
-                                    'company_addresses': None,
-                                    'company_num_employees': None,
-                                    'company_revenue': None,
-                                    'company_description': None,
-                                    'skills': None,
-                                    'experience_range': None,
-                                    'company_rating': None,
-                                    'company_reviews_count': None,
-                                    'vacancy_count': None,
-                                    'work_from_home_type': None,
-                                    })
-                                jobs_df = pd.DataFrame(jobs_list)
-                                all_jobs.append(jobs_df)
-                                print(f"Found {len(apify_jobs)} jobs")
-                            else:
-                                print("No jobs found")
-                        except Exception as e:
-                            error_msg = str(e)
-                            print(f"Error: {error_msg[:100]}")
-                        continue
-                    
-                    elif site_name == "jobsdb_hk_apify":
-                        if not APIFY_AVAILABLE or not ApifyJobsDBHK:
-                            print(f"    Skipping {site_name} (Apify integration not available)")
-                            continue
-                        # Use Apify for JobsDB Hong Kong
-                        apify_scraper = ApifyJobsDBHK()
-                        # Simplify query for Apify
-                        import re
-                        simplified = re.sub(r'["\']', '', query)
-                        search_query = query  # Initialize with original query as fallback
-                        match = re.search(r'["\']?(\w+(?:\s+\w+)?)["\']?\s+OR', simplified, re.IGNORECASE)
-                        if match:
-                            search_query = match.group(1)
-                        else:
-                            words = simplified.split()
-                            for word in words:
-                                if word.lower() not in ['or', 'and', 'the', 'a', 'an'] and len(word) > 2:
-                                    search_query = word
-                                    break
-                            if search_query == query and words:
-                                search_query = words[0]
-                    
-                        print(f"    Searching {site_name} via Apify...", end=" ")
-                        try:
-                            apify_jobs = apify_scraper.scrape(search_query, results_wanted=30)
-                            if len(apify_jobs) > 0:
-                                # Convert to DataFrame format matching scrape_jobs output
-                                jobs_list = []
-                                for job in apify_jobs:
-                                    jobs_list.append({
-                                    'id': job.id,
-                                    'site': 'jobsdb_hk_apify',
-                                    'job_url': job.job_url,
-                                    'job_url_direct': job.job_url,
-                                    'title': job.title,
-                                    'company': job.company_name,
-                                    'location': f"{job.location.city}, {job.location.country.value.title()}" if job.location.city else str(job.location.country.value),
-                                    'date_posted': job.date_posted,
-                                    'job_type': None,
-                                    'salary_source': None,
-                                    'interval': None,
-                                    'min_amount': None,
-                                    'max_amount': None,
-                                    'currency': None,
-                                    'is_remote': job.is_remote,
-                                    'job_level': None,
-                                    'job_function': None,
-                                    'listing_type': None,
-                                    'emails': None,
-                                    'description': job.description or '',
-                                    'company_industry': None,
-                                    'company_url': None,
-                                    'company_logo': None,
-                                    'company_url_direct': None,
-                                    'company_addresses': None,
-                                    'company_num_employees': None,
-                                    'company_revenue': None,
-                                    'company_description': None,
-                                    'skills': None,
-                                    'experience_range': None,
-                                    'company_rating': None,
-                                    'company_reviews_count': None,
-                                    'vacancy_count': None,
-                                    'work_from_home_type': None,
-                                    })
-                                jobs_df = pd.DataFrame(jobs_list)
-                                all_jobs.append(jobs_df)
-                                print(f"Found {len(apify_jobs)} jobs")
-                            else:
-                                print("No jobs found")
-                        except Exception as e:
-                            error_msg = str(e)
-                            print(f"Error: {error_msg[:100]}")
-                        continue
-                    
                     # Some sites don't support complex OR queries - use simpler keywords
                     search_query = query
                     if site_name in ["mycareersfuture"]:
@@ -358,7 +194,7 @@ try:
                     error_msg = str(e)
                     print(f"Error: {error_msg[:100]}")
                     # Log full error for debugging site-specific issues
-                    if site_name in ["mycareersfuture", "jobstreet"]:
+                    if site_name in ["mycareersfuture"]:
                         import traceback
                         print(f"  Full {site_name} error: {error_msg}")
                     continue
