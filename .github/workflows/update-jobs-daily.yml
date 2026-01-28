@@ -92,31 +92,50 @@ jobs:
             exit 0
           fi
       
-      - name: Check for changes
-        id: verify-changed-files
+      - name: Check for changes and commit
         run: |
-          # Check if files exist and have content
-          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
-            echo "Files exist. Checking git status..."
-            git status --porcelain
-            if [ -n "$(git status --porcelain)" ]; then
-              echo "✅ Changes detected"
-              echo "changed=true" >> $GITHUB_OUTPUT
-            else
-              echo "ℹ️  No changes detected (files may be identical to previous run)"
-              echo "changed=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "⚠️  Output files not found, skipping commit"
+          # Check if files exist
+          if [ ! -f "index.html" ] || [ ! -f "core_impact_jobs_sg_hk.csv" ]; then
+            echo "❌ Output files not found, cannot commit"
+            exit 1
           fi
-      
-      - name: Commit and push changes
-        if: steps.verify-changed-files.outputs.changed == 'true'
-        run: |
+          
+          echo "Files exist. Checking git status..."
+          git status --porcelain
+          
+          # Configure git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add index.html singapore_core_impact_jobs.csv
-          git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
+          
+          # Stage the files
+          git add index.html core_impact_jobs_sg_hk.csv
+          
+          # Check if there are changes to commit
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "✅ Changes detected, committing..."
+            git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
+            echo "✅ Committed changes"
+          else
+            echo "ℹ️  No content changes detected, but committing anyway to update GitHub Pages timestamp"
+            # Create an empty commit to trigger GitHub Pages update
+            # The HTML file has a timestamp that changes, so there should usually be changes
+            # But if not, we'll still commit to ensure Pages updates
+            git commit --allow-empty -m "Auto-update trigger - $(date +'%Y-%m-%d %H:%M UTC')"
+            echo "✅ Created empty commit to trigger update"
+          fi
+          
+          # Push changes
+          echo "Pushing to origin main..."
           git push origin main
+          PUSH_EXIT_CODE=$?
+          
+          if [ $PUSH_EXIT_CODE -eq 0 ]; then
+            echo "✅ Successfully pushed to GitHub"
+            echo "GitHub Pages should update within a few minutes"
+          else
+            echo "❌ Failed to push to GitHub (exit code: $PUSH_EXIT_CODE)"
+            echo "Checking git remote configuration..."
+            git remote -v
+            exit $PUSH_EXIT_CODE
+          fi
