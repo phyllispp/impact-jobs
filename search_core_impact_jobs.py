@@ -90,9 +90,18 @@ search_queries = [
 
 all_jobs = []
 
+from datetime import datetime, timedelta
+
 print("Searching for core impact roles across Indeed, LinkedIn, and MyCareersFuture...")
 print("Searching in Singapore and Hong Kong")
 print("Sites: LinkedIn, Indeed, MyCareersFuture (Singapore only)")
+print("="*80)
+
+# Show date range being searched
+cutoff_date = datetime.now() - timedelta(hours=168)  # 7 days ago
+print(f"Date filter: Jobs posted in the last 7 days")
+print(f"Searching for jobs posted after: {cutoff_date.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+print(f"Today's date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
 print("="*80)
 
 # Define locations to search
