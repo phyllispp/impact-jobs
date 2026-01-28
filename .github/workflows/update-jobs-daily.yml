@@ -67,17 +67,40 @@ jobs:
             echo "Checking if output files were created anyway..."
           fi
           
-          # Check if output files exist
+          # Check if output files exist and show job statistics
           if [ -f "index.html" ]; then
             echo "✅ index.html created ($(wc -c < index.html) bytes)"
           else
             echo "❌ index.html not found"
           fi
           if [ -f "core_impact_jobs_sg_hk.csv" ]; then
-            echo "✅ core_impact_jobs_sg_hk.csv created ($(wc -l < core_impact_jobs_sg_hk.csv) lines)"
+            TOTAL_JOBS=$(tail -n +2 core_impact_jobs_sg_hk.csv | wc -l)
+            echo "✅ core_impact_jobs_sg_hk.csv created ($TOTAL_JOBS jobs)"
+            echo ""
+            echo "=== Job Statistics ==="
+            echo "Total jobs found: $TOTAL_JOBS"
+            # Show breakdown by site
+            python3 << 'PYSTATS'
+import pandas as pd
+try:
+    df = pd.read_csv('core_impact_jobs_sg_hk.csv')
+    print(f"\nJobs by site:")
+    print(df['site'].value_counts().to_string())
+    if 'date_posted' in df.columns:
+        print(f"\nDate range:")
+        print(f"  Earliest: {df['date_posted'].min()}")
+        print(f"  Latest: {df['date_posted'].max()}")
+except Exception as e:
+    print(f"Could not analyze CSV: {e}")
+PYSTATS
           else
             echo "❌ core_impact_jobs_sg_hk.csv not found"
           fi
+          
+          # Show last 30 lines of script output for debugging
+          echo ""
+          echo "=== Last 30 lines of script output ==="
+          tail -30 script_output.log 2>/dev/null || echo "No script output log available"
           
           # Exit with the script's exit code (or 0 if files were created)
           if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
