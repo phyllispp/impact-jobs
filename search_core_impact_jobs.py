@@ -536,8 +536,8 @@ try:
             'recruiter',  # Recruiting roles
         ]
         if any(fp in title for fp in false_positives_titles):
-        # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
-        if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
+            # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
+            if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
                 return False
         
         # Skip JLL jobs (they match on "better world" but aren't impact roles)
