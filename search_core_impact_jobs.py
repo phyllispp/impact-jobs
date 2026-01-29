@@ -380,8 +380,8 @@ try:
         # Stricter filtering for Indeed jobs - require impact keywords in title
         # Indeed often returns jobs that match search queries but don't actually have impact focus
         if site == 'indeed':
-            # For Indeed, require at least ONE impact keyword in the title itself
-            # This filters out jobs that only match due to company descriptions or metadata
+        # For Indeed, require at least ONE impact keyword in the title itself
+        # This filters out jobs that only match due to company descriptions or metadata
             title_has_impact = any(kw.lower() in title for kw in impact_keywords)
         if not title_has_impact:
                 return False
@@ -423,7 +423,7 @@ try:
         # AXA often mentions sustainability/climate in generic company descriptions but roles aren't impact-focused
         if 'axa' in company:
             # Must have impact keywords in title - description mentions aren't enough for AXA
-        title_has_real_impact = any(kw in title.lower() for kw in [
+            title_has_real_impact = any(kw in title.lower() for kw in [
                 'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
                 'green', 'csr', 'social impact', 'impact investing', 'impact fund',
                 'sustainability manager', 'sustainability director', 'sustainability officer',
@@ -468,7 +468,7 @@ try:
         # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
         # Company description mentions are NOT sufficient
         # We require either:
-            # 1. Impact keywords in title, OR
+        # 1. Impact keywords in title, OR
         # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
         if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
                 return False
@@ -493,9 +493,9 @@ try:
         ('st. joseph\'s institution international', 'social media marketing'),
         ]
         for company_pattern, title_pattern in false_positive_patterns:
-            if company_pattern in company and title_pattern in title:
-                # Exception: if it's explicitly environmental/sustainability focused, keep it
-                if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
+        if company_pattern in company and title_pattern in title:
+        # Exception: if it's explicitly environmental/sustainability focused, keep it
+        if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
                     return False
         
         # Exclude all technician jobs (including Laboratory Technician - Environmental Division)
@@ -505,8 +505,8 @@ try:
         
         # Exclude intern roles that aren't impact-focused
         if 'intern' in title.lower() or 'internship' in title.lower():
-            # Only keep if title explicitly mentions impact keywords
-            if not any(kw in title.lower() for kw in [
+        # Only keep if title explicitly mentions impact keywords
+        if not any(kw in title.lower() for kw in [
                 'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
                 'green', 'csr', 'social impact', 'impact'
             ]):
@@ -536,7 +536,7 @@ try:
             'recruiter',  # Recruiting roles
         ]
         if any(fp in title for fp in false_positives_titles):
-            # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
+        # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
         if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
                 return False
         
@@ -546,7 +546,7 @@ try:
         
         # Exclude ST. JOSEPH'S INSTITUTION INTERNATIONAL LTD jobs (marketing/recruiting, not impact)
         if "st. joseph's institution international" in company.lower() or "st joseph's institution international" in company.lower():
-            # Only keep if it's explicitly an impact role
+        # Only keep if it's explicitly an impact role
         if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
                 return False
         
@@ -572,10 +572,10 @@ try:
                 'environmental' in title.lower()  # If in title, it's likely real
             ])
         if not has_real_environmental:
-                # Check if it's just about workplace conditions
-                if any(fp in description.lower() for fp in environmental_false_positives):
-                    # Only exclude if title doesn't have impact keywords
-                    if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green']):
+        # Check if it's just about workplace conditions
+        if any(fp in description.lower() for fp in environmental_false_positives):
+        # Only exclude if title doesn't have impact keywords
+        if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green']):
                         return False
         
         # Exclude insurance/underwriting roles unless they're specifically ESG/sustainability roles
@@ -586,7 +586,7 @@ try:
         # Exclude generic engineering roles unless they have clear impact focus
         engineering_keywords = ['engineer', 'engineering']
         if any(eng in title for eng in engineering_keywords):
-            # Keep if title explicitly mentions impact keywords
+        # Keep if title explicitly mentions impact keywords
         title_has_impact = any(kw in title for kw in [
             'sustainability', 'sustainable', 'environmental', 'climate', 
             'esg', 'green', 'clean tech', 'renewable'
@@ -701,7 +701,7 @@ try:
         if any(term in title.lower() for term in legal_finance_titles):
         # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
         if 'sustainability' in description.lower() or 'sustainable finance' in description.lower():
-                # Look for indicators that it's actually part of the role
+        # Look for indicators that it's actually part of the role
                 role_focus_indicators = [
                     'sustainability team',
                     'sustainability office',
@@ -723,7 +723,7 @@ try:
                     'sustainability.'
                 ]
                 has_role_focus = any(indicator in description.lower() for indicator in role_focus_indicators)
-                # Check if it's just mentioned as part of company operations
+        # Check if it's just mentioned as part of company operations
                 company_desc_phrases = [
             'digital banking and sustainability',
             'sustainability, and working',
@@ -801,7 +801,7 @@ try:
         # Exclude generic roles (legal, finance, sourcing, technical director) unless they have clear impact focus in title
         generic_role_titles = ['legal counsel', 'counsel', 'manager, finance', 'finance manager', 'strategic sourcing', 'technical director', 'sourcing manager']
         if any(term in title.lower() for term in generic_role_titles):
-            # Must have impact keyword in title to be considered
+        # Must have impact keyword in title to be considered
         if not any(kw in title.lower() for kw in ['esg', 'sustainability', 'sustainable', 'environmental', 'climate', 'green', 'csr', 'impact']):
         # Check if description has strong impact focus indicators
         strong_impact_indicators = [
@@ -840,10 +840,10 @@ try:
         if len(title_matches) > 0:
             return True
         elif len(desc_matches) > 0:
-            # Description matches are acceptable if they're in job responsibilities
+        # Description matches are acceptable if they're in job responsibilities
         return True
         else:
-            # No matches in title or job responsibilities
+        # No matches in title or job responsibilities
         return False
     
     # Filter by title and description
