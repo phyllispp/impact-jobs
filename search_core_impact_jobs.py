@@ -494,8 +494,8 @@ try:
         ]
         for company_pattern, title_pattern in false_positive_patterns:
             if company_pattern in company and title_pattern in title:
-        # Exception: if it's explicitly environmental/sustainability focused, keep it
-        if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
+                # Exception: if it's explicitly environmental/sustainability focused, keep it
+                if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
                     return False
         
         # Exclude all technician jobs (including Laboratory Technician - Environmental Division)
