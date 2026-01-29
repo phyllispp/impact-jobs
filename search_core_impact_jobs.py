@@ -701,30 +701,30 @@ try:
         if any(term in title.lower() for term in legal_finance_titles):
             # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
             if 'sustainability' in description.lower() or 'sustainable finance' in description.lower():
-            # Look for indicators that it's actually part of the role
-            role_focus_indicators = [
-            'sustainability team',
-            'sustainability office',
-            'sustainability strategy',
-            'sustainability initiatives',
-            'sustainability reporting',
-            'sustainability risk',
-            'sustainability compliance',
-            'sustainable finance team',
-            'sustainable finance products',
-            'sustainable finance business',
-            'sustainable finance strategy',
-            'sustainable finance initiatives',
-            'responsible for sustainability',
-            'support sustainability',
-            'drive sustainability',
-            'sustainability and',
-            'sustainability,',
-            'sustainability.'
-            ]
-            has_role_focus = any(indicator in description.lower() for indicator in role_focus_indicators)
-        # Check if it's just mentioned as part of company operations
-            company_desc_phrases = [
+                # Look for indicators that it's actually part of the role
+                role_focus_indicators = [
+                    'sustainability team',
+                    'sustainability office',
+                    'sustainability strategy',
+                    'sustainability initiatives',
+                    'sustainability reporting',
+                    'sustainability risk',
+                    'sustainability compliance',
+                    'sustainable finance team',
+                    'sustainable finance products',
+                    'sustainable finance business',
+                    'sustainable finance strategy',
+                    'sustainable finance initiatives',
+                    'responsible for sustainability',
+                    'support sustainability',
+                    'drive sustainability',
+                    'sustainability and',
+                    'sustainability,',
+                    'sustainability.'
+                ]
+                has_role_focus = any(indicator in description.lower() for indicator in role_focus_indicators)
+                # Check if it's just mentioned as part of company operations
+                company_desc_phrases = [
             'digital banking and sustainability',
             'sustainability, and working',
             'sustainability and working',
