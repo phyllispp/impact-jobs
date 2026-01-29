@@ -547,7 +547,7 @@ try:
         # Exclude ST. JOSEPH'S INSTITUTION INTERNATIONAL LTD jobs (marketing/recruiting, not impact)
         if "st. joseph's institution international" in company.lower() or "st joseph's institution international" in company.lower():
             # Only keep if it's explicitly an impact role
-        if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
+            if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
                 return False
         
         # Exclude jobs where "environmental" only appears in generic contexts
