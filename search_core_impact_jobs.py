@@ -505,8 +505,8 @@ try:
         
         # Exclude intern roles that aren't impact-focused
         if 'intern' in title.lower() or 'internship' in title.lower():
-        # Only keep if title explicitly mentions impact keywords
-        if not any(kw in title.lower() for kw in [
+            # Only keep if title explicitly mentions impact keywords
+            if not any(kw in title.lower() for kw in [
                 'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
                 'green', 'csr', 'social impact', 'impact'
             ]):
