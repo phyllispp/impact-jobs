@@ -73,14 +73,14 @@ jobs:
           else
             echo "❌ index.html not found"
           fi
-          if [ -f "core_impact_jobs_sg_hk.csv" ]; then
-            echo "✅ core_impact_jobs_sg_hk.csv created ($(wc -l < core_impact_jobs_sg_hk.csv) lines)"
+          if [ -f "singapore_core_impact_jobs.csv" ]; then
+            echo "✅ singapore_core_impact_jobs.csv created ($(wc -l < singapore_core_impact_jobs.csv) lines)"
           else
-            echo "❌ core_impact_jobs_sg_hk.csv not found"
+            echo "❌ singapore_core_impact_jobs.csv not found"
           fi
           
           # Exit with the script's exit code (or 0 if files were created)
-          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+          if [ -f "index.html" ] && [ -f "singapore_core_impact_jobs.csv" ]; then
             echo "✅ Output files exist, continuing..."
             exit 0
           elif [ $SCRIPT_EXIT_CODE -ne 0 ]; then
@@ -116,7 +116,7 @@ jobs:
         id: verify-changed-files
         run: |
           # Check if files exist and have content
-          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+          if [ -f "index.html" ] && [ -f "singapore_core_impact_jobs.csv" ]; then
             echo "Files exist. Checking git status..."
             git status --porcelain
             if [ -n "$(git status --porcelain)" ]; then
@@ -141,7 +141,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add index.html core_impact_jobs_sg_hk.csv
+          git add index.html singapore_core_impact_jobs.csv
           git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
           git push origin main
           PUSH_EXIT_CODE=$?
