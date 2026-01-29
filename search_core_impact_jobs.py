@@ -569,14 +569,14 @@ try:
             'environmental risk' in description.lower(),
             'environmental due diligence' in description.lower(),
             'environmental health' in description.lower() and 'climate change' in description.lower(),
-            'environmental' in title.lower()  # If in title, it's likely real
+                'environmental' in title.lower()  # If in title, it's likely real
             ])
             if not has_real_environmental:
-            # Check if it's just about workplace conditions
-            if any(fp in description.lower() for fp in environmental_false_positives):
-            # Only exclude if title doesn't have impact keywords
-            if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green']):
-            return False
+                # Check if it's just about workplace conditions
+                if any(fp in description.lower() for fp in environmental_false_positives):
+                    # Only exclude if title doesn't have impact keywords
+                    if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green']):
+                        return False
         
             # Exclude insurance/underwriting roles unless they're specifically ESG/sustainability roles
             if any(term in title for term in ['underwriter', 'underwriting']):
