@@ -493,7 +493,7 @@ try:
         ('st. joseph\'s institution international', 'social media marketing'),
         ]
         for company_pattern, title_pattern in false_positive_patterns:
-        if company_pattern in company and title_pattern in title:
+            if company_pattern in company and title_pattern in title:
         # Exception: if it's explicitly environmental/sustainability focused, keep it
         if not any(kw in title for kw in ['sustainability', 'environmental', 'climate', 'esg', 'green', 'clean tech']):
                     return False
