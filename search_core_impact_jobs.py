@@ -381,8 +381,8 @@ try:
         # Indeed often returns jobs that match search queries but don't actually have impact focus
         if site == 'indeed':
             # For Indeed, require at least ONE impact keyword in the title itself
-        # This filters out jobs that only match due to company descriptions or metadata
-        title_has_impact = any(kw.lower() in title for kw in impact_keywords)
+            # This filters out jobs that only match due to company descriptions or metadata
+            title_has_impact = any(kw.lower() in title for kw in impact_keywords)
         if not title_has_impact:
                 return False
         
