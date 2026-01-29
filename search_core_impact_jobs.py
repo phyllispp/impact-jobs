@@ -652,9 +652,9 @@ try:
                 return False
         
         # Exclude roles where CSR/sustainability is only mentioned as company benefit/peripheral
-            # Check for CSR/sustainability mentions that are just company descriptions
-            if ('corporate social responsibility' in description.lower() or 'csr' in description.lower()) and 'csr' not in title.lower():
-        # Check if CSR is mentioned in the context of role responsibilities vs company benefits
+        # Check for CSR/sustainability mentions that are just company descriptions
+        if ('corporate social responsibility' in description.lower() or 'csr' in description.lower()) and 'csr' not in title.lower():
+            # Check if CSR is mentioned in the context of role responsibilities vs company benefits
             csr_contexts = [
             'csr manager',
             'csr director',
@@ -696,10 +696,10 @@ try:
             if has_csr_benefit_only and not has_csr_role_focus:
             return False
         
-            # Exclude legal/finance roles where sustainability is just mentioned as business area, not role focus
-            legal_finance_titles = ['legal', 'counsel', 'lawyer', 'attorney', 'finance', 'accountant', 'auditor', 'treasurer']
-            if any(term in title.lower() for term in legal_finance_titles):
-        # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
+        # Exclude legal/finance roles where sustainability is just mentioned as business area, not role focus
+        legal_finance_titles = ['legal', 'counsel', 'lawyer', 'attorney', 'finance', 'accountant', 'auditor', 'treasurer']
+        if any(term in title.lower() for term in legal_finance_titles):
+            # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
             if 'sustainability' in description.lower() or 'sustainable finance' in description.lower():
             # Look for indicators that it's actually part of the role
             role_focus_indicators = [
