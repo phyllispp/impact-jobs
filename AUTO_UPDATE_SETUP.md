@@ -4,8 +4,8 @@
 
 GitHub Actions will automatically:
 1. Run your Python script daily at 2 AM UTC (10 AM Singapore time)
-2. Crawl job sites (Indeed, LinkedIn, Google)
-3. Generate new `index.html` and `singapore_core_impact_jobs.csv`
+2. Crawl job sites (Indeed, LinkedIn, Google, MyCareersFuture) in Singapore and Hong Kong
+3. Generate new `index.html` and `core_impact_jobs_sg_hk.csv`
 4. Commit and push changes
 5. GitHub Pages automatically updates your website
 
@@ -58,10 +58,11 @@ Make sure these files are committed:
 
 ```
 ✅ index.html                          # Website (will be auto-updated)
-✅ singapore_core_impact_jobs.csv      # Job data (will be auto-updated)
+✅ core_impact_jobs_sg_hk.csv         # Job data (will be auto-updated)
 ✅ search_core_impact_jobs.py         # Search script
 ✅ generate_deployable_website.py     # Website generator
 ✅ requirements.txt                    # Python dependencies
+✅ jobspy/                             # Job scraping library (local)
 ✅ .github/workflows/update-jobs-daily.yml  # Workflow file
 ```
 

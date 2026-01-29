@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 import json
 import os
 
@@ -13,42 +13,9 @@ def generate_deployable_website(csv_file='core_impact_jobs_sg_hk.csv', output_fi
     
     df = pd.read_csv(csv_file)
     
-    # Filter to only show jobs from the last 7 days
+    # Sort by date (most recent first)
     if 'date_posted' in df.columns:
-        # Calculate cutoff date (7 days ago)
-        cutoff_date = datetime.now() - timedelta(days=7)
-        
-        # Convert date_posted to datetime, handling various formats
-        def parse_date(date_str):
-            if pd.isna(date_str) or str(date_str) == 'N/A' or str(date_str) == 'nan':
-                return None
-            try:
-                # Try parsing common date formats
-                for fmt in ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d %H:%M:%S.%f']:
-                    try:
-                        return datetime.strptime(str(date_str), fmt)
-                    except ValueError:
-                        continue
-                # If all formats fail, try pandas to_datetime
-                return pd.to_datetime(date_str)
-            except:
-                return None
-        
-        df['date_posted_parsed'] = df['date_posted'].apply(parse_date)
-        
-        # Filter to only jobs from last 7 days
-        initial_count = len(df)
-        df = df[df['date_posted_parsed'].notna() & (df['date_posted_parsed'] >= cutoff_date)]
-        filtered_count = len(df)
-        
-        if initial_count > filtered_count:
-            print(f"📅 Filtered {initial_count - filtered_count} jobs older than 7 days")
-        
-        # Sort by date (most recent first)
-        df = df.sort_values('date_posted_parsed', ascending=False)
-        
-        # Drop the temporary parsed date column
-        df = df.drop(columns=['date_posted_parsed'])
+        df = df.sort_values('date_posted', ascending=False)
     
     # Convert to JSON for JavaScript
     jobs_data = []
@@ -482,7 +449,7 @@ def generate_deployable_website(csv_file='core_impact_jobs_sg_hk.csv', output_fi
         
         <div class="footer">
             <p>Generated on """ + datetime.now().strftime('%B %d, %Y at %I:%M %p') + """</p>
-            <p>Searching across Indeed, LinkedIn, and MyCareersFuture</p>
+            <p>Searching across Indeed, LinkedIn, Google, and MyCareersFuture</p>
             <p style="margin-top: 5px; font-size: 0.9em;">Jobs from Singapore and Hong Kong</p>
             <p style="margin-top: 10px; font-size: 0.9em;">
                 Looking for impact roles? We filter for genuine ESG, Sustainability, Climate, and Social Impact positions.

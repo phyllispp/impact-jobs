@@ -30,14 +30,24 @@ jobs:
           # Install core dependencies needed by jobspy
           pip install requests beautifulsoup4 pandas numpy pydantic tls-client markdownify regex urllib3
           # Ensure current directory is first in Python path so local jobspy modules are found
+          # This allows importing jobspy.apify_integration and other custom modules
           echo "PYTHONPATH=${PWD}:${PYTHONPATH}" >> $GITHUB_ENV
       
       - name: Verify imports
         run: |
           python -c "from jobspy import scrape_jobs; print('✅ jobspy imported successfully')"
           python -c "from generate_deployable_website import generate_deployable_website; print('✅ generate_deployable_website imported successfully')"
+          python -c "
+          try:
+              from jobspy.apify_integration import ApifyJobstreetSG, ApifyJobsDBHK
+              print('✅ Apify integration available')
+          except ImportError:
+              print('⚠️  Apify integration not available (will skip Apify scrapers)')
+          "
       
       - name: Run job search
+        env:
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
         timeout-minutes: 30
         run: |
           set +e  # Don't exit on error immediately
@@ -102,42 +112,37 @@ jobs:
             echo "✅ Added timestamp comment to index.html"
           fi
       
-      - name: Check for changes and commit
+      - name: Check for changes
+        id: verify-changed-files
         run: |
-          # Check if files exist
-          if [ ! -f "index.html" ] || [ ! -f "core_impact_jobs_sg_hk.csv" ]; then
-            echo "❌ Output files not found, cannot commit"
-            exit 1
+          # Check if files exist and have content
+          if [ -f "index.html" ] && [ -f "core_impact_jobs_sg_hk.csv" ]; then
+            echo "Files exist. Checking git status..."
+            git status --porcelain
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "✅ Changes detected"
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "ℹ️  No changes detected (files may be identical to previous run)"
+              echo "⚠️  This shouldn't happen after adding timestamp - forcing change..."
+              # Touch the file to ensure it changes
+              touch index.html
+              git add index.html
+              echo "changed=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "⚠️  Output files not found, skipping commit"
           fi
-          
-          echo "Files exist. Checking git status..."
-          git status --porcelain
-          
-          # Configure git
+      
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          
-          # Stage the files
           git add index.html core_impact_jobs_sg_hk.csv
-          
-          # Always commit (the timestamp ensures files always change)
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "✅ Changes detected, committing..."
-            git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
-            echo "✅ Committed changes"
-          else
-            echo "⚠️  No changes detected after adding timestamp - this shouldn't happen"
-            echo "Forcing commit anyway..."
-            # Touch the file to ensure it changes
-            touch index.html
-            git add index.html
-            git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
-            echo "✅ Committed with forced update"
-          fi
-          
-          # Push changes
-          echo "Pushing to origin main..."
+          git commit -m "Auto-update jobs - $(date +'%Y-%m-%d %H:%M UTC')"
           git push origin main
           PUSH_EXIT_CODE=$?
           
