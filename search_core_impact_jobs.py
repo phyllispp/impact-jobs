@@ -580,7 +580,7 @@ try:
         
         # Exclude insurance/underwriting roles unless they're specifically ESG/sustainability roles
         if any(term in title for term in ['underwriter', 'underwriting']):
-        if not any(kw in combined for kw in ['esg', 'sustainability', 'sustainable', 'climate', 'environmental risk', 'green']):
+            if not any(kw in combined for kw in ['esg', 'sustainability', 'sustainable', 'climate', 'environmental risk', 'green']):
                 return False
         
         # Exclude generic engineering roles unless they have clear impact focus
