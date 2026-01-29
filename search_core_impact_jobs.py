@@ -381,9 +381,9 @@ try:
         # Indeed often returns jobs that match search queries but don't actually have impact focus
         if site == 'indeed':
             # For Indeed, require at least ONE impact keyword in the title itself
-            # This filters out jobs that only match due to company descriptions or metadata
-            title_has_impact = any(kw.lower() in title for kw in impact_keywords)
-            if not title_has_impact:
+        # This filters out jobs that only match due to company descriptions or metadata
+        title_has_impact = any(kw.lower() in title for kw in impact_keywords)
+        if not title_has_impact:
                 return False
         
         # Extract job responsibilities section (before company description)
@@ -404,7 +404,7 @@ try:
             'learn more about',
             'company description',
             'who we are',
-            # AXA-specific markers
+        # AXA-specific markers
             'about axa',
             'about axa hong kong',
             'about axa singapore',
@@ -415,7 +415,7 @@ try:
         ]
         for marker in company_desc_markers:
             marker_pos = job_responsibilities.find(marker)
-            if marker_pos != -1:
+        if marker_pos != -1:
                 job_responsibilities = job_responsibilities[:marker_pos]
                 break
         
@@ -423,7 +423,7 @@ try:
         # AXA often mentions sustainability/climate in generic company descriptions but roles aren't impact-focused
         if 'axa' in company:
             # Must have impact keywords in title - description mentions aren't enough for AXA
-            title_has_real_impact = any(kw in title.lower() for kw in [
+        title_has_real_impact = any(kw in title.lower() for kw in [
                 'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
                 'green', 'csr', 'social impact', 'impact investing', 'impact fund',
                 'sustainability manager', 'sustainability director', 'sustainability officer',
@@ -431,9 +431,9 @@ try:
                 'climate manager', 'climate director', 'environmental manager'
             ])
             
-            # Check if job responsibilities explicitly state this is a sustainability/ESG role
-            # Only check in the job responsibilities section, not in company description
-            desc_explicitly_impact_role = any([
+        # Check if job responsibilities explicitly state this is a sustainability/ESG role
+        # Only check in the job responsibilities section, not in company description
+        desc_explicitly_impact_role = any([
                 'responsible for sustainability' in job_responsibilities,
                 'responsible for esg' in job_responsibilities,
                 'sustainability manager' in job_responsibilities,
@@ -459,38 +459,38 @@ try:
                 'impact investing' in job_responsibilities,
             ])
             
-            # Also check if impact keywords appear in job responsibilities (not just company description)
-            # This catches cases where keywords appear but not in the explicit phrases above
-            impact_keywords_in_responsibilities = any([
+        # Also check if impact keywords appear in job responsibilities (not just company description)
+        # This catches cases where keywords appear but not in the explicit phrases above
+        impact_keywords_in_responsibilities = any([
                 kw.lower() in job_responsibilities for kw in impact_keywords
             ])
             
-            # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
-            # Company description mentions are NOT sufficient
-            # We require either:
+        # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
+        # Company description mentions are NOT sufficient
+        # We require either:
             # 1. Impact keywords in title, OR
-            # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
-            if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
+        # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
+        if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
                 return False
         
         # Exclude specific companies/roles that are false positives (check early)
         false_positive_patterns = [
-            ('amazon', 'field development engineer'),
-            ('amazon', 'colo'),
-            ('axa', 'underwriter'),
-            ('axa', 'underwriting'),
-            ('axa', 'workplace executive'),  # Administrative role, not impact
-            ('pro matrix', 'project engineer'),
-            ('globalfoundries', 'process engineering'),
-            ('globalfoundries', 'photolithography'),
-            ('3m', 'process engineer'),
-            ('3m', 'tuas plant'),
-            ('tech data', 'product manager'),
-            ('tech data', 'presales consultant'),
-            ('wsh experts', 'resident technical officer'),
-            ('surechem', 'electrical and electronics engineering'),
-            ("st. joseph's institution international", 'social media marketing'),  # Marketing role, not impact
-            ('st. joseph\'s institution international', 'social media marketing'),
+        ('amazon', 'field development engineer'),
+        ('amazon', 'colo'),
+        ('axa', 'underwriter'),
+        ('axa', 'underwriting'),
+        ('axa', 'workplace executive'),  # Administrative role, not impact
+        ('pro matrix', 'project engineer'),
+        ('globalfoundries', 'process engineering'),
+        ('globalfoundries', 'photolithography'),
+        ('3m', 'process engineer'),
+        ('3m', 'tuas plant'),
+        ('tech data', 'product manager'),
+        ('tech data', 'presales consultant'),
+        ('wsh experts', 'resident technical officer'),
+        ('surechem', 'electrical and electronics engineering'),
+        ("st. joseph's institution international", 'social media marketing'),  # Marketing role, not impact
+        ('st. joseph\'s institution international', 'social media marketing'),
         ]
         for company_pattern, title_pattern in false_positive_patterns:
             if company_pattern in company and title_pattern in title:
@@ -537,7 +537,7 @@ try:
         ]
         if any(fp in title for fp in false_positives_titles):
             # Exception: if title contains ESG/sustainability/environmental explicitly, keep it
-            if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
+        if not any(kw in title for kw in ['esg', 'sustainability', 'environmental', 'climate', 'green', 'csr']):
                 return False
         
         # Skip JLL jobs (they match on "better world" but aren't impact roles)
@@ -547,7 +547,7 @@ try:
         # Exclude ST. JOSEPH'S INSTITUTION INTERNATIONAL LTD jobs (marketing/recruiting, not impact)
         if "st. joseph's institution international" in company.lower() or "st joseph's institution international" in company.lower():
             # Only keep if it's explicitly an impact role
-            if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
+        if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
                 return False
         
         # Exclude jobs where "environmental" only appears in generic contexts
@@ -571,7 +571,7 @@ try:
             'environmental health' in description.lower() and 'climate change' in description.lower(),
                 'environmental' in title.lower()  # If in title, it's likely real
             ])
-            if not has_real_environmental:
+        if not has_real_environmental:
                 # Check if it's just about workplace conditions
                 if any(fp in description.lower() for fp in environmental_false_positives):
                     # Only exclude if title doesn't have impact keywords
@@ -580,19 +580,19 @@ try:
         
         # Exclude insurance/underwriting roles unless they're specifically ESG/sustainability roles
         if any(term in title for term in ['underwriter', 'underwriting']):
-            if not any(kw in combined for kw in ['esg', 'sustainability', 'sustainable', 'climate', 'environmental risk', 'green']):
+        if not any(kw in combined for kw in ['esg', 'sustainability', 'sustainable', 'climate', 'environmental risk', 'green']):
                 return False
         
         # Exclude generic engineering roles unless they have clear impact focus
         engineering_keywords = ['engineer', 'engineering']
         if any(eng in title for eng in engineering_keywords):
             # Keep if title explicitly mentions impact keywords
-            title_has_impact = any(kw in title for kw in [
+        title_has_impact = any(kw in title for kw in [
             'sustainability', 'sustainable', 'environmental', 'climate', 
             'esg', 'green', 'clean tech', 'renewable'
             ])
-            # Keep if description has strong impact focus (not just compliance)
-            desc_has_impact = any([
+        # Keep if description has strong impact focus (not just compliance)
+        desc_has_impact = any([
             'climate change' in description.lower(),
             'sustainability' in description.lower() and ('strategy' in description.lower() or 'initiative' in description.lower()),
             'environmental impact' in description.lower(),
@@ -602,13 +602,13 @@ try:
             'green technology' in description.lower(),
             'e-sustainability' in description.lower()
             ])
-            if not (title_has_impact or desc_has_impact):
+        if not (title_has_impact or desc_has_impact):
                 return False
         
         # Exclude generic uses of "impact" that don't indicate impact roles
         if 'impact' in description.lower() and 'impact' not in title.lower():
         # Check if it's just generic business language
-            generic_impact_phrases = [
+        generic_impact_phrases = [
             'high-impact role',
             'high impact role',
             'make an impact',
@@ -631,9 +631,9 @@ try:
             'business impact',
             'commercial impact'
             ]
-            # If "impact" only appears in generic phrases and not in impact-related contexts, exclude
-            has_generic_only = any(phrase in description.lower() for phrase in generic_impact_phrases)
-            has_real_impact_context = any([
+        # If "impact" only appears in generic phrases and not in impact-related contexts, exclude
+        has_generic_only = any(phrase in description.lower() for phrase in generic_impact_phrases)
+        has_real_impact_context = any([
             'social impact' in description.lower(),
             'environmental impact' in description.lower(),
             'impact investing' in description.lower(),
@@ -648,14 +648,14 @@ try:
             'impact initiatives' in description.lower(),
             'impact programs' in description.lower()
             ])
-            if has_generic_only and not has_real_impact_context:
+        if has_generic_only and not has_real_impact_context:
                 return False
         
         # Exclude roles where CSR/sustainability is only mentioned as company benefit/peripheral
         # Check for CSR/sustainability mentions that are just company descriptions
         if ('corporate social responsibility' in description.lower() or 'csr' in description.lower()) and 'csr' not in title.lower():
-            # Check if CSR is mentioned in the context of role responsibilities vs company benefits
-            csr_contexts = [
+        # Check if CSR is mentioned in the context of role responsibilities vs company benefits
+        csr_contexts = [
             'csr manager',
             'csr director',
             'csr officer',
@@ -673,9 +673,9 @@ try:
             'csr,',
             'csr.'
             ]
-            has_csr_role_focus = any(context in description.lower() for context in csr_contexts)
-            # If CSR is only mentioned as a company benefit/network/initiatives, exclude
-            csr_benefit_phrases = [
+        has_csr_role_focus = any(context in description.lower() for context in csr_contexts)
+        # If CSR is only mentioned as a company benefit/network/initiatives, exclude
+        csr_benefit_phrases = [
             'corporate social responsibility and more',
             'csr and more',
             'including csr',
@@ -688,19 +688,19 @@ try:
             'esg, equality diversity',
             'esg, equality diversity & inclusion'
             ]
-            has_csr_benefit_only = any(phrase in description.lower() for phrase in csr_benefit_phrases)
-            # For consultant roles, CSR/ESG mentioned as company initiatives is not enough
-            if 'consultant' in title.lower() and has_csr_benefit_only and not has_csr_role_focus:
+        has_csr_benefit_only = any(phrase in description.lower() for phrase in csr_benefit_phrases)
+        # For consultant roles, CSR/ESG mentioned as company initiatives is not enough
+        if 'consultant' in title.lower() and has_csr_benefit_only and not has_csr_role_focus:
                 return False
-            # For other roles too
-            if has_csr_benefit_only and not has_csr_role_focus:
+        # For other roles too
+        if has_csr_benefit_only and not has_csr_role_focus:
                 return False
         
         # Exclude legal/finance roles where sustainability is just mentioned as business area, not role focus
         legal_finance_titles = ['legal', 'counsel', 'lawyer', 'attorney', 'finance', 'accountant', 'auditor', 'treasurer']
         if any(term in title.lower() for term in legal_finance_titles):
-            # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
-            if 'sustainability' in description.lower() or 'sustainable finance' in description.lower():
+        # Check if sustainability/sustainable finance is mentioned as role responsibility vs company description
+        if 'sustainability' in description.lower() or 'sustainable finance' in description.lower():
                 # Look for indicators that it's actually part of the role
                 role_focus_indicators = [
                     'sustainability team',
@@ -738,8 +738,8 @@ try:
         
         # Exclude roles where "sustainable" only appears in generic business contexts
         if 'sustainable' in description.lower() and 'sustainable' not in title.lower():
-            # Check if it's about sustainable business practices vs impact role
-            sustainable_role_indicators = [
+        # Check if it's about sustainable business practices vs impact role
+        sustainable_role_indicators = [
             'sustainability',
             'sustainable finance',
             'sustainable investment',
@@ -751,9 +751,9 @@ try:
             'sustainable strategy',
             'sustainable initiatives'
             ]
-            has_sustainable_role_focus = any(indicator in description.lower() for indicator in sustainable_role_indicators)
-            # Generic business language (commercial sustainability, not environmental)
-            generic_sustainable = [
+        has_sustainable_role_focus = any(indicator in description.lower() for indicator in sustainable_role_indicators)
+        # Generic business language (commercial sustainability, not environmental)
+        generic_sustainable = [
             'sustainable growth',
             'sustainable business',
             'sustainable operations',
@@ -766,14 +766,14 @@ try:
             'financial sustainability',
             'economic sustainability'
             ]
-            has_generic_only = any(phrase in description.lower() for phrase in generic_sustainable) and not has_sustainable_role_focus
-            if has_generic_only:
-            return False
+        has_generic_only = any(phrase in description.lower() for phrase in generic_sustainable) and not has_sustainable_role_focus
+        if has_generic_only:
+                return False
         
-            # Exclude roles where CSR/social impact is only mentioned as part of activities/initiatives for non-impact roles
-            if ('corporate social responsibility' in description.lower() or 'csr' in description.lower() or 'social impact' in description.lower()) and not any(kw in title.lower() for kw in ['csr', 'social impact', 'sustainability', 'esg']):
+        # Exclude roles where CSR/social impact is only mentioned as part of activities/initiatives for non-impact roles
+        if ('corporate social responsibility' in description.lower() or 'csr' in description.lower() or 'social impact' in description.lower()) and not any(kw in title.lower() for kw in ['csr', 'social impact', 'sustainability', 'esg']):
         # Check if CSR/social impact is mentioned as role responsibility vs just activities
-            csr_role_focus = any([
+        csr_role_focus = any([
             'csr manager' in description.lower(),
             'csr director' in description.lower(),
             'csr officer' in description.lower(),
@@ -789,22 +789,22 @@ try:
             'social impact team' in description.lower()
             ])
         # Check if it's just mentioned as activities/initiatives for non-impact roles
-            csr_activities_only = any([
+        csr_activities_only = any([
             'csr initiatives' in description.lower() and 'participate' in description.lower(),
             'csr activities' in description.lower() and 'support' in description.lower(),
             'corporate social responsibility initiatives' in description.lower() and 'participate' in description.lower(),
             'social impact' in description.lower() and 'commitment to positive social impact' in description.lower() and 'intern' in title.lower()
             ])
-            if csr_activities_only and not csr_role_focus:
+        if csr_activities_only and not csr_role_focus:
             return False
         
-            # Exclude generic roles (legal, finance, sourcing, technical director) unless they have clear impact focus in title
-            generic_role_titles = ['legal counsel', 'counsel', 'manager, finance', 'finance manager', 'strategic sourcing', 'technical director', 'sourcing manager']
-            if any(term in title.lower() for term in generic_role_titles):
+        # Exclude generic roles (legal, finance, sourcing, technical director) unless they have clear impact focus in title
+        generic_role_titles = ['legal counsel', 'counsel', 'manager, finance', 'finance manager', 'strategic sourcing', 'technical director', 'sourcing manager']
+        if any(term in title.lower() for term in generic_role_titles):
             # Must have impact keyword in title to be considered
-            if not any(kw in title.lower() for kw in ['esg', 'sustainability', 'sustainable', 'environmental', 'climate', 'green', 'csr', 'impact']):
+        if not any(kw in title.lower() for kw in ['esg', 'sustainability', 'sustainable', 'environmental', 'climate', 'green', 'csr', 'impact']):
         # Check if description has strong impact focus indicators
-            strong_impact_indicators = [
+        strong_impact_indicators = [
             'sustainability team',
             'sustainability office',
             'esg team',
@@ -816,35 +816,35 @@ try:
             'sustainable finance team',
             'sustainable finance strategy'
             ]
-            if not any(indicator in description.lower() for indicator in strong_impact_indicators):
+        if not any(indicator in description.lower() for indicator in strong_impact_indicators):
             return False
         
-            # Check if any impact keyword appears in title or job responsibilities
-            # Prioritize matches in title, but also accept matches in job responsibilities
-            # Exclude matches that only appear in company description sections
-            matches = []
-            title_matches = []
-            desc_matches = []
+        # Check if any impact keyword appears in title or job responsibilities
+        # Prioritize matches in title, but also accept matches in job responsibilities
+        # Exclude matches that only appear in company description sections
+        matches = []
+        title_matches = []
+        desc_matches = []
         
-            for kw in impact_keywords:
+        for kw in impact_keywords:
             kw_lower = kw.lower()
-            if kw_lower in title:
+        if kw_lower in title:
             matches.append(f"title:{kw}")
-            title_matches.append(kw_lower)
-            elif kw_lower in job_responsibilities:
+        title_matches.append(kw_lower)
+        elif kw_lower in job_responsibilities:
             matches.append(f"desc:{kw}")
-            desc_matches.append(kw_lower)
+        desc_matches.append(kw_lower)
         
-            # Must have at least one impact keyword match in title OR job responsibilities
-            # If only description matches exist, ensure they're in the job responsibilities section
-            if len(title_matches) > 0:
+        # Must have at least one impact keyword match in title OR job responsibilities
+        # If only description matches exist, ensure they're in the job responsibilities section
+        if len(title_matches) > 0:
             return True
-            elif len(desc_matches) > 0:
+        elif len(desc_matches) > 0:
             # Description matches are acceptable if they're in job responsibilities
-            return True
-            else:
+        return True
+        else:
             # No matches in title or job responsibilities
-            return False
+        return False
     
     # Filter by title and description
     core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
