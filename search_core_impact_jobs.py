@@ -412,56 +412,56 @@ try:
             # Exclude AXA jobs unless they're explicitly ESG/sustainability roles
             # AXA often mentions sustainability/climate in generic company descriptions but roles aren't impact-focused
             if 'axa' in company:
-            # Must have impact keywords in title - description mentions aren't enough for AXA
-            title_has_real_impact = any(kw in title.lower() for kw in [
-            'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
-            'green', 'csr', 'social impact', 'impact investing', 'impact fund',
-            'sustainability manager', 'sustainability director', 'sustainability officer',
-            'sustainability specialist', 'esg manager', 'esg director', 'esg officer',
-            'climate manager', 'climate director', 'environmental manager'
-            ])
-            
-            # Check if job responsibilities explicitly state this is a sustainability/ESG role
-            # Only check in the job responsibilities section, not in company description
-            desc_explicitly_impact_role = any([
-            'responsible for sustainability' in job_responsibilities,
-            'responsible for esg' in job_responsibilities,
-            'sustainability manager' in job_responsibilities,
-            'sustainability director' in job_responsibilities,
-            'sustainability officer' in job_responsibilities,
-            'sustainability specialist' in job_responsibilities,
-            'esg manager' in job_responsibilities,
-            'esg director' in job_responsibilities,
-            'esg officer' in job_responsibilities,
-            'this role focuses on sustainability' in job_responsibilities,
-            'this role focuses on esg' in job_responsibilities,
-            'primary responsibility.*sustainability' in job_responsibilities,
-            'primary responsibility.*esg' in job_responsibilities,
-            'sustainability strategy' in job_responsibilities,
-            'sustainability initiatives' in job_responsibilities,
-            'sustainability reporting' in job_responsibilities,
-            'esg strategy' in job_responsibilities,
-            'esg initiatives' in job_responsibilities,
-            'esg reporting' in job_responsibilities,
-            'climate change' in job_responsibilities and ('strategy' in job_responsibilities or 'risk' in job_responsibilities),
-            'environmental impact' in job_responsibilities,
-            'sustainable finance' in job_responsibilities,
-            'impact investing' in job_responsibilities,
-            ])
-            
-            # Also check if impact keywords appear in job responsibilities (not just company description)
-            # This catches cases where keywords appear but not in the explicit phrases above
-            impact_keywords_in_responsibilities = any([
-            kw.lower() in job_responsibilities for kw in impact_keywords
-            ])
-            
-            # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
-            # Company description mentions are NOT sufficient
-            # We require either:
-            # 1. Impact keywords in title, OR
-            # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
-            if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
-            return False
+                # Must have impact keywords in title - description mentions aren't enough for AXA
+                title_has_real_impact = any(kw in title.lower() for kw in [
+                'esg', 'sustainability', 'sustainable', 'environmental', 'climate', 
+                'green', 'csr', 'social impact', 'impact investing', 'impact fund',
+                'sustainability manager', 'sustainability director', 'sustainability officer',
+                'sustainability specialist', 'esg manager', 'esg director', 'esg officer',
+                'climate manager', 'climate director', 'environmental manager'
+                ])
+                
+                # Check if job responsibilities explicitly state this is a sustainability/ESG role
+                # Only check in the job responsibilities section, not in company description
+                desc_explicitly_impact_role = any([
+                'responsible for sustainability' in job_responsibilities,
+                'responsible for esg' in job_responsibilities,
+                'sustainability manager' in job_responsibilities,
+                'sustainability director' in job_responsibilities,
+                'sustainability officer' in job_responsibilities,
+                'sustainability specialist' in job_responsibilities,
+                'esg manager' in job_responsibilities,
+                'esg director' in job_responsibilities,
+                'esg officer' in job_responsibilities,
+                'this role focuses on sustainability' in job_responsibilities,
+                'this role focuses on esg' in job_responsibilities,
+                'primary responsibility.*sustainability' in job_responsibilities,
+                'primary responsibility.*esg' in job_responsibilities,
+                'sustainability strategy' in job_responsibilities,
+                'sustainability initiatives' in job_responsibilities,
+                'sustainability reporting' in job_responsibilities,
+                'esg strategy' in job_responsibilities,
+                'esg initiatives' in job_responsibilities,
+                'esg reporting' in job_responsibilities,
+                'climate change' in job_responsibilities and ('strategy' in job_responsibilities or 'risk' in job_responsibilities),
+                'environmental impact' in job_responsibilities,
+                'sustainable finance' in job_responsibilities,
+                'impact investing' in job_responsibilities,
+                ])
+                
+                # Also check if impact keywords appear in job responsibilities (not just company description)
+                # This catches cases where keywords appear but not in the explicit phrases above
+                impact_keywords_in_responsibilities = any([
+                kw.lower() in job_responsibilities for kw in impact_keywords
+                ])
+                
+                # For AXA, require explicit impact role in title OR strong indicators in job responsibilities
+                # Company description mentions are NOT sufficient
+                # We require either:
+                # 1. Impact keywords in title, OR
+                # 2. Explicit impact role phrases in job responsibilities AND impact keywords present
+                if not (title_has_real_impact or (desc_explicitly_impact_role and impact_keywords_in_responsibilities)):
+                    return False
         
             # Exclude specific companies/roles that are false positives (check early)
             false_positive_patterns = [
