@@ -691,10 +691,10 @@ try:
             has_csr_benefit_only = any(phrase in description.lower() for phrase in csr_benefit_phrases)
             # For consultant roles, CSR/ESG mentioned as company initiatives is not enough
             if 'consultant' in title.lower() and has_csr_benefit_only and not has_csr_role_focus:
-            return False
+                return False
             # For other roles too
             if has_csr_benefit_only and not has_csr_role_focus:
-            return False
+                return False
         
         # Exclude legal/finance roles where sustainability is just mentioned as business area, not role focus
         legal_finance_titles = ['legal', 'counsel', 'lawyer', 'attorney', 'finance', 'accountant', 'auditor', 'treasurer']
