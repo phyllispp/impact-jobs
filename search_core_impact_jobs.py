@@ -550,17 +550,17 @@ try:
             if not any(kw in title.lower() for kw in ['sustainability', 'esg', 'csr', 'environmental', 'climate', 'social impact']):
                 return False
         
-            # Exclude jobs where "environmental" only appears in generic contexts
-            environmental_false_positives = [
+        # Exclude jobs where "environmental" only appears in generic contexts
+        environmental_false_positives = [
             'environmental conditions',  # Workplace conditions, not environmental impact
             'environmental health and safety',  # HSE compliance, not impact role
             'environmental compliance',  # Regulatory compliance
             'environmental regulations',
             'environmental standards',
             'environmental permits'
-            ]
-            # Check if description only has environmental in false positive contexts
-            if 'environmental' in description.lower():
+        ]
+        # Check if description only has environmental in false positive contexts
+        if 'environmental' in description.lower():
             has_real_environmental = any([
             'environmental impact' in description.lower(),
             'environmental & social' in description.lower(),
