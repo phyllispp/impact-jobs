@@ -731,14 +731,14 @@ try:
             'footprint * sustainable finance',
             'footprint sustainable finance',
             'extensive footprint sustainable finance'
-            ]
-            has_company_desc_only = any(phrase in description.lower() for phrase in company_desc_phrases)
-            if has_company_desc_only and not has_role_focus:
-            return False
+                ]
+                has_company_desc_only = any(phrase in description.lower() for phrase in company_desc_phrases)
+                if has_company_desc_only and not has_role_focus:
+                    return False
         
-            # Exclude roles where "sustainable" only appears in generic business contexts
-            if 'sustainable' in description.lower() and 'sustainable' not in title.lower():
-        # Check if it's about sustainable business practices vs impact role
+        # Exclude roles where "sustainable" only appears in generic business contexts
+        if 'sustainable' in description.lower() and 'sustainable' not in title.lower():
+            # Check if it's about sustainable business practices vs impact role
             sustainable_role_indicators = [
             'sustainability',
             'sustainable finance',
@@ -846,8 +846,8 @@ try:
             # No matches in title or job responsibilities
             return False
     
-            # Filter by title and description
-            core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
+    # Filter by title and description
+    core_impact_jobs = combined_df[combined_df.apply(is_core_impact_role, axis=1)]
     
             print("\n" + "="*80)
             print(f"Total unique jobs found: {len(combined_df)}")
