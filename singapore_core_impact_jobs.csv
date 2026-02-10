@@ -1,16 +1,150 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
+"in-7be3b79859b67abc","indeed","https://sg.indeed.com/viewjob?jk=7be3b79859b67abc","https://jobs.standardchartered.com/job/Associate-Director%2C-Data-Analyst%2C-ESG-Delivery/48621-en_GB","Associate Director, Data Analyst, ESG Delivery","Standard Chartered Bank","Singapore, S00, SG","2026-02-09","","","","","","",False,"","","","","**Requisition Number:** 48621
+
+**Job Location:** Singapore, SGP
+
+**Work Type:** Office Working
+
+**Employment Type:** Permanent
+
+**Posting Start Date:** 09/02/2026
+
+**Posting End Date:** 28/02/2026
+
+**:**
+
+**Job Summary**
+
+The ESG Data Analyst uses ESG data to build the best customer experiences and deliver insights to help Business, Operations and Risk functions make better decisions. The individual should have business domain expertise to translate business requirements into data-based insights and deliverables.
+
+  
+
+The individual owns and manages a product backlog and is ultimately accountable for the successful delivery of the ESG data initiatives. The individual works in a fast-paced environment with high degrees of ambiguity, get excited by solving complex problems and is adept at getting things done.
+
+**Key Responsibilities**
+
+**Strategy**  
+
+* The ESG transformation initiative aims to harness cutting-edge technology to drive operational efficiency, data transparency, and ESG decision-making across our footprint to foster SCB’s leadership in sustainable finance.
+
+**Business**  
+
+* Support data exploration and data analysis requirements from relevant stakeholders.
+* Decompose book of work into key milestones or epics, features and user stories
+* Manage stakeholders, providing demos and training as needed for seamless solution rollout.
+* Collect user feedback and actively contribute to use case prioritization.
+
+**Processes**  
+
+* Support the development and execution of our data delivery strategy and roadmap.
+* Analyse datasets with tools like Python and SQL to gain key actionable insights to resolve business problems.
+* Present key findings, insights and business recommendations to stakeholders using data visualisation tools such as Tableau and Power BI.
+* Manage data products and visualisations delivery end-to-end by collaborating with Business analysts, Squad Lead, CXID and
+* Utilize Azure DevOps (ADO) to track, monitor and manage product backlog, ensuring efficient workflow and prioritization of tasks.
+* Identify, assess, monitor, control and mitigate impediments to the ESG projects; effectively and collaboratively resolving them
+
+**People and Talent**  
+
+* Collaborate with cross-functional teams, to align with business goals and ensure timely delivery of product features.
+* Collaborate closely with Technology, Operations, and relevant business/product stakeholders to secure and align internal resources.
+
+**Risk Management**  
+
+* Assess the initiative delivery risk and perform impact assessment, consulting with the SMEs, Process Owners and impacted Risk Framework Owners. Engage Data Governance to review data changes in accordance to Data Management Framework.
+* Change Impact Assessment: identify the impacted processes from the Changes by engaging with relevant Business / Function representatives, SMEs, Process Owners, Risk Framework Owners and Operational Risk Officers.
+
+Work closely with Change Managers to ensure that a mitigation plan is developed for each delivery risk identified.
+
+**Governance**  
+
+* Working with Change Management team, Process Owners and Risk Owners to ensure that deliveries/releases have attained the necessary approvals/sign offs prior to implementation.
+* Ensure project management/collaboration tools like Clarity and ADO are up to date including Project static data, status updates including RAG status, key milestones’ attestation and completion, risks/ dependencies/issues, are
+
+tracked and reported to the respective forums e.g. RFs and QPRs.
+
+**Regulatory and Business Conduct**
+
+* Display exemplary conduct and live by the Group’s Values and Code of Conduct.
+* Take personal responsibility for embedding the highest standards of ethics, including regulatory and business conduct, across Standard Chartered Bank. This includes understanding and ensuring compliance with, in letter and spirit, all applicable laws, regulations, guidelines and the Group Code of Conduct.
+* Effectively and collaboratively identify, escalate, mitigate and resolve risk, conduct and compliance matters.
+
+**Key stakeholders**
+
+* ESG Technology
+* ESG Architecture
+* Environmental Social Risk Management
+* ESG & Reputational Risk
+* Credit Risk
+* Global Process Owner – Coverage, Banking, WRB
+* CIB Coverage Chief of Staff
+* Chief Data Office BI team
+* Chief Sustainability Office team
+
+**Other Responsibilities**  
+Embed Here for good and Group’s brand and values in ESG Data. Perform other responsibilities assigned under Group, Country, Business or Functional policies and procedures;
+
+**Qualifications**
+
+* Education: University Degree
+* Languages: Business Communication
+
+**Our Ideal Candidate**
+
+* 8+ years of hands-on technical experience in data analytics, data engineering, or business intelligence roles
+
+* Advanced proficiency in SQL or Python/R, ETL tools (Airflow, Databricks), and visualization tools (Tableau, MSTR, Power BI) with proven ability to architect complex data pipelines, optimize query performance and design dashboards
+
+* Domain expertise in ESG (Environmental, Social, Governance) frameworks and sustainability reporting standards including GRI, TCFD, and EU Taxonomy, with hands-on experience in ESG data collection, validation, and reporting across multiple jurisdictions
+
+* Proven track record as a product owner or data product manager with experience managing cross-functional agile teams, defining business requirements, and successfully delivering data products while maintaining high data quality and governance standards
+
+* Expert-level statistical analysis and business intelligence capabilities with demonstrated experience in transforming complex ESG datasets into strategic insights
+
+**Role Specific Technical Skills and Competencies**
+
+* Data Analysis
+* Analytical and coding skills
+* Visualization building
+* Communication skills
+* Agile project management
+* Sustainable Finance or ESG Risk Management
+
+**About Standard Chartered**
+
+We're an international bank, nimble enough to act, big enough for impact. For more than 170 years, we've worked to make a positive difference for our clients, communities, and each other. We question the status quo, love a challenge and enjoy finding new opportunities to grow and do better than before. If you're looking for a career with purpose and you want to work for a bank making a difference, we want to hear from you. You can count on us to celebrate your unique talents and we can't wait to see the talents you can bring us.
+
+Our purpose, to drive commerce and prosperity through our unique diversity, together with our brand promise, to be here for good are achieved by how we each live our valued behaviours. When you work with us, you'll see how we value difference and advocate inclusion.
+
+Together we:
+
+* **Do the right thing** and are assertive, challenge one another, and live with integrity, while putting the client at the heart of what we do
+* **Never settle,** continuously striving to improve and innovate, keeping things simple and learning from doing well, and not so well
+* **Are better together,** we can be ourselves, be inclusive, see more good in others, and work collectively to build for the long term
+
+**What we offer**
+
+**In line with our Fair Pay Charter,** we offer a competitive salary and benefits to support your mental, physical, financial and social wellbeing.
+
+* **Core bank funding for retirement savings, medical and life insurance,** with flexible and voluntary benefits available in some locations.
+* **Time-off** including annual leave, parental/maternity (20 weeks), sabbatical (12 months maximum) and volunteering leave (3 days), along with minimum global standards for annual and public holiday, which is combined to 30 days minimum.
+* **Flexible working** options based around home and office locations, with flexible working patterns.
+* **Proactive wellbeing support** through Unmind, a market-leading digital wellbeing platform, development courses for resilience and other human skills, global Employee Assistance Programme, sick leave, mental health first-aiders and all sorts of self-help toolkits
+* **A continuous learning culture** to support your growth, with opportunities to reskill and upskill and access to physical, virtual and digital learning.
+* **Being part of an inclusive and values driven organisation,** one that embraces and celebrates our unique diversity, across our teams, business functions and geographies - everyone feels respected and can realise their full potential.
+
+**Recruitment Assessments**
+
+Some of our roles use assessments to help us understand how suitable you are for the role you've applied to. If you are invited to take an assessment, this is great news. It means your application has progressed to an important stage of our recruitment process.
+
+Visit our careers website www.sc.com/careers","Banks And Financial Services","https://sg.indeed.com/cmp/Standard-Chartered-Bank","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/f352beb47acbe281bb3534e44e8ae048","http://www.sc.com/careers","London London, United Kingdom","10,000+","more than $10B (USD)","If you’re looking for a career with purpose and want to work for a bank making a difference, we’d love to hear from you.","","","","","",""
+"li-4370201723","linkedin","https://www.linkedin.com/jobs/view/4370201723","","Manager, Sustainability Office","MOH Holdings (Singapore)","Singapore, Singapore","2026-02-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/moh-holdings","","","","","","","","","","","",""
+"li-4370093861","linkedin","https://www.linkedin.com/jobs/view/4370093861","","Asst. Manager/M Sustainability","Singapore Fashion Council","Singapore, Singapore","2026-02-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singaporefashioncouncil","","","","","","","","","","","",""
 "li-4318344478","linkedin","https://www.linkedin.com/jobs/view/4318344478","","Sustainability Project Manager","BNP Paribas","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/bnp-paribas","","","","","","","","","","","",""
 "li-4370155235","linkedin","https://www.linkedin.com/jobs/view/4370155235","","Head of Environmental & Process Excellence","Sanofi","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/sanofi","","","","","","","","","","","",""
-"li-4361476183","linkedin","https://www.linkedin.com/jobs/view/4361476183","","Associate, Impact and Partnerships, Corporate Affairs & Communication (CAC)","GIC","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gic","","","","","","","","","","","",""
 "li-4362780035","linkedin","https://www.linkedin.com/jobs/view/4362780035","","Internship: Global Corporate Banking, Sustainability Office [December 2025 – May 2026]","OCBC","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/ocbc-bank","","","","","","","","","","","",""
 "li-4273864098","linkedin","https://www.linkedin.com/jobs/view/4273864098","","Assistant Professor / Associate Professor / Professor in Sustainability Management","Singapore Institute of Technology","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/singapore-institute-of-technology/","","","","","","","","","","","",""
+"li-4361476183","linkedin","https://www.linkedin.com/jobs/view/4361476183","","Associate, Impact and Partnerships, Corporate Affairs & Communication (CAC)","GIC","Singapore, Singapore","2026-02-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gic","","","","","","","","","","","",""
 "li-4369303556","linkedin","https://www.linkedin.com/jobs/view/4369303556","","Associate Director/Manager (Strategy & Impact)","Temasek Foundation","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasekfoundation","","","","","","","","","","","",""
-"li-4369533473","linkedin","https://www.linkedin.com/jobs/view/4369533473","","Assistant Director, SingHealth Office for Sustainable Health","SingHealth","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singhealth","","","","","","","","","","","",""
-"li-4369336698","linkedin","https://www.linkedin.com/jobs/view/4369336698","","Associate - Assurance, Climate Change and Sustainability Services (2026 Graduates)","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-4353099672","linkedin","https://www.linkedin.com/jobs/view/4353099672","","Associate / Senior Associate, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-4369311990","linkedin","https://www.linkedin.com/jobs/view/4369311990","","Intern - Assurance, Climate Change and Sustainability Services (Jul - Dec 2026)","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-3933909325","linkedin","https://www.linkedin.com/jobs/view/3933909325","","Volunteer: Environment and Climate Change Project in Iceland","Global Nomadic","","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
-"li-4360559255","linkedin","https://www.linkedin.com/jobs/view/4360559255","","Corporate Sustainability Office Intern","UOB","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/uob","","","","","","","","","","","",""
 "in-7dcf838c5389a5b1","indeed","https://sg.indeed.com/viewjob?jk=7dcf838c5389a5b1","https://jobs.sanofi.com/job/-/-/2649/34894982528","Head of Environmental & Process Excellence","Sanofi","Singapore, S00, SG","2026-02-06","","","","","","",False,"","","","","The incumbent shall be responsible in assisting with the site in the design, lead and maintaining a world class Environmental & Process Excellence program and alignment with both local and international codes, recognized industry standards and Sanofi requirements from project conception to realization. This translates in executing the site strategic roadmap to ensure site compliance and the right-to-operate with the various operating permitting licenses with all municipal, provincial, or local regulatory requirements, as well all Sanofi HSES Standards (through the design and implementation of site wide programs).
 
 Specific programs to be implemented will include Wastewater, Ozone Depleting Substances (ODS), Hazardous Wastes, Medical Wastes, Non-Hazardous Wastes, Air Emissions, Community & Boundary Noise Limitations, Storm Water, Trade Effluent and Process Excellence such as Support Sanofi HSE standards, programs and management system to ensure that site is compliant with local regulatory guidelines, SS651 Occupational Safety & Health Management System, etc. but not limited to:
@@ -43,11 +177,18 @@ Specific programs to be implemented will include Wastewater, Ozone Depleting Sub
 * Carry out any other duties as assigned by the Head of HSES.
 
 null","","https://sg.indeed.com/cmp/Sanofi","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/ef60cd636bc2be61c6eccfef96801f9b","https://www.sanofi.com/fr","Paris","10,000+","more than $10B (USD)","Sanofi is dedicated to supporting people through their health challenges. We are a global biopharmaceutical company focused on human health.","","","","","",""
+"li-4366663590","linkedin","https://www.linkedin.com/jobs/view/4366663590","","Lead Water & Climate Adaptation Expert, APAC","Ramboll","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://dk.linkedin.com/company/ramboll","","","","","","","","","","","",""
+"li-3933909325","linkedin","https://www.linkedin.com/jobs/view/3933909325","","Volunteer: Environment and Climate Change Project in Iceland","Global Nomadic","","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
+"li-4369311990","linkedin","https://www.linkedin.com/jobs/view/4369311990","","Intern - Assurance, Climate Change and Sustainability Services (Jul - Dec 2026)","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4353099672","linkedin","https://www.linkedin.com/jobs/view/4353099672","","Associate / Senior Associate, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4369336698","linkedin","https://www.linkedin.com/jobs/view/4369336698","","Associate - Assurance, Climate Change and Sustainability Services (2026 Graduates)","EY","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4360559255","linkedin","https://www.linkedin.com/jobs/view/4360559255","","Corporate Sustainability Office Intern","UOB","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/uob","","","","","","","","","","","",""
+"li-4369533473","linkedin","https://www.linkedin.com/jobs/view/4369533473","","Assistant Director, SingHealth Office for Sustainable Health","SingHealth","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singhealth","","","","","","","","","","","",""
 "li-4369308621","linkedin","https://www.linkedin.com/jobs/view/4369308621","","Principal Environmental and Social Policy Specialist(Based in Beijing)","Asian Infrastructure Investment Bank (AIIB)","Singapore, Singapore","2026-02-06","","","","","","",False,"","","","","","","https://cn.linkedin.com/company/asian-infrastructure-investment-bank-aiib-","","","","","","","","","","","",""
-"li-4369438872","linkedin","https://www.linkedin.com/jobs/view/4369438872","","Sustainability Officer","Samudera Shipping Line Ltd","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/samudera-shipping-line-ltd","","","","","","","","","","","",""
 "li-4348493915","linkedin","https://www.linkedin.com/jobs/view/4348493915","","Environmental Health & Safety (EHS) Engineer","GE Vernova","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://www.linkedin.com/company/gevernova","","","","","","","","","","","",""
-"li-4362349416","linkedin","https://www.linkedin.com/jobs/view/4362349416","","Advisory - Consulting, ESG | Off-Cycle Internship (Jan 2026 to Jun 2026)","KPMG Singapore","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
+"li-4369438872","linkedin","https://www.linkedin.com/jobs/view/4369438872","","Sustainability Officer","Samudera Shipping Line Ltd","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/samudera-shipping-line-ltd","","","","","","","","","","","",""
 "li-4367418502","linkedin","https://www.linkedin.com/jobs/view/4367418502","","Senior Research Fellow (Climate Finance)","Nanyang Technological University Singapore","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
+"li-4362349416","linkedin","https://www.linkedin.com/jobs/view/4362349416","","Advisory - Consulting, ESG | Off-Cycle Internship (Jan 2026 to Jun 2026)","KPMG Singapore","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
 "li-4369675695","linkedin","https://www.linkedin.com/jobs/view/4369675695","","Advisory - Consulting, ESG Consulting | Off-Cycle Internship 2026 (Jul 2026 - Dec 2026)","KPMG Singapore","Singapore, Singapore","2026-02-05","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
 "in-129f580f4bda69b8","indeed","https://sg.indeed.com/viewjob?jk=129f580f4bda69b8","https://careers.kpmg.com.sg/job/Advisory-Consulting%2C-ESG-Consulting-Off-Cycle-Internship-2026-%28Jul-2026-Dec-2026%29/52278544/","Advisory - Consulting, ESG Consulting | Off-Cycle Internship 2026 (Jul 2026 - Dec 2026)","KPMG","SG","2026-02-05","internship","","","","","",False,"","","","","**Function(s):** Advisory
 
@@ -105,6 +246,7 @@ Only shortlisted candidates will be contacted by KPMG Talent Acquisition team, p
   
   
 At KPMG in Singapore we are committed to creating a diverse and inclusive workplace. We believe that diversity of thought, background and experience strengthens relationships and delivers meaningful benefits to our people, our clients and communities. As an equal opportunity employer, all qualified applicants will receive consideration for employment regardless of age, race, gender identity or expression, colour, marital status, religion, sexual orientation, disability, or other non-merit factors. We celebrate the different talents that our people bring and support every staff member in their journey to achieve personal and professional growth. One of the ways we do this is through Take Charge: Flexi-work, our flexible working framework which enables agile and innovative teams to help deliver our business goals.","","https://sg.indeed.com/cmp/Kpmg-0828bc85","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/d7b7fd1f635973534d21ba35d6f99c18","http://www.kpmg.com","Berlin","10,000+","$1B to $5B (USD)","At KPMG, you'll be able to tap into your skills, expertise and passion to help organizations find sustainable solutions to the world's most pressing issues.","","","","","",""
+"li-4354839717","linkedin","https://www.linkedin.com/jobs/view/4354839717","","Environmental Health and Safety Engineer","Micron Technology","Singapore, Singapore","2026-02-04","","","","","","",False,"","","","","","","https://www.linkedin.com/company/micron-technology","","","","","","","","","","","",""
 "li-4352450572","linkedin","https://www.linkedin.com/jobs/view/4352450572","","Assistant Director / Senior Manager (Sustainability Office)","Civil Aviation Authority of Singapore","Singapore, Singapore","2026-02-04","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/civil-aviation-authority-of-singapore","","","","","","","","","","","",""
 "in-86973db397ab9030","indeed","https://sg.indeed.com/viewjob?jk=86973db397ab9030","https://careers.gic.com.sg/job/Singapore-Associate%2C-Impact-and-Partnerships%2C-Corporate-Affairs-&-Communication-%28CAC%29/1356780466/","Associate, Impact and Partnerships, Corporate Affairs & Communication (CAC)","GIC","Singapore, S00, SG","2026-02-04","","","","","","",True,"","","","","**Location:**Singapore, SG
 
@@ -181,9 +323,6 @@ At GIC, our offices are vibrant hubs for ideation, professional growth, and inte
 
 **We are an equal opportunity employer**  
 GIC is an equal opportunity employer, and we value diversity. We do not discriminate based on race, religion, colour, national origin, sex, gender, gender expression, sexual orientation, age, marital status, veteran status, or disability status. We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment.","","https://sg.indeed.com/cmp/Gic-fd5d6266","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/da153389950326e03e44c23254788f9e","https://gic.careers","Singapore","1,001 to 5,000","Decline to state","At GIC, we have one purpose: to generate good returns for present and future generations of Singaporeans, while benefiting the local communities we invest in around the world.","","","","","",""
-"li-4354839717","linkedin","https://www.linkedin.com/jobs/view/4354839717","","Environmental Health and Safety Engineer","Micron Technology","Singapore, Singapore","2026-02-04","","","","","","",False,"","","","","","","https://www.linkedin.com/company/micron-technology","","","","","","","","","","","",""
-"li-4368602057","linkedin","https://www.linkedin.com/jobs/view/4368602057","","Assistant Manager, Corporate Sustainability","Kuok Group Singapore","Singapore, Singapore","2026-02-03","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kuoksg","","","","","","","","","","","",""
-"li-4218850762","linkedin","https://www.linkedin.com/jobs/view/4218850762","","Volunteer: Environmental Multimedia Programme in Peru","Global Nomadic","","2026-02-03","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
 "in-eedbb2e9aa956cbb","indeed","https://sg.indeed.com/viewjob?jk=eedbb2e9aa956cbb","https://vantagedc.wd1.myworkdayjobs.com/Vantage/job/Singapore-Singapore/Sr-Director--Environmental-Health---Safety--APAC_R20345","Sr. Director, Environmental Health & Safety, APAC","Vantage Data Centers","Singapore, S00, SG","2026-02-03","fulltime","","","","","",False,"","","","","**About Vantage Data Centers**
 ==============================
 
@@ -254,42 +393,7 @@ Don't meet all the requirements? Please still apply if you think you are the rig
 Vantage Data Centers is an Equal Opportunity Employer
 
 Vantage Data Centers does not accept unsolicited resumes from search firm agencies. Fees will not be paid in the event a candidate submitted by a recruiter without an agreement in place is hired; such resumes will be deemed the sole property of Vantage Data Centers.","","https://sg.indeed.com/cmp/Vantage-Data-Centers","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/dbe28ad3dcf5d79436bae3088835f172","https://vantage-dc.com","Denver, CO","501 to 1,000","Decline to state","","","","","","",""
-"li-4359644909","linkedin","https://www.linkedin.com/jobs/view/4359644909","","Sales Manager, ESG & Sustainability Services","SGS","Singapore, Singapore","2026-02-02","","","","","","",False,"","","","","","","https://ch.linkedin.com/company/sgs","","","","","","","","","","","",""
-"in-a9de3226cbffb1b4","indeed","https://sg.indeed.com/viewjob?jk=a9de3226cbffb1b4","https://capitaland.wd3.myworkdayjobs.com/en-US/CapitaLandGroup/job/Singapore-Central-Singapore/Intern--Corporate-Social-Responsibility_JR004382-1","Intern, Corporate Social Responsibility","CapitaLand","S00, SG","2026-02-02","fulltime, internship","","","","","",False,"","","","","About Us
-
-CapitaLand Group (CapitaLand) is one of Asia’s largest diversified real estate groups. Headquartered in Singapore, CapitaLand’s portfolio focuses on real estate investment management and real estate development, and spans across more than 270 cities in over 45 countries.
-
-Job Description
-
-At CapitaLand, we believe in making a positive impact by building resilience through enriching lives and uplifting communities where we operate. CapitaLand Hope Foundation (CHF), the philanthropic arm of CapitaLand Group, was established in 2005 to deepen the company’s community development commitment and contribute towards education, health and well-being initiatives targeting children, youth and seniors. Going beyond donations, the company also advocates volunteerism as an integral part of building a caring and inclusive community. We actively leverage our resources and networks to galvanise our staff, business partners and tenants to build an ecosystem of doing good together, amplifying the direct impact of our contributions to the communities.
-
-The Corporate Social Responsibility (CSR) Intern will be part of the Group CSR Team to work with like-minded individuals to drive social impact across CapitaLand Group of businesses as part of our global efforts to be an advocate for the social causes that we are passionate about.
-
-KEY RESPONSIBILITIES
-
-* Assist in the in the planning and execution of CSR/CHF initiatives in Singapore, including the coordination with internal stakeholders, community partners and volunteers in programme design, ensuring alignment with funding focus areas, and tracking programme outcomes during implementation
-* Assist in the implementation of business improvement initiatives including digitalisation of business processes, data cleaning and management
-* Assist in the content development, design and management of CSR/CHF communications materials such as videos, website, intranet, promotional literature, EDMs and presentation slides, as well as support the collection of impact stories to drive social awareness and support for the causes
-* Assist with CSR/CHF report preparation including data collection and analysis
-* Any duties assigned
-
-Do you have what it takes?
-
-* Team player with good communication, interpersonal and organisation skills
-* Curious, resourceful and meticulous with good analytical skills and ability to multitask and manage multiple timelines independently
-* Excellent verbal and written communication skills with good command of English. Knowledge of Chinese language will be advantageous when liaising with stakeholders in China if required
-* Good digital media and IT knowledge and skills such as basic design tool and MS Office – Word, Excel and Powerpoint, and able to create good presentation content for reporting and storytelling
-* Great project and event management experience and skills will be useful
-* Strong interest in CSR and community development with some community service experience will be beneficial
-* Able to commit for at least 6 months for the internship will be preferred
-
-Closing Statement:
-
-At CapitaLand, we advocate fair employment practices, and recruit talents based on merit and fit with our Corporate values. We provide equal opportunity for all qualified persons and build an inclusive workplace regardless of race, gender, age, religious belief or nationality.
-
-Only shortlisted candidates will be notified.","Real Estate","https://sg.indeed.com/cmp/Capitaland","","https://www.capitaland.com/international/en.html","SINGAPORE, SN","10,000+","$1B to $5B (USD)","Headquartered and listed in Singapore, CapitaLand is one of Asia’s largest diversified real estate groups, with a portfolio spanning across more than 240 cities in over 30 countries.","","","","","",""
-"li-4368197260","linkedin","https://www.linkedin.com/jobs/view/4368197260","","Intern, Corporate Social Responsibility","CapitaLand","Singapore, Singapore","2026-02-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/capitaland-limited","","","","","","","","","","","",""
-"li-4367826071","linkedin","https://www.linkedin.com/jobs/view/4367826071","","Client Manager (Sustainability)","BSI","","2026-02-02","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/bsi","","","","","","","","","","","",""
-"li-4336075604","linkedin","https://www.linkedin.com/jobs/view/4336075604","","Manager, Corporate Communications & CSR","Kuok Group Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kuoksg","","","","","","","","","","","",""
-"li-4370201723","linkedin","https://www.linkedin.com/jobs/view/4370201723","","Manager, Sustainability Office","MOH Holdings (Singapore)","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/moh-holdings","","","","","","","","","","","",""
-"li-4370093861","linkedin","https://www.linkedin.com/jobs/view/4370093861","","Asst. Manager/M Sustainability","Singapore Fashion Council","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singaporefashioncouncil","","","","","","","","","","","",""
+"li-4368602057","linkedin","https://www.linkedin.com/jobs/view/4368602057","","Assistant Manager, Corporate Sustainability","Kuok Group Singapore","Singapore, Singapore","2026-02-03","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kuoksg","","","","","","","","","","","",""
+"li-4218850762","linkedin","https://www.linkedin.com/jobs/view/4218850762","","Volunteer: Environmental Multimedia Programme in Peru","Global Nomadic","","2026-02-03","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
+"li-4361756910","linkedin","https://www.linkedin.com/jobs/view/4361756910","","Research Associate - Institute for Climate Risk and Response","UNSW","","","","","","","","",False,"","","","","","","https://au.linkedin.com/school/unsw/","","","","","","","","","","","",""
+"li-4370224039","linkedin","https://www.linkedin.com/jobs/view/4370224039","","Associate Director, Data Analyst, ESG Delivery","Standard Chartered Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/standard-chartered-singapore","","","","","","","","","","","",""
