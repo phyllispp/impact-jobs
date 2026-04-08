@@ -1,67 +1,24 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
 "li-4394434343","linkedin","https://www.linkedin.com/jobs/view/4394434343","","Senior ESG Consultant","Delta Electronics Southeast Asia & Oceania","Singapore, Singapore","2026-04-06","","","","","","",False,"","","","","","","https://th.linkedin.com/company/deltaseaoceania","","","","","","","","","","","",""
+"li-4367826071","linkedin","https://www.linkedin.com/jobs/view/4367826071","","Client Manager (Sustainability)","BSI","","2026-04-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/bsi","","","","","","","","","","","",""
 "li-4306443041","linkedin","https://www.linkedin.com/jobs/view/4306443041","","Intern, Communications (Corporate Social Responsibility)","Marina Bay Sands","Singapore, Singapore","2026-04-04","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/marina-bay-sands-pte-ltd","","","","","","","","","","","",""
 "li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","2026-04-04","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
 "li-4396560852","linkedin","https://www.linkedin.com/jobs/view/4396560852","","Senior Vice President - Strategic Planning, Sustainability, Corporate Banking","DBS Bank","Singapore, Singapore","2026-04-03","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dbs-bank","","","","","","","","","","","",""
 "li-4304677023","linkedin","https://www.linkedin.com/jobs/view/4304677023","","Senior Sustainability Consultant","Arup","Singapore, Singapore","2026-04-03","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/arup","","","","","","","","","","","",""
-"li-4371927742","linkedin","https://www.linkedin.com/jobs/view/4371927742","","Admin Officer, Sustainability Group (1-Year Contract)","Monetary Authority of Singapore (MAS)","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/mas","","","","","","","","","","","",""
 "li-4391715031","linkedin","https://www.linkedin.com/jobs/view/4391715031","","Manager/Assoc Director, Sustainable Investment Research with Global Asset Management Firm","The CAP Consulting Group Pte Ltd","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/cap-consulting-group-pte-ltd","","","","","","","","","","","",""
-"li-4027978140","linkedin","https://www.linkedin.com/jobs/view/4027978140","","Intern, Sustainability (Culture & Capacity Building)","Marina Bay Sands","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/marina-bay-sands-pte-ltd","","","","","","","","","","","",""
-"li-4389057152","linkedin","https://www.linkedin.com/jobs/view/4389057152","","Intern, Sustainability","CapitaLand","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/capitaland-limited","","","","","","","","","","","",""
-"li-4355926102","linkedin","https://www.linkedin.com/jobs/view/4355926102","","Project Intern, Sustainability Strategy (Institutional Sustainability) (Jul - Dec 2026)","Temasek","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
-"li-4344036518","linkedin","https://www.linkedin.com/jobs/view/4344036518","","Sustainability Specialist","AIA Singapore","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/aia-singapore","","","","","","","","","","","",""
 "li-4393424010","linkedin","https://www.linkedin.com/jobs/view/4393424010","","Global Sustainability Specialist – Human Rights","Asahi Global Procurement","","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/asahi-global-procurement-office","","","","","","","","","","","",""
-"li-4384108559","linkedin","https://www.linkedin.com/jobs/view/4384108559","","Senior Lead, Supply Chain Sustainability","ASM","","2026-04-01","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/asm","","","","","","","","","","","",""
-"li-4373818252","linkedin","https://www.linkedin.com/jobs/view/4373818252","","Early Careers: 2026 Graduate Program - Climate Practice (Physical Risks) Graduate Analyst – Singapore","WTW","Singapore, Singapore","2026-04-01","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/wtwcorporate","","","","","","","","","","","",""
+"li-4344036518","linkedin","https://www.linkedin.com/jobs/view/4344036518","","Sustainability Specialist","AIA Singapore","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/aia-singapore","","","","","","","","","","","",""
+"li-4355926102","linkedin","https://www.linkedin.com/jobs/view/4355926102","","Project Intern, Sustainability Strategy (Institutional Sustainability) (Jul - Dec 2026)","Temasek","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
+"li-4371927742","linkedin","https://www.linkedin.com/jobs/view/4371927742","","Admin Officer, Sustainability Group (1-Year Contract)","Monetary Authority of Singapore (MAS)","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/mas","","","","","","","","","","","",""
+"li-4389057152","linkedin","https://www.linkedin.com/jobs/view/4389057152","","Intern, Sustainability","CapitaLand","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/capitaland-limited","","","","","","","","","","","",""
+"li-4027978140","linkedin","https://www.linkedin.com/jobs/view/4027978140","","Intern, Sustainability (Culture & Capacity Building)","Marina Bay Sands","Singapore, Singapore","2026-04-02","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/marina-bay-sands-pte-ltd","","","","","","","","","","","",""
 "li-4355907981","linkedin","https://www.linkedin.com/jobs/view/4355907981","","Project Intern, Sustainability Strategy (Policy and Research) - Jul to Dec 2026","Temasek","Singapore, Singapore","2026-04-01","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
+"li-4373818252","linkedin","https://www.linkedin.com/jobs/view/4373818252","","Early Careers: 2026 Graduate Program - Climate Practice (Physical Risks) Graduate Analyst – Singapore","WTW","Singapore, Singapore","2026-04-01","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/wtwcorporate","","","","","","","","","","","",""
+"li-4384108559","linkedin","https://www.linkedin.com/jobs/view/4384108559","","Senior Lead, Supply Chain Sustainability","ASM","","2026-04-01","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/asm","","","","","","","","","","","",""
 "li-4384148061","linkedin","https://www.linkedin.com/jobs/view/4384148061","","Environmental Scientist Level II","Worley","","2026-04-01","","","","","","",False,"","","","","","","https://au.linkedin.com/company/worley","","","","","","","","","","","",""
-"li-4392167576","linkedin","https://www.linkedin.com/jobs/view/4392167576","","Transition Finance & Advisory, ESG Strategy","Standard Chartered Singapore","Singapore, Singapore","2026-03-31","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/standard-chartered-singapore","","","","","","","","","","","",""
-"in-dc6e83b94c11d3ab","indeed","https://sg.indeed.com/viewjob?jk=dc6e83b94c11d3ab","https://ehac.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/18084","Sustainability Intern – Systems Implementation (6months)","Williams-Sonoma, Inc.","SG","2026-03-31","fulltime","","","","","",False,"","","","","**Job Summary:**
-
-Sustainability at Williams-Sonoma, Inc. (WSI) encompasses our environmental and social initiatives. In this position, you will be focused primarily on implementation of a new system to support traceability and reporting. This includes interacting with our supply chain partners in WSI’s key sourcing markets. You will support suppliers to onboard into the system, troubleshoot and review data. You will contribute to the success of WSI's sustainability initiatives through the timely collection, management, and analysis of data from our supply chain partners.
-
-An ideal candidate should have an interest in sustainability technology solutions and be comfortable working with multiple stakeholders. In return, you will be supported by a collaborative and experienced global sustainability dream team!
-
-**This position is a 6-12 months internship position with the possibility to convert to contract.**
-
-**Key responsibilities:**
-
-* Support the WSI Sustainability team in achieving companywide and brand-specific goals related to responsible materials through implementation of a new technology platform for suppliers
-* Work with sustainability team to monitor supplier compliance by analyzing vendor cotton supply chain mapping and ensuring alignment with WSI requirements
-* Supplier communication about sustainability system purpose & expectations
-* Manage system, including resolving vendor issues, providing timely assistance and recommending changes
-Monitor supplier compliance - ensure suppliers are submitting data in timely manner through the system’s task function & review submitted data  
-
-**Desired qualifications and competencies:**
-
-* Keen interest in sustainability, supply chain management, or related fields
-* Experience in sustainability and traceability projects is an advantage
-* Detail oriented with proven analytical skills and experience processing large amounts of data to derive insight and develop recommendations for action
-* Maintains a global perspective and is culturally sensitive and aware.
-* Demonstrates a creative, energetic and motivated spirit.
-* Thrives in a collaborative & diverse team environment.
-* Proficiency in Microsoft Office Skills (especially Excel)
-* Exceptional written and verbal communication skills
-* Knowledgeable about Power BI is a plus
-
-**Commitment period:**
-
-* Minimum able to commit to 5 full days a week, ideally for 6-12 months
-
-#LI-KW1
-
-  
-
-**About Us**
-
-Founded in 1956, Williams-Sonoma, Inc. is the premier specialty retailer of home furnishings in the United States, Canada, Puerto Rico, Australia, United Kingdom and the rest of the world with franchise partnerships. Our family of brands are Williams-Sonoma, Pottery Barn, Pottery Barn Kids, PBteen, West Elm, Williams-Sonoma Home, Rejuvenation, Mark and Graham, and GreenRow. Our passion for high-quality products, functional design, outstanding customer service, enhancing the lives of our customers and the communities remains as our core values.
-
-Today, we are a more than USD 8.7 billion company, with a multi-brand, multi-channel, global enterprise supported by state-of-the-art technology and some of the most talented teams in retailing - and we're always looking for new energy and ideas.
-
-The Singapore regional office was set up in 2008 and we currently have more than 160 associates in functions such as sustainability, customs & compliance, finance, human resource, information technology, inventory planning, logistics, sourcing and quality assurance.
-
-The Global team is an inclusive employer where we recruit and provide employees with fair opportunities on the basis of merit, regardless of age, race, gender, religion, marital status and family responsibilities, or disability. Find out more about us at our WSI LinkedIn Page !","Retail","https://sg.indeed.com/cmp/Williams--sonoma,-Inc.","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/4fb035b20e3358262a3db41c8950e62d","https://www.williams-sonomainc.com/","3250 Van Ness Ave.
-San Francisco, CA 94109","10,000+","$5B to $10B (USD)","Founded in 1956, Williams-Sonoma, Inc. is the premier specialty retailer of high-quality products for the home.","","","","","",""
-"li-3803759960","linkedin","https://www.linkedin.com/jobs/view/3803759960","","Volunteer: Environmental Research Project in Costa Rica","Global Nomadic","","2026-03-31","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
-"li-4367826071","linkedin","https://www.linkedin.com/jobs/view/4367826071","","Client Manager (Sustainability)","BSI","","","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/bsi","","","","","","","","","","","",""
-"li-4397983139","linkedin","https://www.linkedin.com/jobs/view/4397983139","","Environmental Control Officer (ECO)","Chan & Chan Engineering Pte Ltd","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/chan-&-chan-engineering-pte-ltd","","","","","","","","","","","",""
+"li-4398228605","linkedin","https://www.linkedin.com/jobs/view/4398228605","","MGR, Sustainability Manager, Group Property Management","OCBC","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/ocbc-bank","","","","","","","","","","","",""
+"li-4398535596","linkedin","https://www.linkedin.com/jobs/view/4398535596","","Senior Associate/AVP - E&S Risk, Sustainable Finance, Institutional Banking Group","DBS Bank","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dbs-bank","","","","","","","","","","","",""
+"li-4218850762","linkedin","https://www.linkedin.com/jobs/view/4218850762","","Volunteer: Environmental Multimedia Programme in Peru","Global Nomadic","","","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/global-nomadic","","","","","","","","","","","",""
+"li-4359644909","linkedin","https://www.linkedin.com/jobs/view/4359644909","","Sales Manager, ESG & Sustainability Services","SGS","Singapore, Singapore","","","","","","","",False,"","","","","","","https://ch.linkedin.com/company/sgs","","","","","","","","","","","",""
+"li-4395427240","linkedin","https://www.linkedin.com/jobs/view/4395427240","","ESG Client Advisor (Financial) / CBD, Contract","Manpower Singapore","","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/manpowersingapore","","","","","","","","","","","",""
+"li-4395919004","linkedin","https://www.linkedin.com/jobs/view/4395919004","","Sustainable Supply Chain Analyst / Ethical Sourcing Specialist / ESG Procurement Manager","Legacy Group","Singapore, Singapore","","","","","","","",False,"","","","","","","https://pg.linkedin.com/company/legacygrouppng","","","","","","","","","","","",""
