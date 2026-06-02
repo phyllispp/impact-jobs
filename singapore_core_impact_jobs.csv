@@ -1,10 +1,12 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
-"li-4348912043","linkedin","https://www.linkedin.com/jobs/view/4348912043","","Associate/AVP, Total Portfolio Sustainability Investment Research & Strategy","GIC","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gic","","","","","","","","","","","",""
-"li-4380743544","linkedin","https://www.linkedin.com/jobs/view/4380743544","","Director of Strategic Partnerships, Climate - Asia Region","Pacific Environment","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://www.linkedin.com/company/pacific-environment","","","","","","","","","","","",""
-"li-4390362760","linkedin","https://www.linkedin.com/jobs/view/4390362760","","Senior Analyst – Climate Risk","WTW","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/wtwcorporate","","","","","","","","","","","",""
+"li-4417883335","linkedin","https://www.linkedin.com/jobs/view/4417883335","","Regional Environmental, Health & Safety Manager","The Estée Lauder Companies Inc.","Singapore, Singapore","2026-05-31","","","","","","",False,"","","","","","","https://www.linkedin.com/company/the-estee-lauder-companies-inc","","","","","","","","","","","",""
 "li-4400815071","linkedin","https://www.linkedin.com/jobs/view/4400815071","","Senior Associate / Manager, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4390362760","linkedin","https://www.linkedin.com/jobs/view/4390362760","","Senior Analyst – Climate Risk","WTW","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/wtwcorporate","","","","","","","","","","","",""
+"li-4380743544","linkedin","https://www.linkedin.com/jobs/view/4380743544","","Director of Strategic Partnerships, Climate - Asia Region","Pacific Environment","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://www.linkedin.com/company/pacific-environment","","","","","","","","","","","",""
+"li-4348912043","linkedin","https://www.linkedin.com/jobs/view/4348912043","","Associate/AVP, Total Portfolio Sustainability Investment Research & Strategy","GIC","Singapore, Singapore","2026-05-30","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gic","","","","","","","","","","","",""
 "li-4422005362","linkedin","https://www.linkedin.com/jobs/view/4422005362","","Research Engineer/Fellow (Connector for Sustainability Innovation) - JZ","Singapore Institute of Technology","Singapore, Singapore","2026-05-29","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/singapore-institute-of-technology/","","","","","","","","","","","",""
 "li-4420909352","linkedin","https://www.linkedin.com/jobs/view/4420909352","","ESG Associate","Climate Fund Managers","Singapore, Singapore","2026-05-29","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/climate-fund-managers","","","","","","","","","","","",""
+"li-4420928971","linkedin","https://www.linkedin.com/jobs/view/4420928971","","Manager, Facilities Management & Sustainability (2-years renewable contract)","Mount Faber Leisure Group","Singapore, Singapore","2026-05-29","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/mountfaberleisuregroup","","","","","","","","","","","",""
 "in-b673374f2dcc50dd","indeed","https://sg.indeed.com/viewjob?jk=b673374f2dcc50dd","http://sg.indeed.com/job/implementation-manager-regulatory-reform-and-sustainable-finance-b673374f2dcc50dd","Implementation Manager - Regulatory Reform and Sustainable Finance","Financial Services Regulatory Authority of St Helena","Remote, SG","2026-05-29","fulltime","","","","","",True,"","","","info@fsra.sh","Role Type: Full-time Contractor
 
 Reporting to: CEO
@@ -58,20 +60,63 @@ Benefits:
 
 Work Location: Remote","","https://sg.indeed.com/cmp/Financial-Services-Regulatory-Authority-of-St-Helena","","","","","","","","","","","",""
 "li-4417695550","linkedin","https://www.linkedin.com/jobs/view/4417695550","","Trainee Officer, Sustainable Banking (1 Year Contract)","Crédit Agricole CIB","Singapore, Singapore","2026-05-29","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/credit-agricole-cib","","","","","","","","","","","",""
-"li-4418893948","linkedin","https://www.linkedin.com/jobs/view/4418893948","","ESG Business Development Associate","ESGpedia","","2026-05-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/esgpedia","","","","","","","","","","","",""
+"li-4417439989","linkedin","https://www.linkedin.com/jobs/view/4417439989","","Research Associate (Maritime Energy and Sustainability)","Nanyang Technological University Singapore","Singapore, Singapore","2026-05-29","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
 "li-4406270964","linkedin","https://www.linkedin.com/jobs/view/4406270964","","Manager / Assistant Manager, Sustainability","Resorts World Sentosa","Singapore, Singapore","2026-05-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/resorts-world-sentosa","","","","","","","","","","","",""
-"li-4419029571","linkedin","https://www.linkedin.com/jobs/view/4419029571","","Environmental Consultant (Flora Specialist)","Aurecon","Singapore, Singapore","2026-05-28","","","","","","",False,"","","","","","","https://au.linkedin.com/company/aurecon","","","","","","","","","","","",""
+"li-4420446903","linkedin","https://www.linkedin.com/jobs/view/4420446903","","Environmental Engineer Level I","Worley","South West Community Development Council, Singapore","2026-05-28","","","","","","",False,"","","","","","","https://au.linkedin.com/company/worley","","","","","","","","","","","",""
+"li-4418893948","linkedin","https://www.linkedin.com/jobs/view/4418893948","","ESG Business Development Associate","ESGpedia","","2026-05-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/esgpedia","","","","","","","","","","","",""
+"li-4389544635","linkedin","https://www.linkedin.com/jobs/view/4389544635","","Deputy Director, Sustainable Energy, Urban Solutions and Sustainability","Enterprise Singapore","Singapore, Singapore","2026-05-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/enterprisesingapore","","","","","","","","","","","",""
+"in-4c6798ffd1b1a843","indeed","https://sg.indeed.com/viewjob?jk=4c6798ffd1b1a843","https://careers.nus.edu.sg/job/Assistant-Manager-%28Environmental-Health-&-Safety%29/32787-en_GB","Assistant Manager (Environmental Health & Safety)","National University of Singapore","Lower Kent Ridge Road, S00, SG","2026-05-28","contract","","","","","",False,"","","","","**Job Description**
+-------------------
+
+To oversee the Safety and Health Management System in the Department of Civil and Environmental Engineering that involve activities and hazards ranging from heavy engineering works/machineries to handling of regulated chemicals/hazardous substances, ionising/non-ionising substance and laser equipment.
+
+  
+
+* Develop, implement, and maintain the Department’s Safety & Health Management System in compliance with statutory and institutional requirements
+* Ensure compliance with all applicable Workplace Safety & Health, environmental, and fire safety regulations, including management of licences and statutory obligations
+* Provide technical advice on hazard identification, risk assessment, and safe work practices for laboratories, hazardous materials, radiation sources, and engineering equipment
+* Oversee laboratory safety, including commissioning/decommissioning, and safe operations of facilities and equipment
+* Administer Permit-to-Work (PTW) systems and ensure proper implementation of high-risk work controls (e.g., LOTO)
+* Plan and conduct safety inspections, audits, and regulatory compliance reviews, coordinate and close audit findings
+* Lead incident reporting and investigations, including root cause analysis and implementation of corrective actions
+* Develop and implement emergency response plans, and coordinate drills and business continuity planning
+* Conduct safety training, briefings, and engagement initiatives to promote a strong safety culture
+* Maintain accurate S&H records and documentation in compliance with regulatory requirements
+* Serve as Secretariat for S&H committees and support College-level safety programmes
+* Liaise with internal stakeholders and external authorities (e.g., MOM, NEA, SCDF) on S&H matters
+* Perform specialised safety functions where applicable (e.g., radiation monitoring, leak testing, dosimetry tracking)
+* Support management review processes and continuous improvement initiatives
+* Provide backup support for other S&H personnel as required
+
+**Job Requirements**
+--------------------
+
+* Possess at least a bachelor’s degree in Health, Safety & Environment (HSE), Engineering, or a related discipline.
+* Good knowledge of the Workplace Safety and Health Act and its subsidiary legislation, as well as relevant fire safety, environmental, and other statutory requirements in Singapore.
+* Demonstrated competency in hazard identification, risk assessment, and implementation of control measures (e.g., HAZID, HAZOP, JSA/RA).
+* Registered Workplace Safety and Health Officer (WSHO) with MOM is preferred.
+* Certified Fire Safety Manager (FSM) with SCDF will be an advantage.
+* Certified internal auditor for ISO 14001 (Environmental Management Systems) and ISO 45001 (Occupational Health & Safety Management Systems) preferred.
+* Possession of Construction Safety Orientation Course (CSOC/BCSS); Work-at-Height Assessor/Supervisor certification is an added advantage.
+* Minimum 3 years of relevant working experience in construction, laboratory, or engineering environments.
+* Candidates with fewer years of experience but strong academic background and relevant exposure may be considered.
+* Familiarity with statutory safety regulations, including chemical safety and hazardous substances management.
+* Good knowledge of industry standards and best practices in laboratory and/or construction safety.
+* Strong analytical, problem-solving, and organisational skills, with the ability to manage multiple tasks independently.
+* Proficient in Microsoft Office applications (Excel, Word, PowerPoint).
+* Strong communication and interpersonal skills, with the ability to engage stakeholders at all levels.
+* Independent, proactive, and a collaborative team player.
+* Highly committed, detail-oriented, and service-oriented with a strong sense of responsibility
+* Open to fixed term contract","","https://sg.indeed.com/cmp/National-University-of-Singapore","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/de9349d7434945d15bc81274357d1574","https://www.nus.edu.sg/","Singapore","10,000+","Decline to state","","","","","","",""
+"li-4419910231","linkedin","https://www.linkedin.com/jobs/view/4419910231","","Director, Sustainability – Supply Chain","Resmed","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://www.linkedin.com/company/resmed","","","","","","","","","","","",""
+"li-4273864098","linkedin","https://www.linkedin.com/jobs/view/4273864098","","Assistant Professor / Associate Professor / Professor in Sustainability Management","Singapore Institute of Technology","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/singapore-institute-of-technology/","","","","","","","","","","","",""
+"li-4418801016","linkedin","https://www.linkedin.com/jobs/view/4418801016","","BD Director (ESG,HK and SEA Market)","Links International","Singapore River, Central Singapore Community Development Council, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://hk.linkedin.com/company/links-recruitment-limited","","","","","","","","","","","",""
+"li-4401575688","linkedin","https://www.linkedin.com/jobs/view/4401575688","","Corporate Communications & CSR Intern (Yr2026 Q3/Q4 Intake - 6 months) - ***For Students based in Singapore only***","TotalEnergies","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/totalenergies","","","","","","","","","","","",""
 "li-4408811307","linkedin","https://www.linkedin.com/jobs/view/4408811307","","Sustainability Consultant | ESD - Singapore","Arup","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/arup","","","","","","","","","","","",""
 "li-4419837966","linkedin","https://www.linkedin.com/jobs/view/4419837966","","Regional Remediation Lead APJC, WW Sustainability","Amazon","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://www.linkedin.com/company/amazon","","","","","","","","","","","",""
-"li-4418596071","linkedin","https://www.linkedin.com/jobs/view/4418596071","","Associate Sustainability Communication Director","SHEIN","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/shein","","","","","","","","","","","",""
-"li-4419910231","linkedin","https://www.linkedin.com/jobs/view/4419910231","","Director, Sustainability – Supply Chain","Resmed","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://www.linkedin.com/company/resmed","","","","","","","","","","","",""
-"li-4418801016","linkedin","https://www.linkedin.com/jobs/view/4418801016","","BD Director (ESG,HK and SEA Market)","Links International","Singapore River, Central Singapore Community Development Council, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://hk.linkedin.com/company/links-recruitment-limited","","","","","","","","","","","",""
-"li-4273864098","linkedin","https://www.linkedin.com/jobs/view/4273864098","","Assistant Professor / Associate Professor / Professor in Sustainability Management","Singapore Institute of Technology","Singapore, Singapore","2026-05-27","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/singapore-institute-of-technology/","","","","","","","","","","","",""
-"li-4415243861","linkedin","https://www.linkedin.com/jobs/view/4415243861","","ESG Data Analyst","SATS Ltd.","Singapore, Singapore","2026-05-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/sats-ltd","","","","","","","","","","","",""
 "li-4419153417","linkedin","https://www.linkedin.com/jobs/view/4419153417","","Regional Sustainability Project Manager","DHL","Singapore, Singapore","2026-05-26","","","","","","",False,"","","","","","","https://de.linkedin.com/company/dhl","","","","","","","","","","","",""
 "li-4413014803","linkedin","https://www.linkedin.com/jobs/view/4413014803","","Sr. Manager, Social Impact & Sustainability - Asia Pacific","Visa","Singapore, Singapore","2026-05-26","","","","","","",False,"","","","","","","https://www.linkedin.com/company/visa","","","","","","","","","","","",""
 "li-4410050347","linkedin","https://www.linkedin.com/jobs/view/4410050347","","Advisory - Consulting, ESG | Graduate Associate 2026","KPMG Singapore","Singapore, Singapore","2026-05-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
-"li-4376595687","linkedin","https://www.linkedin.com/jobs/view/4376595687","","Research Analyst/ Associate/ Fellow in Sustainable Finance","National University of Singapore","Singapore, Singapore","2026-05-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/national-university-of-singapore/","","","","","","","","","","","",""
 "in-0d8bf891ac45c8c9","indeed","https://sg.indeed.com/viewjob?jk=0d8bf891ac45c8c9","https://www.amazon.jobs/jobs/10430919/regional-remediation-lead-apjc-ww-sustainability?cmpid=DA_INAD200785B","Regional Remediation Lead APJC, WW Sustainability","Amazon.com","Singapore, S00, SG","2026-04-17","fulltime","","","","","",False,"","","","","**DESCRIPTION**
 ---------------
 
@@ -125,4 +170,6 @@ Mentorship & Career Growth: We're continuously raising our performance bar as we
 
   
 Our inclusive culture empowers Amazonians to deliver the best results for our customers. If you have a disability and need a workplace accommodation or adjustment during the application and hiring process, including support for the interview or onboarding process, please visit https://amazon.jobs/content/en/how-we-hire/accommodations for more information. If the country/region you’re applying in isn’t listed, please contact your Recruiting Partner.","Internet And Software","https://sg.indeed.com/cmp/Amazon.com","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/3e9d43f5c277de169808abdcaf49ba2c","https://www.amazon.jobs","440 Terry Ave N, Seattle, WA, United States, Washington","10,000+","more than $10B (USD)","Our mission is to be Earth's most customer-centric company.","","","","","",""
-"li-4417883335","linkedin","https://www.linkedin.com/jobs/view/4417883335","","Regional Environmental, Health & Safety Manager","The Estée Lauder Companies Inc.","Singapore, Singapore","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/the-estee-lauder-companies-inc","","","","","","","","","","","",""
+"li-4372969737","linkedin","https://www.linkedin.com/jobs/view/4372969737","","Risk Services, Sustainability and Climate Change Advisory - Manager/ Senior Manager","PwC Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/pwc-singapore","","","","","","","","","","","",""
+"li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
+"li-4393260315","linkedin","https://www.linkedin.com/jobs/view/4393260315","","Sustainability Intern – Systems Implementation (6months)","Williams-Sonoma, Inc.","","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/williams-sonoma-inc-","","","","","","","","","","","",""
