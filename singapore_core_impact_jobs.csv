@@ -1,13 +1,34 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
-"in-275fe3f73809aff2","indeed","https://sg.indeed.com/viewjob?jk=275fe3f73809aff2","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Climate-Risk-Assessment-and-Climate-Change-_R00025219","Research Fellow (Climate Risk Assessment and Climate Change)","Nanyang Technological University","SG","2026-07-16","fulltime","","","","","",True,"","","","","In this rapidly changing world, the Centre for Climate Change and Environmental Health (CCEH) is advancing research on how climate change, hydroclimate variability, and extreme environmental conditions affect human health, infrastructure, ecosystems, and society. By bringing together expertise across climate science, hydroclimate analysis, environmental science, exposure assessment, public health, artificial intelligence, and predictive modelling, CCEH develops evidence-based solutions to support climate risk assessment, disaster preparedness, adaptation planning, and more climate-resilient communities in Singapore and across Asia.
+"li-4441164086","linkedin","https://www.linkedin.com/jobs/view/4441164086","","Consultant – Impact Measurement Specialist (Mixed Methods)","Impact Investment Exchange (IIX)","Singapore, Singapore","2026-07-17","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/impact-investment-exchange","","","","","","","","","","","",""
+"in-63f55d950580b50b","indeed","https://sg.indeed.com/viewjob?jk=63f55d950580b50b","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Associate--Spatial-Environmental-Health-and-AI-based-Exposure-Modelling-_R00025217-1","Research Associate (Spatial Environmental Health and AI-based Exposure Modelling)","Nanyang Technological University","Nanyang Avenue, S00, SG","2026-07-16","fulltime","","","","","",True,"","","","","In this rapidly changing world, the Centre for Climate Change and Environmental Health (CCEH) is advancing research on how climate change, air pollution, and extreme environmental conditions affect human health. By bringing together expertise across environmental science, exposure assessment, epidemiology, and public health, CCEH develops evidence-based solutions to support healthier and more climate-resilient communities in Singapore and across Asia.
+
+Within CCEH, the Environmental Health team, led by Prof. Steve Yim, investigates the interactions between climate, air quality, and human health using integrated measurement, modelling, and statistical approaches. The team works across multiple spatial scales to understand how environmental exposures affect human health and to generate scientific evidence for public health policy and workforce protection strategies.
+
+**Key Responsibilities** :
+
+The position will support research on environmental exposure assessment and its implications for human health, with a focus on climate- and environment-related risks such as heat, air pollution, temperature variability, and urban environmental factors. The role will contribute to the collection, integration, analysis, and interpretation of climate, environmental, land-use, remote sensing, socioeconomic, and health-related data. The successful candidate will apply spatial analysis, artificial intelligence, machine learning, land-use regression, and spatiotemporal modelling approaches to develop exposure estimates, generate maps and indicators, support research publications and reports, and collaborate with research partners to strengthen the Centre’s evidence base for environmental health, climate adaptation, and public health policy.
+
+**Job Requirements** :
+
+* Have a Master’s degree in Geographic Information Science, geospatial science, geography, environmental health, public health, epidemiology, environmental science, data science, climate science, or a related discipline.
+* Have research experience in environmental exposure assessment, spatial analysis, land-use regression modelling, environmental epidemiology, climate change and health, air pollution, heat exposure, or related fields.
+* Have experience in analyzing climate, environmental, land-use, remote sensing, health, or socioeconomic data.
+* Have experience using R, Python, GIS software, Google Earth Engine, or other relevant statistical and geospatial analytical tools.
+* Have good organizational, communication, and academic writing skills, with the ability to work independently and collaboratively in interdisciplinary teams.
+* Candidates with relevant publications, project experience, or experience applying machine learning or artificial intelligence techniques in environmental health research will be advantageous.
+
+We regret that only shortlisted candidates will be notified.
+
+Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
+"in-275fe3f73809aff2","indeed","https://sg.indeed.com/viewjob?jk=275fe3f73809aff2","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Climate-Risk-Assessment-and-Climate-Change-_R00025219","Research Fellow (Climate Risk Assessment and Climate Change)","Nanyang Technological University","Nanyang Avenue, S00, SG","2026-07-16","fulltime","","","","","",True,"","","","","In this rapidly changing world, the Centre for Climate Change and Environmental Health (CCEH) is advancing research on how climate change, hydroclimate variability, and extreme environmental conditions affect human health, infrastructure, ecosystems, and society. By bringing together expertise across climate science, hydroclimate analysis, environmental science, exposure assessment, public health, artificial intelligence, and predictive modelling, CCEH develops evidence-based solutions to support climate risk assessment, disaster preparedness, adaptation planning, and more climate-resilient communities in Singapore and across Asia.
 
 Within CCEH, the Climate and AI team, led by Prof. Steve Yim, focuses on climate change, hydroclimate variability, extreme weather events, environmental hazards, and their implications for climate risk assessment and societal resilience. The team uses integrated observations, reanalysis datasets, climate model simulations, artificial intelligence, and statistical approaches across multiple spatial and temporal scales to improve the prediction and assessment of climate-sensitive risks. Its research generates scientific evidence to support early warning, disaster preparedness, risk-informed decision-making, and climate adaptation strategies.
 
-**Key Responsibilities**:
+**Key Responsibilities** :
 
 The position will support research on hydroclimate variability and change, with a particular focus on Asian monsoon dynamics, hydroclimatic extremes, climate risk assessment, and early warning systems. The role will contribute to research on the understanding, prediction, and risk assessment of heavy precipitation, drought, flooding, monsoon variability, compound extreme events, and other climate-sensitive hazards across Singapore, Southeast Asia, and the wider Asian region. The successful candidate will analyse and integrate climate, hydrological, environmental, health, and socioeconomic datasets using statistical, spatiotemporal, climate diagnostic, and artificial intelligence methods; develop and evaluate predictive models, high-resolution risk assessment frameworks, climate scenario analyses, and early warning tools; contribute to research publications, technical reports, and decision-support outputs; and collaborate with academic, government, and stakeholder partners to strengthen disaster preparedness, climate adaptation, resilience planning, and evidence-based decision-making.
 
-**Job Requirements**:
+**Job Requirements** :
 
 * Have a Ph.D. degree in atmospheric science, climate science, hydroclimate science, hydrology, environmental science, geography, data science, artificial intelligence, computer science, or another related discipline.
 * Have strong research experience in hydroclimate variability, Asian monsoon dynamics, climate extremes, climate risk assessment, climate change impacts, environmental modelling, early warning systems, artificial intelligence, machine learning, or related fields.
@@ -19,6 +40,8 @@ The position will support research on hydroclimate variability and change, with 
 We regret that only shortlisted candidates will be notified.
 
 Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
+"li-4441448716","linkedin","https://www.linkedin.com/jobs/view/4441448716","","Research Fellow (Climate Risk Assessment and Climate Change)","Nanyang Technological University Singapore","Singapore, Singapore","2026-07-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
+"li-4438467153","linkedin","https://www.linkedin.com/jobs/view/4438467153","","[NCCS] Manager / Senior Manager (Strategy), National Climate Change Secretariat","National Climate Change Secretariat, Singapore","Singapore, Singapore","2026-07-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/nccs-sg","","","","","","","","","","","",""
 "in-010ac5a7e1fa9505","indeed","https://sg.indeed.com/viewjob?jk=010ac5a7e1fa9505","https://www.envirosc.com/careers/","Environmental, Health & Safety (EHS) Coordinator","Envirosolutions & Consulting Sdn. Bhd.","SG","2026-07-16","contract","","","","","",False,"","","","","**Job Description**  
 As an Environmental, Health & Safety (EHS) Coordinator, you will support clients in the planning, implementation, management, and coordination of EHS requirements across operational facilities and office environments. You will play an important role in ensuring compliance with applicable regulations, promoting a strong safety culture, and supporting the effective management of environmental, health, and safety programmes.
 
@@ -55,29 +78,8 @@ The successful candidate will also be responsible for conducting and facilitatin
 * Knowledge of EHS regulations, compliance requirements, and industry best practices will be an advantage.
 
 **Employment Type:** Contract (1 to 2 years), with extension or renewal subject to the Client’s requirements and project needs.","","https://sg.indeed.com/cmp/Envirosolutions-&-Consulting-Sdn.-Bhd.","","https://www.envirosc.com","Singapore","2 to 10","","","","","","","",""
-"li-4438467153","linkedin","https://www.linkedin.com/jobs/view/4438467153","","[NCCS] Manager / Senior Manager (Strategy), National Climate Change Secretariat","National Climate Change Secretariat, Singapore","Singapore, Singapore","2026-07-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/nccs-sg","","","","","","","","","","","",""
-"in-63f55d950580b50b","indeed","https://sg.indeed.com/viewjob?jk=63f55d950580b50b","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Associate--Spatial-Environmental-Health-and-AI-based-Exposure-Modelling-_R00025217-1","Research Associate (Spatial Environmental Health and AI-based Exposure Modelling)","Nanyang Technological University","SG","2026-07-16","fulltime","","","","","",True,"","","","","In this rapidly changing world, the Centre for Climate Change and Environmental Health (CCEH) is advancing research on how climate change, air pollution, and extreme environmental conditions affect human health. By bringing together expertise across environmental science, exposure assessment, epidemiology, and public health, CCEH develops evidence-based solutions to support healthier and more climate-resilient communities in Singapore and across Asia.
-
-Within CCEH, the Environmental Health team, led by Prof. Steve Yim, investigates the interactions between climate, air quality, and human health using integrated measurement, modelling, and statistical approaches. The team works across multiple spatial scales to understand how environmental exposures affect human health and to generate scientific evidence for public health policy and workforce protection strategies.
-
-**Key Responsibilities**:
-
-The position will support research on environmental exposure assessment and its implications for human health, with a focus on climate- and environment-related risks such as heat, air pollution, temperature variability, and urban environmental factors. The role will contribute to the collection, integration, analysis, and interpretation of climate, environmental, land-use, remote sensing, socioeconomic, and health-related data. The successful candidate will apply spatial analysis, artificial intelligence, machine learning, land-use regression, and spatiotemporal modelling approaches to develop exposure estimates, generate maps and indicators, support research publications and reports, and collaborate with research partners to strengthen the Centre’s evidence base for environmental health, climate adaptation, and public health policy.
-
-**Job Requirements**:
-
-* Have a Master’s degree in Geographic Information Science, geospatial science, geography, environmental health, public health, epidemiology, environmental science, data science, climate science, or a related discipline.
-* Have research experience in environmental exposure assessment, spatial analysis, land-use regression modelling, environmental epidemiology, climate change and health, air pollution, heat exposure, or related fields.
-* Have experience in analyzing climate, environmental, land-use, remote sensing, health, or socioeconomic data.
-* Have experience using R, Python, GIS software, Google Earth Engine, or other relevant statistical and geospatial analytical tools.
-* Have good organizational, communication, and academic writing skills, with the ability to work independently and collaboratively in interdisciplinary teams.
-* Candidates with relevant publications, project experience, or experience applying machine learning or artificial intelligence techniques in environmental health research will be advantageous.
-
-We regret that only shortlisted candidates will be notified.
-
-Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
-"li-4432551325","linkedin","https://www.linkedin.com/jobs/view/4432551325","","AVP, Global Wholesale Banking - Sustainability Office","OCBC","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/ocbc-bank","","","","","","","","","","","",""
-"li-4429827054","linkedin","https://www.linkedin.com/jobs/view/4429827054","","Manager (Environmental Public Health)","Ministry of Defence of Singapore","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/mindefsg","","","","","","","","","","","",""
+"li-4432601613","linkedin","https://www.linkedin.com/jobs/view/4432601613","","Executive, Sustainability & Product Development","Singapore Land Group Limited","Singapore, Singapore","2026-07-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singapore-land-group-limited","","","","","","","","","","","",""
+"li-4438424981","linkedin","https://www.linkedin.com/jobs/view/4438424981","","Head (Planning), Sustainability Office","Civil Aviation Authority of Singapore","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/civil-aviation-authority-of-singapore","","","","","","","","","","","",""
 "in-ada8ccb4db9634ea","indeed","https://sg.indeed.com/viewjob?jk=ada8ccb4db9634ea","https://sggovterp.wd102.myworkdayjobs.com/en-US/PublicServiceCareers/job/CAA-Changi-Airport-Terminal-2/Head--Planning---Sustainability-Office_JR-10000053195","Head (Planning), Sustainability Office","","Changi Airport, S00, SG","2026-07-15","fulltime","","","","","",False,"","","","","**[What the role is]**
 
 As part of the Sustainability Office, you will help promote Singapore’s aviation interests to sustain the long-term competitiveness of the Singapore air hub. This will involve overseeing and coordinating matters relating to aviation environmental protection and driving the development and implementation of sustainability roadmaps for domestic airport emissions and international aviation emissions.
@@ -98,12 +100,11 @@ To succeed in this job, you should have good interpersonal skills to engage stak
 * Able to travel on occasion for work
 
 Note: Your appointment designation will commensurate with your relevant work experience. Successful candidates will be offered a 3-year contract in the first instance.","","","","","","","","","","","","","",""
+"li-4432551325","linkedin","https://www.linkedin.com/jobs/view/4432551325","","AVP, Global Wholesale Banking - Sustainability Office","OCBC","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/ocbc-bank","","","","","","","","","","","",""
 "li-4440946683","linkedin","https://www.linkedin.com/jobs/view/4440946683","","Senior Assistant Director, A*STAR Office of Sustainability","A*STAR - Agency for Science, Technology and Research","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/astarsg","","","","","","","","","","","",""
-"li-4438424981","linkedin","https://www.linkedin.com/jobs/view/4438424981","","Head (Planning), Sustainability Office","Civil Aviation Authority of Singapore","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/civil-aviation-authority-of-singapore","","","","","","","","","","","",""
-"li-4439843094","linkedin","https://www.linkedin.com/jobs/view/4439843094","","Sustainability Executive (Junior/ Senior) - based in China/ Singapore","UTAC","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/utac","","","","","","","","","","","",""
-"li-4439845714","linkedin","https://www.linkedin.com/jobs/view/4439845714","","Senior Associate/Manager, Government Relations, ESG","SHEIN","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/shein","","","","","","","","","","","",""
+"li-4429827054","linkedin","https://www.linkedin.com/jobs/view/4429827054","","Manager (Environmental Public Health)","Ministry of Defence of Singapore","Singapore, Singapore","2026-07-15","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/mindefsg","","","","","","","","","","","",""
+"li-4439818253","linkedin","https://www.linkedin.com/jobs/view/4439818253","","Corporate Social Responsibility Manager (Internship)","Tata Consultancy Services","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://in.linkedin.com/company/tata-consultancy-services","","","","","","","","","","","",""
 "li-4428697888","linkedin","https://www.linkedin.com/jobs/view/4428697888","","Deputy Director, Group Sustainability","Frasers Property Limited","","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/frasers-property-limited","","","","","","","","","","","",""
-"li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
 "in-8c2e8ac94e612f63","indeed","https://sg.indeed.com/viewjob?jk=8c2e8ac94e612f63","https://www.mycareersfuture.gov.sg/job/marketing/esg-marketing-1-year-contract-persol-singapore-7f8674134a1ba1adeb9a66ffbe1da4f8","ESG Marketing - 1 year contract","PERSOL","SG","2026-07-14","contract","","","","","",False,"","","","","**Duration: 1 year contract**
 
 **Location: Depot road**
@@ -140,7 +141,11 @@ By sending us your personal data and curriculum vitae (CV), you are deemed to co
 
 PERSOL Singapore Pte Ltd • RCB No. 200007268E • EA License No. 01C4394 • R1435126 (Aw Yu Chen)","","https://sg.indeed.com/cmp/Persol-6","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/f5743b8958278a4993fafc415aea78f4","http://www.persolsingapore.com","Head Office
 43-47 Burswood Road, Burswood, WA, 6100","501 to 1,000","","","","","","","",""
-"li-4439774418","linkedin","https://www.linkedin.com/jobs/view/4439774418","","Sustainable Manufacturing Water Program Manager","NXP Semiconductors","","2026-07-13","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/nxp-semiconductors","","","","","","","","","","","",""
+"li-4439845714","linkedin","https://www.linkedin.com/jobs/view/4439845714","","Senior Associate/Manager, Government Relations, ESG","SHEIN","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/shein","","","","","","","","","","","",""
+"li-4439843094","linkedin","https://www.linkedin.com/jobs/view/4439843094","","Sustainability Executive (Junior/ Senior) - based in China/ Singapore","UTAC","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/utac","","","","","","","","","","","",""
+"li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","2026-07-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
+"li-4439114453","linkedin","https://www.linkedin.com/jobs/view/4439114453","","Head of Investments (Climate and Energy Transition)","Berge Bulk","Singapore, Singapore","2026-07-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/bergebulk","","","","","","","","","","","",""
+"li-4439125983","linkedin","https://www.linkedin.com/jobs/view/4439125983","","Manager / Assistant Manager, Sustainability","Resorts World Sentosa","Singapore, Singapore","2026-07-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/resorts-world-sentosa","","","","","","","","","","","",""
 "in-7deac7b0f9903461","indeed","https://sg.indeed.com/viewjob?jk=7deac7b0f9903461","https://eyglobal.yello.co/jobs/hYCRKgA0WpNFO8pQyvbxdA?job_board_id=c1riT--B2O-KySgYWsZO1Q","Associate - Assurance, Climate Change and Sustainability Services (2027 Graduates)","EY","Singapore, S00, SG","2026-07-13","","","","","","",False,"","","","","At EY, we’re all in to shape your future with confidence.
 
 We’ll help you succeed in a globally connected powerhouse of diverse teams and take your career wherever you want it to go.
@@ -187,45 +192,159 @@ EY is building a better working world by creating new value for clients, people,
 Enabled by data, AI and advanced technology, EY teams help clients shape the future with confidence and develop answers for the most pressing issues of today and tomorrow.
 
 EY teams work across a full spectrum of services in assurance, consulting, tax, strategy and transactions. Fueled by sector insights, a globally connected, multi-disciplinary network and diverse ecosystem partners, EY teams can provide services in more than 150 countries and territories.","","https://sg.indeed.com/cmp/Ey","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/82174c7d7afe2380d2d4631ea183f866","https://www.ey.com","London, England","10,000+","more than $10B (USD)","At EY, we are committed to building a better working world.","","","","","",""
-"li-4439114453","linkedin","https://www.linkedin.com/jobs/view/4439114453","","Head of Investments (Climate and Energy Transition)","Berge Bulk","Singapore, Singapore","2026-07-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/bergebulk","","","","","","","","","","","",""
-"li-4439125983","linkedin","https://www.linkedin.com/jobs/view/4439125983","","Manager / Assistant Manager, Sustainability","Resorts World Sentosa","Singapore, Singapore","2026-07-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/resorts-world-sentosa","","","","","","","","","","","",""
-"li-4439798149","linkedin","https://www.linkedin.com/jobs/view/4439798149","","Environmental Maintenance Coordinator","Cushman & Wakefield","Singapore, Singapore","2026-07-13","","","","","","",False,"","","","","","","https://www.linkedin.com/company/cushman-&-wakefield","","","","","","","","","","","",""
 "li-4400815071","linkedin","https://www.linkedin.com/jobs/view/4400815071","","Senior Associate / Manager, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-07-12","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
 "li-4420002259","linkedin","https://www.linkedin.com/jobs/view/4420002259","","Director, Sustainable Business","Brunswick Group","North West Community Development Council, Singapore","2026-07-11","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/brunswick-group","","","","","","","","","","","",""
-"in-2c476e8004d57ca9","indeed","https://sg.indeed.com/viewjob?jk=2c476e8004d57ca9","https://www.mycareersfuture.gov.sg/job/marketing/sustainability-marketing-content-specialist-persol-singapore-ad7c1a9e0f78520a4fb7897af8fc60b6","Sustainability Marketing Content Specialist","PERSOL","SG","2026-07-09","contract","","","","","",False,"","","","","* 12months contract
-* Salary: $4400 per month
-* Location: Depot road
+"in-fa9b69a9be5822c6","indeed","https://sg.indeed.com/viewjob?jk=fa9b69a9be5822c6","https://iix-global.breezy.hr/p/f09eb6dc6c93-call-for-consultant-impact-measurement-specialist?source=indeed","Call for Consultant - Impact Measurement Specialist","IIX Global","Singapore, S00, SG","2026-07-01","contract","","","","","",False,"","","","","**Consultant – Impact Measurement Specialist (Mixed Methods)**
 
-Job Summary
+**Singapore · Contract / Freelance · Project-Based, ~2 Days per Week**
 
-To support sustainability communications and content management for a product portfolio. The role serves as the bridge between technical teams, sustainability specialists, compliance stakeholders, and marketing teams, translating complex sustainability initiatives into clear, credible, and business-ready messaging for internal and external audiences.
+**Location:** Based in Singapore; occasional regional fieldwork as required
 
-Key Responsibilities
+**Team / BU:** IIX Platforms, Works closely with the Strategic Initiatives team, IIX Impact Measurement team, and Project Lead
 
-* Act as the subject matter expert for product sustainability messaging.
-* Translate sustainability and R&D inputs into clear narratives, claims, and proof points.
-* Develop, review, and maintain sustainability content for marketing materials, internal communications, sales enablement, and events.
-* Support sustainability claim substantiation by gathering, validating, and organizing supporting data and documentation.
-* Collaborate with cross-functional stakeholders, including engineering, product development, sustainability, supply chain, and compliance teams.
-* Monitor market trends and competitor sustainability communications to identify positioning opportunities and emerging themes.
-* Build and maintain a centralized messaging library, ensuring consistency, accuracy, and easy accessibility across teams.
-* Maintain records of approvals, supporting evidence, and substantiation references for claims.
+**Employment Type:** Project-Based, Freelance / Independent Contractor — ~2 days/week (flexible); 2-month engagement (flexible/extendable)
 
-Requirements
+**ABOUT IIX GLOBAL**
 
-* Background in Marketing, Communications, or a related discipline.
-* Experience working with data, documentation, and claim substantiation.
-* Strong organizational skills, attention to detail, and ability to manage multiple stakeholders and priorities.
-* Ability to work independently in a cross-functional environment.
-* Familiarity with regulated marketing, compliance, or claims review processes.
-* Experience working with international or cross-regional teams.
+Impact Investment Exchange (IIX) is a pioneer in impact investing, dedicated to reshaping finance for sustainable development. Over the past 15+ years, IIX has built the sustainable investing market through:
 
-To apply, simply click ""APPLY"" and submit your curriculum vitae (CV) through GO, the official PERSOL job application platform.
+* Capital Mobilization – Including the Women's Livelihood Bond™ Series (7 listed bonds and growing).
 
-By sending us your personal data and curriculum vitae (CV), you are deemed to consent to PERSOL Singapore Pte Ltd and its affiliates to collect, use and disclose your personal data for the purposes set out in the Privacy Policy available at https://www.persolsingapore.com/policies. You acknowledge that you have read, understood, and agree with the Privacy Policy.
+* Enterprise Technical Assistance – Supporting impact enterprises across Asia, Africa, and the Pacific.
 
-PERSOL Singapore Pte Ltd • RCB No. 200007268E • EA License No. 01C4394• Reg No: R1770602 (Teng Min Yee)","","https://sg.indeed.com/cmp/Persol-6","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/f5743b8958278a4993fafc415aea78f4","http://www.persolsingapore.com","Head Office
-43-47 Burswood Road, Burswood, WA, 6100","501 to 1,000","","","","","","","",""
+* Data & Impact Measurement – Leveraging IIX Values™, an impact verification tech solution.
+
+* Global Advocacy & Innovation – Driving gender equality and climate action in financial markets through initiatives like the Orange Movement™.
+
+**Our Impact:**
+
+* Mobilized nearly US$1.5 billion in capital, of which US$600 million is directly invested
+
+* Positively impacted over 185 million lives
+
+* Avoided over 1.9 million metric tons of carbon
+
+* Collected over 116,000+ data points on sustainable MSMEs
+
+In 2024, IIX launched IIX Intelligence™, a global data hub evaluating gender diversity, ESG, and climate action among MSMEs. Our work has been recognized by accolades such as the Oslo Business for Peace Award and the UN Global Climate Action Award.
+
+ROLE PURPOSE
+
+IIX is seeking an experienced, mixed-methods Impact Measurement Specialist with working proficiency in quantitative methods to support impact measurement, analytics, and research writing across its portfolio of programs and client engagements. The role combines hands-on qualitative and mixed-methods research delivery — interviews, focus groups, and evidence gathering — with strong analytical writing, producing impact assessment reports and related materials that are rigorous, clear, and tailored to funder, donor, and government audiences. This is a flexible, project-based engagement suited to a self-directed professional who can move fluidly between fieldwork and analysis, and who can be deployed across different IIX programs as needs arise.
+
+**KEY RESPONSIBILITIES**
+
+**Impact Measurement**
+
+* Design and/or support recruitment strategies for research participants across relevant stakeholder groups (e.g., enterprise leaders, beneficiaries, volunteers, ecosystem enablers, funders)
+
+* Conduct in-depth interviews (IDIs) and facilitate focus group discussions (FGDs), including sensitive or emotionally significant conversations, with care and confidentiality
+
+* Facilitate Theory of Change mapping sessions and other structured evidence-gathering exercises (self-assessment forms, follow-up interviews, document review)
+
+* Coordinate transcription and translation of fieldwork materials across languages as needed
+
+* Design and administer quantitative surveys and data collection instruments aligned to program indicators and impact frameworks
+
+* Clean, structure, and analyze quantitative datasets, applying appropriate statistical methods to test relationships, trends, and significance
+
+* Build and maintain indicator trackers, scorecards, or dashboards that translate raw data into decision-useful metrics
+
+* Flag research or fieldwork risks early, such as sampling gaps, participant fatigue, or coverage concentration, and escalate through regular project syncs
+
+* Triangulate quantitative findings with qualitative evidence to strengthen the rigor and credibility of impact claims
+
+Report Writing & Project Support
+
+* Draft, edit, and finalize impact assessment and M&E reports, integrating statistical findings with qualitative narrative into clear, well-structured outputs
+
+* Contribute to cross-cutting synthesis reports, drawing out data-driven patterns across themes, stakeholder groups, or program components
+
+* Draft stakeholder-facing materials — executive summaries, presentation content, one-pagers, or briefing notes — for funders, donors, and government partners
+
+* Act as day-to-day support to the Project Lead, helping keep workstreams, timelines, and deliverables on track, and stepping in on ad hoc analysis or drafting tasks as priorities shift
+
+* Review and quality-check technical reports and datasets produced by program and research teams for consistency, accuracy, and clarity
+
+**WHAT WE'RE LOOKING FOR**
+
+**Experience & Skills**
+
+* Min. 5 years of relevant professional experience spanning mixed-methods research AND impact measurement, M&E, or development-sector report writing
+
+* Demonstrated experience conducting in-depth interviews and facilitating focus group discussions, ideally in a social sector or development context
+
+* Strong analytical writing skills, with a track record of producing clear, well-structured reports that translate complex or qualitative data into accessible narratives for funders, donors, or government partners
+
+* Solid understanding of impact measurement frameworks (IRIS+, SDGs, GRI, or equivalent)
+
+* Working familiarity with Singapore's nonprofit, grassroots, or community ecosystem, or a closely adjacent sector
+
+* Strong facilitation and rapport-building skills with a wide range of stakeholders
+
+* Comfortable working in a support capacity to a Project Lead: proactive, organized, and reliable without needing close supervision
+
+* Independent project coordination skills: able to manage a multi-week or multi-month research and reporting schedule with minimal day-to-day oversight
+
+* Bachelor's degree or higher in Social Sciences, International Development, Public Policy, Economics, or a related discipline
+
+**Preferred / Desired Qualifications**
+
+* Spoken and written Mandarin Chinese is a strong advantage: it meaningfully widens the participant pool for interviews, focus groups, and other qualitative research, and supports engagement with a broader range of stakeholders
+
+* Comfortable working across additional languages, or able to coordinate interpretation/translation support where personal fluency doesn't cover a language
+
+* Prior experience with Theory of Change facilitation or impact assessment work
+
+* Familiarity with impact investing, ESG, gender finance, or sustainable development themes
+
+* Familiarity with data visualization tools (Tableau, Power BI, Claude Code) or statistical analysis software
+
+**Working Arrangement**
+
+* Onboarding and briefing with the relevant IIX project team at the start of each engagement
+
+* Regular check-ins with the Project Lead and IIX delivery team throughout the engagement
+
+* All fieldwork materials, consent processes, and data handling to follow IIX's PDPA-compliant protocols
+
+The Person
+
+* Self-directed and proactive — comfortable operating with minimal day-to-day supervision across a multi-month engagement
+
+* A strong facilitator and relationship-builder, at ease engaging enterprise leaders, beneficiaries, funders, and other stakeholders, including in sensitive conversations
+
+* Organized and reliable, able to move fluidly between fieldwork and analysis while keeping workstreams and deliverables on track
+
+THE PREM FRAMEWORK
+
+Every IIX team member is a PREM professional. We look for these qualities in everyone we hire:
+
+P - Passionate: Mission-driven & purpose-led
+
+R - Resilient: Thrives under pressure & ambiguity
+
+E - Equitable: Champions fairness & inclusion
+
+M - Maverick: Bold, entrepreneurial thinker
+
+**WHY IIX**
+
+* Work at the intersection of finance and impact — your contribution directly enables IIX's mission
+
+* High-trust, lean team environment — minimal bureaucracy, maximum ownership
+
+* Flexible, project-based engagement — shape your own schedule while contributing to high-visibility research and funder-facing materials
+
+* Work alongside the Strategic Initiatives and IIX Impact Measurement teams on programs spanning gender-lens investing, climate finance, and sustainable development across Asia
+
+* A culture that takes PREM values seriously — you will be seen, heard, and valued
+
+**HOW TO APPLY**
+
+Interested candidates should submit a CV, a brief cover note, and two to three relevant work samples, which may include impact assessments or M&E reports, research briefs, or interview/FGD summaries they have authored or co-authored, by 24th July, 2026. Please indicate language proficiencies (including Mandarin, if applicable) in the cover note. Applications and inquiries may be directed to <breezy link> for any further clarification.
+
+IIX is an equal opportunity employer. We are committed to building a diverse, inclusive team that reflects the communities we serve.","","https://sg.indeed.com/cmp/Iix-Global","","","","","","","","","","","",""
 "in-0088f586e8435a93","indeed","https://sg.indeed.com/viewjob?jk=0088f586e8435a93","https://tzuchisingapore.mathilda.io/career/jd/3048/default/default","Environmental Sustainability executive","Tzu Chi Singapore","SG","2024-11-04","parttime, fulltime","","","","","",False,"","","","","Posted on : 04 Nov 2024, Location : HYC
 
 Job Summary:
@@ -303,8 +422,8 @@ Minimum 1 years of relevant experience
 #### **Number Of Open Position(s)**
 
 1","","https://sg.indeed.com/cmp/Tzu-Chi-Singapore","","","","","","","","","","","",""
-"li-4432601613","linkedin","https://www.linkedin.com/jobs/view/4432601613","","Executive, Sustainability & Product Development","Singapore Land Group Limited","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singapore-land-group-limited","","","","","","","","","","","",""
-"li-4441448716","linkedin","https://www.linkedin.com/jobs/view/4441448716","","Research Fellow (Climate Risk Assessment and Climate Change)","Nanyang Technological University Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
-"li-4441164086","linkedin","https://www.linkedin.com/jobs/view/4441164086","","Consultant – Impact Measurement Specialist (Mixed Methods)","Impact Investment Exchange (IIX)","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/impact-investment-exchange","","","","","","","","","","","",""
-"li-4441445898","linkedin","https://www.linkedin.com/jobs/view/4441445898","","Research Associate (Spatial Environmental Health and AI-based Exposure Modelling)","Nanyang Technological University Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
-"li-4441443161","linkedin","https://www.linkedin.com/jobs/view/4441443161","","Associate / Assistant Manager, Sustainability (Frasers Hospitality, 6 months contract)","Frasers Property Limited","","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/frasers-property-limited","","","","","","","","","","","",""
+"li-4414204287","linkedin","https://www.linkedin.com/jobs/view/4414204287","","Sustainability Partners Specialist (AVP/VP)","Bank of Singapore, Asia’s Global Private Bank","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/bank-of-singapore","","","","","","","","","","","",""
+"li-4441318484","linkedin","https://www.linkedin.com/jobs/view/4441318484","","Strategy and Sustainability Professional","Siemens","Singapore, Singapore","","","","","","","",False,"","","","","","","https://de.linkedin.com/company/siemens","","","","","","","","","","","",""
+"li-4441970117","linkedin","https://www.linkedin.com/jobs/view/4441970117","","Head of Sustainability","Henkel","Singapore, Singapore","","","","","","","",False,"","","","","","","https://de.linkedin.com/company/henkel","","","","","","","","","","","",""
+"li-4424336112","linkedin","https://www.linkedin.com/jobs/view/4424336112","","Product Manager, Waste and Sustainability (NEA)","GovTech Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/govtech-singapore","","","","","","","","","","","",""
+"li-4027978140","linkedin","https://www.linkedin.com/jobs/view/4027978140","","Intern, Sustainability (Culture & Capacity Building)","Marina Bay Sands","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/marina-bay-sands-pte-ltd","","","","","","","","","","","",""
