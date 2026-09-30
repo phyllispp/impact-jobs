@@ -1,7 +1,86 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
-"li-4471330958","linkedin","https://www.linkedin.com/jobs/view/4471330958","","Sustainability & ESG Consultant","SGS","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://ch.linkedin.com/company/sgs","","","","","","","","","","","",""
-"li-4471331453","linkedin","https://www.linkedin.com/jobs/view/4471331453","","Associate - Assurance, Climate Change and Sustainability Services (2027 Graduates)","EY","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-4448960993","linkedin","https://www.linkedin.com/jobs/view/4448960993","","Senior Manager/ Assistant Director (Biodiversity) - Sustainability Office","Gardens by the Bay","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gardens-by-the-bay","","","","","","","","","","","",""
+"in-98cfd0f6075cfe88","indeed","https://sg.indeed.com/viewjob?jk=98cfd0f6075cfe88","https://ehac.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/20545","Sustainability Intern – Social Impact (6 months)","Williams-Sonoma, Inc.","SG","2026-09-29","fulltime","","","","","",False,"","","","","**JOB SUMMARY:**
+
+The Sustainability Intern will have a strong interest in sustainability and social impact. They will support the execution of an industry leading factory responsibility program in home furnishings, working within the WSI sustainability team across Asia and the US.
+
+The Social Compliance Intern will support the day-to-day operations of Williams-Sonoma, Inc.’s social compliance program with some addition projects. Working closely with the Sustainability team across Asia, the Intern will assist with social compliance audit tracking, supplier and factory follow-up, data management, reporting, documentation, and program coordination.
+
+This role is suited for someone who is detail-oriented, comfortable working with data, and interested in gaining hands-on experience in the operational management of a global social compliance program.
+
+**We are looking for an intern for 6months, starting January 2027, preferably able to commit to at least 4 days work week.**
+
+**KEY RESPONSIBILITIES:**
+
+* Support the day-to-day operation and coordination of WSI’s social compliance and factory responsibility program.
+* Maintain and update social compliance records, trackers, databases, and supplier/factory information.
+* Support follow-up with suppliers and factories on outstanding documentation, corrective actions, and program requirements.
+* Support the preparation of social compliance reports.
+* Support on Data Collection on Traceability for Europe and Pakistan market.
+* Support on launching and tracking Vendor Progress for Annual Conflict Mineral Data Collection.
+
+**DESIRABLE ATTRIBUTES, SKILLS AND QUALIFICATIONS:**
+
+* Strong interest in social compliance, responsible sourcing, sustainability, or global supply chains.
+* Embodies the highest level of personal and professional integrity and ethics.
+* A true passion for sustainability.
+* Maintains a global perspective and is culturally sensitive and aware.
+* Thrives in a collaborative team environment.
+* Demonstrates a creative, energetic and motivated spirit.
+* Possesses attention to detail while managing simultaneous projects in a dynamic environment.
+* Strong data analysis and excel skills
+* Ability to work independently and cooperatively in a diverse group
+* Fluency in English and proficiency in Microsoft Word, PowerPoint, Excel
+* Proficiency in Microsoft BI is a plus.
+
+**Commitment period:**
+
+* Minimum able to commit to 4 full days a week, ideally for 6 months.
+* This internship can be a credit-bearing internship with the academic institutions.
+
+#LI-KW1
+
+  
+
+**About Us**
+
+Founded in 1956, Williams-Sonoma, Inc. is the premier specialty retailer of home furnishings in the United States, Canada, Puerto Rico, Australia, United Kingdom and the rest of the world with franchise partnerships. Our family of brands are Williams-Sonoma, Pottery Barn, Pottery Barn Kids, PBteen, West Elm, Williams-Sonoma Home, Rejuvenation, Mark and Graham, and GreenRow. Our passion for high-quality products, functional design, outstanding customer service, enhancing the lives of our customers and the communities remains as our core values.
+
+Today, we are a more than USD 8.7 billion company, with a multi-brand, multi-channel, global enterprise supported by state-of-the-art technology and some of the most talented teams in retailing - and we're always looking for new energy and ideas.
+
+The Singapore regional office was set up in 2008 and we currently have more than 160 associates in functions such as sustainability, customs & compliance, finance, human resource, information technology, inventory planning, logistics, sourcing and quality assurance.
+
+The Global team is an inclusive employer where we recruit and provide employees with fair opportunities on the basis of merit, regardless of age, race, gender, religion, marital status and family responsibilities, or disability. Find out more about us at our WSI LinkedIn Page !","Retail","https://sg.indeed.com/cmp/Williams--sonoma,-Inc.","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/4fb035b20e3358262a3db41c8950e62d","https://www.williams-sonomainc.com/","3250 Van Ness Ave.
+San Francisco, CA 94109","10,000+","$5B to $10B (USD)","Founded in 1956, Williams-Sonoma, Inc. is the premier specialty retailer of high-quality products for the home.","","","","","",""
+"in-5bec56969ce192bb","indeed","https://sg.indeed.com/viewjob?jk=5bec56969ce192bb","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Associate--AI-for-Nature-Based-Climate-Solutions-_R00025899","Research Associate (AI for Nature Based Climate Solutions)","Nanyang Technological University","Nanyang Avenue, S00, SG","2026-09-29","fulltime","","","","","",True,"","","","","ASE is a diverse school focusing on the connections between geosciences, ecology, society and Earth systems. Our approach integrates these disciplines to examine big environmental challenges both in Southeast Asia and globally. We conduct cutting-edge research on topics that include ecology, geohazards, climate change, sea-level rise, environmental sustainability, conservation of environment and biodiversity, and interactions between environment and society. For more information on ASE please visit https://www.ntu.edu.sg/ase .
+
+The Yanyan Cheng research group is seeking a Research Associate. This position is part of a Singapore MOE funded research project hosted by ASE. The Research Associate will help advance research in integrated assessment modeling and understand interactions among land, water, carbon, energy, climate, ecosystems, and human systems.
+
+This is a one-year appointment and potentially renewable based on performance and funding availability.
+
+**Key Responsibilities:**
+
+* Collect, curate, validate, and document large-scale multimodal ecohydrological remote sensing datasets.
+* Train and evaluate models on large datasets and high-performance computing systems; establish reproducible baselines, ablation studies, and evaluation suites.
+Apply the developed datasets and models to the monitoring and analysis of tropical ecohydrological processes.  
+
+**Job Requirements:**
+
+* The candidate should hold a master's degree in information and communication engineering, with research experience in 3D point-cloud or point-cloud sequence processing, is highly desirable.
+* The candidate should posse extensive relevant experience in model design and development, programming implementation, experimental design and evaluation, and peer-reviewed scientific writing.
+* The candidate should have demonstrated research expertise in both remote sensing and computer vision.
+* The candidate should have a strong publication record. Preference will be given to candidates with first- or co-first-author papers in CCF Rank A computer science venues (e.g., CVPR) and leading peer-reviewed remote sensing journals (e.g., IEEE TGRS).
+* The candidate should have strong programming skills in Python and MATLAB, together with practical experience in deep-learning frameworks such as PyTorch, remote sensing data processing, Linux environments, and high-performance computing.
+* The candidate must be able to communicate fluently and demonstrate strong academic writing skills for papers, reports, and presentations.
+* The candidate should be able to work independently and collaboratively, manage large datasets and research codebases, meet project deadlines, and produce reproducible research outputs.
+Interpersonal skill (e.g. Ability to work independently / develop solutions under strict timelines, meticulous and eye for details / excellent organizational / time management skills).  
+
+ASE seeks a diverse and inclusive workforce and is committed to equality of opportunity. We welcome applications from all and recruit on the basis of merit, regardless of age, race, gender, religion, marital status and family responsibilities, or disability.
+
+We regret to inform that only shortlisted candidates will be notified.
+
+Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
+"li-4466628666","linkedin","https://www.linkedin.com/jobs/view/4466628666","","Sustainability Specialist – Global Systems Implementation (1 year contract)","Williams-Sonoma, Inc.","","2026-09-29","","","","","","",False,"","","","","","","https://www.linkedin.com/company/williams-sonoma-inc-","","","","","","","","","","","",""
+"li-4472425903","linkedin","https://www.linkedin.com/jobs/view/4472425903","","VP/SVP, Business for Impact Specialist, DBS Foundation","DBS Bank","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dbs-bank","","","","","","","","","","","",""
 "in-98d80c43f4bbff9d","indeed","https://sg.indeed.com/viewjob?jk=98d80c43f4bbff9d","https://jobsearch.alstom.com/job/Singapore-Communications-and-CSR-Director-East-Asia/1441879033/","Communications and CSR Director East Asia","ALSTOM","Singapore, S00, SG","2026-09-28","fulltime","","","","","",False,"","","","","At Alstom, we understand transport networks and what moves people. From high-speed trains, metros, monorails, and trams, to turnkey systems, services, infrastructure, signalling and digital mobility, we offer our diverse customers the broadest portfolio in the industry. Every day, 80,000 colleagues lead the way to greener and smarter mobility worldwide, connecting cities as we reduce carbon and replace cars.
 
 Could you be the full-time **Cluster Communications & CSR Director iEast Asia** we’re looking for?
@@ -59,11 +138,18 @@ As a global business, we’re an equal-opportunity employer that celebrates dive
 
   
 
-**Job Segment:** Marketing Communications, CSR, PR, Communications, Branding, Marketing, Management","","https://sg.indeed.com/cmp/Alstom","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/64be0526492313f864a2792a3d0515d9","https://www.alstom.com/","","10,000+","$5B to $10B (USD)","Leading societies to a low carbon future, Alstom develops and markets mobility solutions that provide the sustainable foundations for the future of transportation.","","","","","",""
-"li-4463349723","linkedin","https://www.linkedin.com/jobs/view/4463349723","","ESG Consulting (Transition & Transformation), Senior Associate to Assistant Manager","KPMG Singapore","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
-"li-4463351322","linkedin","https://www.linkedin.com/jobs/view/4463351322","","ESG Consulting (Integrated ESG Advisory & Transformation), Manager","KPMG Singapore","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
-"li-4357497090","linkedin","https://www.linkedin.com/jobs/view/4357497090","","Environmental Microbiologist","DSO National Laboratories","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dso-national-laboratories","","","","","","","","","","","",""
+**Job Segment:** CSR, Marketing Communications, PR, Branding, Communications, Management, Marketing","","https://sg.indeed.com/cmp/Alstom","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/64be0526492313f864a2792a3d0515d9","https://www.alstom.com/","","10,000+","$5B to $10B (USD)","Leading societies to a low carbon future, Alstom develops and markets mobility solutions that provide the sustainable foundations for the future of transportation.","","","","","",""
+"li-4470867800","linkedin","https://www.linkedin.com/jobs/view/4470867800","","Communications and CSR Director East Asia","Alstom","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/alstom","","","","","","","","","","","",""
+"li-4462208003","linkedin","https://www.linkedin.com/jobs/view/4462208003","","[SRO] Senior/Assistant Technical Director, Sustainability Reporting Office","ACRA - Accounting and Corporate Regulatory Authority","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/accounting-and-corporate-regulatory-authority-acra-","","","","","","","","","","","",""
+"li-4470897472","linkedin","https://www.linkedin.com/jobs/view/4470897472","","Global Investors, Venture Capital Funds, Impact Investors, Family Offices, Institutional Capital & Strategic Capital Partners","AgroNest Ventures Private Limited","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/agronest-ventures","","","","","","","","","","","",""
+"li-4448960993","linkedin","https://www.linkedin.com/jobs/view/4448960993","","Senior Manager/ Assistant Director (Biodiversity) - Sustainability Office","Gardens by the Bay","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/gardens-by-the-bay","","","","","","","","","","","",""
+"li-4471385341","linkedin","https://www.linkedin.com/jobs/view/4471385341","","Cocoa Sustainability Assistant","PT Asia Cocoa Indonesia","","2026-09-28","","","","","","",False,"","","","","","","https://id.linkedin.com/company/pt-asiacocoa-indonesia","","","","","","","","","","","",""
+"li-4471331453","linkedin","https://www.linkedin.com/jobs/view/4471331453","","Associate - Assurance, Climate Change and Sustainability Services (2027 Graduates)","EY","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4471330958","linkedin","https://www.linkedin.com/jobs/view/4471330958","","Sustainability & ESG Consultant","SGS","Singapore, Singapore","2026-09-28","","","","","","",False,"","","","","","","https://ch.linkedin.com/company/sgs","","","","","","","","","","","",""
 "li-4463341886","linkedin","https://www.linkedin.com/jobs/view/4463341886","","ESG Consulting (Risk and Reporting), Senior Associate to Assistant Manager","KPMG Singapore","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
+"li-4463349723","linkedin","https://www.linkedin.com/jobs/view/4463349723","","ESG Consulting (Transition & Transformation), Senior Associate to Assistant Manager","KPMG Singapore","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
+"li-4357497090","linkedin","https://www.linkedin.com/jobs/view/4357497090","","Environmental Microbiologist","DSO National Laboratories","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dso-national-laboratories","","","","","","","","","","","",""
+"li-4463351322","linkedin","https://www.linkedin.com/jobs/view/4463351322","","ESG Consulting (Integrated ESG Advisory & Transformation), Manager","KPMG Singapore","Singapore, Singapore","2026-09-26","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
 "in-c5c5611d3244f949","indeed","https://sg.indeed.com/viewjob?jk=c5c5611d3244f949","https://www.mycareersfuture.gov.sg/job/475342bdc4b87143fc600feedb20a05e","Sr. Environmental & Social Risk Advisor, Singapore","","Outram, S00, SG","2026-09-25","","","","","","",False,"","","","","As an Export Credit Agency, Export Development Canada (EDC) helps Canadian companies of all sizes succeed on the world stage. With this goal in mind, EDC aims to increase trade opportunities in the Asia-Pacific region through growing our local presence in Singapore with a variety of locally-offered services.
   
   
@@ -189,6 +275,7 @@ International Footprint
   
   
 With offices across Canada and around the world, we are close to the Canadian businesses we support and to the buyers in global markets that can connect Canadian exporters to international supply chains.","","","","","","","","","","","","","",""
+"li-4470110842","linkedin","https://www.linkedin.com/jobs/view/4470110842","","Sustainability Advisor (6-month contract)","Clifford Capital","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/clifford-capital","","","","","","","","","","","",""
 "in-6f8351664f34f8e7","indeed","https://sg.indeed.com/viewjob?jk=6f8351664f34f8e7","https://www.mycareersfuture.gov.sg/job/ca6505364eed6a1b826f9a1105cb9250","Corporate Social Responsibility Executive","Woh Hup (Private) Limited","Clementi, S00, SG","2026-09-25","fulltime","","","","","",False,"","","","","The Corporate Social Responsibility Executive is responsible for managing the Company’s CSR initiatives and supporting the Corporate Affairs Team on events and communication.
   
   
@@ -250,6 +337,7 @@ At the heart of our four-generation family-run business lies a proud heritage of
   
   
 In our efforts to continuously raise the industry bar, we seek to introduce innovative new building solutions and broaden our skills through strategic joint-venture partnerships with overseas counterparts. This has seen us emerge in recent years from being a principal player in the building of private residential and commercial developments, to becoming a leader too in large-scale civil engineering works, cementing our position at the forefront of the construction industry, locally and regionally.","","https://sg.indeed.com/cmp/Woh-Hup-(private)-Limited","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/e119b87e5f9846601b5f650d75a49cbb","https://www.wohhup.com/","","","","","","","","","",""
+"li-4471874507","linkedin","https://www.linkedin.com/jobs/view/4471874507","","Corporate Social Responsibility Executive","Woh Hup Group","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/wohhupgroup","","","","","","","","","","","",""
 "in-c509c94796599dbc","indeed","https://sg.indeed.com/viewjob?jk=c509c94796599dbc","https://www.efinancialcareers.sg/jobs-Singapore-Singapore-Executive_Director_Sustainability_Planning__Strategy_Asia_Pacific_Division_APD_-_SMBC.id24819319","Executive Director, Sustainability Planning & Strategy, Asia Pacific Division (APD) - SMBC","Sumitomo Group","Singapore, S00, SG","2026-09-25","fulltime","","","","","",False,"","","","","**Company Overview**
 
 * Headquartered in Tokyo, Sumitomo Mitsui Banking Corporation (SMBC) is a leading global financial institution and a core member of Sumitomo Mitsui Financial Group (SMBC Group). Built upon our rich Japanese heritage since 1876, we put our customers first and provide seamless access to, from and within the Asia Pacific region. SMBC is one of the largest Japanese banks by assets and maintains strong credit ratings across our global integrated network. We work closely as one SMBC Group to offer personal, corporate and investment banking services to meet the needs of our customers.
@@ -278,12 +366,8 @@ In our efforts to continuously raise the industry bar, we seek to introduce inno
 * In-depth knowledge of key sustainability issues, sustainability international standards/principles, relevant regulations & standards, and best practices relevanc e to the banking sector
 * Familiar with international environmental and social policies, procedures, and standards such as IFC performance standards and/or GHG Protocol and possessing in-depth environmental and social due diligence experience
 * Proficient in project management with strong analytical skills in analyzing data and identifying trends to understand data systems","","https://sg.indeed.com/cmp/Sumitomo-Group-2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/659294da72f49bdfb1f4d28b74d74f3e","https://www.sumitomo.gr.jp/english/","","","","","","","","","",""
-"li-4471874507","linkedin","https://www.linkedin.com/jobs/view/4471874507","","Corporate Social Responsibility Executive","Woh Hup Group","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/wohhupgroup","","","","","","","","","","","",""
-"li-4470110842","linkedin","https://www.linkedin.com/jobs/view/4470110842","","Sustainability Advisor (6-month contract)","Clifford Capital","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/clifford-capital","","","","","","","","","","","",""
 "li-4461157428","linkedin","https://www.linkedin.com/jobs/view/4461157428","","Sustainability Compliance Tracing (SCT) Team Lead","Keppel (Infrastructure Division)","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/keppel-infrastructure-division","","","","","","","","","","","",""
 "li-4452901359","linkedin","https://www.linkedin.com/jobs/view/4452901359","","Manager, Environment & Sustainability","Changi Airport Group","Singapore, Singapore","2026-09-25","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/changiairportgroup","","","","","","","","","","","",""
-"li-4453103090","linkedin","https://www.linkedin.com/jobs/view/4453103090","","Sustainability Engineer","ENGIE Southeast Asia","Singapore, Singapore","2026-09-24","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/engie-southeast-asia","","","","","","","","","","","",""
-"li-4471428461","linkedin","https://www.linkedin.com/jobs/view/4471428461","","Sustainability Communications Director","Charterhouse Partnership","Singapore, Singapore","2026-09-24","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/charterhousepartnershipglobal","","","","","","","","","","","",""
 "in-cc0982684a7f06d9","indeed","https://sg.indeed.com/viewjob?jk=cc0982684a7f06d9","https://careerasia.smbc.co.jp/SMBC/job/Executive-Director%2C-Sustainability-Planning-&-Strategy%2C-Asia-Pacific-Division-%28APD%29/1440930633/","Executive Director, Sustainability Planning & Strategy, Asia Pacific Division (APD)","Sumitomo Group","SG","2026-09-24","","","","","","",False,"","","","","**Company Overview**
 
 * Headquartered in Tokyo, Sumitomo Mitsui Banking Corporation (SMBC) is a leading global financial institution and a core member of Sumitomo Mitsui Financial Group (SMBC Group). Built upon our rich Japanese heritage since 1876, we put our customers first and provide seamless access to, from and within the Asia Pacific region. SMBC is one of the largest Japanese banks by assets and maintains strong credit ratings across our global integrated network. We work closely as one SMBC Group to offer personal, corporate and investment banking services to meet the needs of our customers.
@@ -314,104 +398,11 @@ In our efforts to continuously raise the industry bar, we seek to introduce inno
 * In-depth knowledge of key sustainability issues, sustainability international standards/principles, relevant regulations & standards, and best practices relevance to the banking sector
 * Familiar with international environmental and social policies, procedures, and standards such as IFC performance standards and/or GHG Protocol and possessing in-depth environmental and social due diligence experience
 * Proficient in project management with strong analytical skills in analyzing data and identifying trends to understand data systems","","https://sg.indeed.com/cmp/Sumitomo-Group-2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/659294da72f49bdfb1f4d28b74d74f3e","https://www.sumitomo.gr.jp/english/","","","","","","","","","",""
-"in-4c53aee284fae618","indeed","https://sg.indeed.com/viewjob?jk=4c53aee284fae618","https://www.mycareersfuture.gov.sg/job/993bfbb1e979c775a8736de819c3ee03","Environmental Control Officer (cum WSHC)","Ban Chon Corporation & Trading Pte Ltd","Geylang, S00, SG","2026-09-24","parttime, fulltime","","","","","",False,"","","","bc@banchoncorp.com","**Responsibilities:**  
-Work closely with the project team & WSHO on environmental issues such as noise pollution, vector control, air pollution, water pollution and drainage, prevention & control of infectious diseases, food hygiene, solid waste management, chemical storage & disposal and haze response procedure
-  
-  
-Implement and monitor environmental, health and safety management systems at worksites
-  
-  
-Prepare, submit statutory reports and maintain documentation for environmental public health requirements on environmental issues
-  
-  
-Conduct regular site inspections to ensure that site activities are carried out in compliance with NEA and EHS regulations
-  
-  
-Liaise with NEA, PUB and relevant authorities on all environmental issues
-  
-  
-Support in-house environmental initiatives
-  
-  
-**Requirements:**  
-Registered Environmental Control Officer with NEA
-  
-  
-Registered Earth Control Measures Officer with IES
-  
-  
-Advanced Certificate in Workplace Safety Health or Coordinator Certificate
-  
-  
-At least 3 years’ experience as Environmental Control Officer in the construction industry
-  
-  
-Excellent team player, good interpersonal skills and a good attitude
-  
-  
-Ability to multi-task in a fast paced and dynamic environment
-  
-  
-Information provided in response to this job advertisement will be treated in strict confidence and be used for recruitment purpose only.
-  
-  
-\\*\\*Interested applicants, please send your CV to bc@banchoncorp.com\\*\\*
-  
-  
-Local civil engineering company incorporated since 1995 which specialised in construction of roads, drains, sewers and other many infrastructures. Registered with BCA under CW02-B1. Other certification achievements such as ISO9001, 45001, 14001, GGBS Merit, bizSafe STAR.
-  
-  
-Company mainly bid for projects from Gebiz under HDB, JTC, PUB and many more.","","https://sg.indeed.com/cmp/Ban-Chon-Corporation-&-Trading-Pte-Ltd","","","","","","","","","","","",""
-"li-4468987566","linkedin","https://www.linkedin.com/jobs/view/4468987566","","Environmental & Social Due Diligence Consultant, Renewable Energy","UL Solutions","","2026-09-23","","","","","","",False,"","","","","","","https://www.linkedin.com/company/ulsolutions","","","","","","","","","","","",""
-"li-4464518376","linkedin","https://www.linkedin.com/jobs/view/4464518376","","Global Head of Sustainability, Life Sciences and Chemicals Multinational ( SINGAPORE )","Genesis Partners","Singapore, Singapore","2026-09-23","","","","","","",False,"","","","","","","https://www.linkedin.com/company/talent-genesis-partners","","","","","","","","","","","",""
+"li-4453103090","linkedin","https://www.linkedin.com/jobs/view/4453103090","","Sustainability Engineer","ENGIE Southeast Asia","Singapore, Singapore","2026-09-24","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/engie-southeast-asia","","","","","","","","","","","",""
+"li-4471428461","linkedin","https://www.linkedin.com/jobs/view/4471428461","","Sustainability Communications Director","Charterhouse Partnership","Singapore, Singapore","2026-09-24","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/charterhousepartnershipglobal","","","","","","","","","","","",""
 "li-4460288067","linkedin","https://www.linkedin.com/jobs/view/4460288067","","Senior / Staff Program Manager, Sustainability Operations","Micron Technology","Singapore, Singapore","2026-09-23","","","","","","",False,"","","","","","","https://www.linkedin.com/company/micron-technology","","","","","","","","","","","",""
 "li-4440450319","linkedin","https://www.linkedin.com/jobs/view/4440450319","","SA/AVP, Sustainability (Sustainable Solutions)","Temasek","Singapore, Singapore","2026-09-23","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
-"li-4470680625","linkedin","https://www.linkedin.com/jobs/view/4470680625","","Assistant Manager/Senior Assistant Manager, Office of Sustainability","National University Health System","Singapore, Singapore","2026-09-23","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/national-university-health-system","","","","","","","","","","","",""
-"li-4469018473","linkedin","https://www.linkedin.com/jobs/view/4469018473","","Lead / Senior Product Manager, Ministry of Sustainability and the Environment (MSE)","GovTech Singapore","","2026-09-22","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/govtech-singapore","","","","","","","","","","","",""
-"li-4449599220","linkedin","https://www.linkedin.com/jobs/view/4449599220","","Off-Cycle Intern, ESG Investment Management (Jan - Jun 2027)","Temasek","Singapore, Singapore","2026-09-22","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
-"in-019b424f954fa605","indeed","https://sg.indeed.com/viewjob?jk=019b424f954fa605","https://capitaland.wd3.myworkdayjobs.com/en-US/CapitaLandGroup/job/Singapore-Central-Singapore/Intern--Sustainability--Jan---Jun-2027-_JR005013-1","Intern, Sustainability (Jan - Jun 2027)","CapitaLand","S00, SG","2026-09-22","fulltime, internship","","","","","",False,"","","","","**About Us**
-
-CapitaLand Group (CapitaLand) is one of Asia’s largest diversified real estate groups. Headquartered in Singapore, CapitaLand’s portfolio focuses on real estate investment management and real estate development, and spans across more than 270 cities in over 45 countries.
-
-**Job Description**
-
-This internship provides a unique opportunity to work with the sustainability team at CapitaLand Development (CLD), alongside external industry experts. You will gain hands-on experience in emissions data analysis, market benchmark development, and sustainability reporting.
-
-You will be tasked with analysing environmental data and conducting research for technical projects that directly influence CLD's emissions management practices and sustainability strategies. This includes working on low-carbon material solutions and learning about the decarbonization of the real estate and construction sector. This role is perfect for someone passionate about contributing to real-world sustainability initiatives and making a tangible impact.
-
-**What You Will Get to Do**
-
-**Contribute to Sustainability Projects**
-
-* Support cross-functional teams on sustainability initiatives, such as ongoing decarbonization projects, green building certifications, and ESG reporting
-* Assist in tracking progress on CLD’s sustainability goals and preparing reports on ESG key performance indicators (KPIs)
-* Participate in internal sustainability workshops, helping to drive cultural change across the organization
-
-**Research and Data Collection**
-
-* Conduct research on the availability and nature of emissions data for concrete and its constituents in Singapore
-* Compare emissions data with other regions, regionally and internationally, to identify gaps and opportunities for improvement
-* Collaborate with stakeholders to collect and validate data for reporting purposes
-
-**Support for Benchmark Development:**
-
-* Assist in the creation of a tailored market benchmark for Singapore based on data collected during the reporting pilot
-* Work closely with technical experts to validate methodologies and ensure accurate reporting
-
-**What We Are Looking For**
-
-* Preferred a Master student or as part of Doctorate thesis
-* Enrolled in a degree program related to sustainability, sustainable design, environmental science, engineering, or a related field
-* Strong analytical skills with an interest in sustainability data and reporting
-* Knowledge of excel and similar tools for data collection and processing
-* Good communication skills, with the ability to work in a collaborative environment
-* Knowledge of carbon accounting or emissions reporting methodologies is an advantage but not required
-
-**Closing Statement:**
-
-At CapitaLand, we advocate fair employment practices, and recruit talents based on merit and fit with our Corporate values. We provide equal opportunity for all qualified persons and build an inclusive workplace regardless of race, gender, age, religious belief or nationality.
-
-Only shortlisted candidates will be notified.","Real Estate","https://sg.indeed.com/cmp/Capitaland","","https://www.capitaland.com/international/en.html","SINGAPORE, SN","10,000+","$1B to $5B (USD)","Headquartered and listed in Singapore, CapitaLand is one of Asia’s largest diversified real estate groups, with a portfolio spanning across more than 240 cities in over 30 countries.","","","","","",""
+"li-4464518376","linkedin","https://www.linkedin.com/jobs/view/4464518376","","Global Head of Sustainability, Life Sciences and Chemicals Multinational ( SINGAPORE )","Genesis Partners","Singapore, Singapore","2026-09-23","","","","","","",False,"","","","","","","https://www.linkedin.com/company/talent-genesis-partners","","","","","","","","","","","",""
 "in-4c0003ce1388720c","indeed","https://sg.indeed.com/viewjob?jk=4c0003ce1388720c","https://hitachi.wd1.myworkdayjobs.com/en-US/hitachi/job/Singapore-Singapore/Sustainability-Executive_R0016469","Sustainability Executive","Hitachi Rail","Singapore, S00, SG","2023-03-20","fulltime","","","","","",True,"","","","","**Location:**
 
 Singapore, Singapore
@@ -473,10 +464,11 @@ Candidates must be confident in handing both traditional and new communications 
 Self-motivated, independent, and result-oriented with a strong analytical mindset. Must possess ability to multi-task and work to meet deadlines. Must be flexible and willing to be stretched into new areas of work as required.
 
 An excellent command of the English language, both written and verbal.","","https://sg.indeed.com/cmp/Hitachi-Rail","","https://www.hitachirail.com/","London, England","10,000+","$5B to $10B (USD)","Hitachi Rail is committed to driving the sustainable mobility transition and has a clear focus on partnering with customers to rethink mobility.","","","","","",""
-"li-4472425903","linkedin","https://www.linkedin.com/jobs/view/4472425903","","VP/SVP, Business for Impact Specialist, DBS Foundation","DBS Bank","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/dbs-bank","","","","","","","","","","","",""
-"li-4466628666","linkedin","https://www.linkedin.com/jobs/view/4466628666","","Sustainability Specialist – Global Systems Implementation (1 year contract)","Williams-Sonoma, Inc.","","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/williams-sonoma-inc-","","","","","","","","","","","",""
-"li-4471385341","linkedin","https://www.linkedin.com/jobs/view/4471385341","","Cocoa Sustainability Assistant","PT Asia Cocoa Indonesia","","","","","","","","",False,"","","","","","","https://id.linkedin.com/company/pt-asiacocoa-indonesia","","","","","","","","","","","",""
-"li-4470867800","linkedin","https://www.linkedin.com/jobs/view/4470867800","","Communications and CSR Director East Asia","Alstom","Singapore, Singapore","","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/alstom","","","","","","","","","","","",""
-"li-4462208003","linkedin","https://www.linkedin.com/jobs/view/4462208003","","[SRO] Senior/Assistant Technical Director, Sustainability Reporting Office","ACRA - Accounting and Corporate Regulatory Authority","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/accounting-and-corporate-regulatory-authority-acra-","","","","","","","","","","","",""
-"li-4470897472","linkedin","https://www.linkedin.com/jobs/view/4470897472","","Global Investors, Venture Capital Funds, Impact Investors, Family Offices, Institutional Capital & Strategic Capital Partners","AgroNest Ventures Private Limited","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/agronest-ventures","","","","","","","","","","","",""
-"li-4473079226","linkedin","https://www.linkedin.com/jobs/view/4473079226","","Environmental Health Safety Specialist","TERA Data Centers","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/teradatacenters","","","","","","","","","","","",""
+"li-4473703298","linkedin","https://www.linkedin.com/jobs/view/4473703298","","Executive/Senior Executive, Sustainability","The Ascott Limited","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/the-ascott-limited","","","","","","","","","","","",""
+"li-4473704343","linkedin","https://www.linkedin.com/jobs/view/4473704343","","Assistant Manager / Executive, Engineering & Sustainability","CapitaLand","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/capitaland-limited","","","","","","","","","","","",""
+"li-4466658041","linkedin","https://www.linkedin.com/jobs/view/4466658041","","Manager / Senior Manager, Sustainability & Energy","A*STAR - Agency for Science, Technology and Research","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/astarsg","","","","","","","","","","","",""
+"li-4471978665","linkedin","https://www.linkedin.com/jobs/view/4471978665","","Senior Executive, Group Risk and Sustainability","Thomson Medical","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/thomson-medical","","","","","","","","","","","",""
+"li-4473700497","linkedin","https://www.linkedin.com/jobs/view/4473700497","","Intern - Assurance, Climate Change and Sustainability Services (Jan - June 2027)","EY","Singapore, Singapore","","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
+"li-4473735035","linkedin","https://www.linkedin.com/jobs/view/4473735035","","Manager - EHS, Sustainability & Security","UTAC","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/utac","","","","","","","","","","","",""
+"li-4473221816","linkedin","https://www.linkedin.com/jobs/view/4473221816","","Research Associate (AI for Nature Based Climate Solutions)","Nanyang Technological University Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
+"li-4462997099","linkedin","https://www.linkedin.com/jobs/view/4462997099","","Junior Environmental Engineer","Boskalis","Singapore, Singapore","","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/boskalis","","","","","","","","","","","",""
