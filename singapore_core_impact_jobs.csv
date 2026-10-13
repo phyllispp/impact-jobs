@@ -1,44 +1,10 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
-"li-4476238918","linkedin","https://www.linkedin.com/jobs/view/4476238918","","Associate Director / Manager (Climate & Liveability)","Temasek Foundation","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasekfoundation","","","","","","","","","","","",""
+"li-4478366883","linkedin","https://www.linkedin.com/jobs/view/4478366883","","Manager, Environment & Sustainability","Changi Airport Group","Changi, East Region, Singapore","2026-10-12","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/changiairportgroup","","","","","","","","","","","",""
+"li-4475668986","linkedin","https://www.linkedin.com/jobs/view/4475668986","","Senior Director, ESG & Sustainability","Randstad Singapore","Singapore, Singapore","2026-10-12","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/randstad-singapore","","","","","","","","","","","",""
+"li-4433209956","linkedin","https://www.linkedin.com/jobs/view/4433209956","","Senior/Staff Program Manager - Sustainability Operations","Micron Technology","Singapore, Singapore","2026-10-11","","","","","","",False,"","","","","","","https://www.linkedin.com/company/micron-technology","","","","","","","","","","","",""
 "li-4464518376","linkedin","https://www.linkedin.com/jobs/view/4464518376","","Global Head of Sustainability, Life Sciences and Chemicals Multinational ( SINGAPORE )","Genesis Partners","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://www.linkedin.com/company/talent-genesis-partners","","","","","","","","","","","",""
+"li-4476289221","linkedin","https://www.linkedin.com/jobs/view/4476289221","","Senior / Public Health Officer (Contact and Environmental Diseases)","Communicable Diseases Agency (CDA)","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/cdasgp","","","","","","","","","","","",""
 "li-4477628646","linkedin","https://www.linkedin.com/jobs/view/4477628646","","Research Fellow (Environmental Sciences)","Nanyang Technological University Singapore","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
-"in-16f927b2fee33163","indeed","https://sg.indeed.com/viewjob?jk=16f927b2fee33163","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Environmental-Sciences-_R00025991","Research Fellow (Environmental Sciences)","Nanyang Technological University","Nanyang Avenue, S00, SG","2026-10-09","fulltime","","","","","",False,"","","","","The Asian School of the Environment (ASE) at Nanyang Technological University is an interdisciplinary school that aims to be a world leader in environmental research focused on Asian environmental challenges. The ASE integrates earth and environmental life science, ecology, engineering and technology, human ecology, humanities, and the social sciences to address key issues of the environment and sustainability. For more details, please view https://www.ntu.edu.sg/ase .
-
-  
-
-The Wetland Carbon Lab at NTU’s Asian School of the Environment (ASE) focuses on understanding the role of wetlands and aquatic ecosystems, including mangroves peatlands, and streams, as natural climate solutions. The lab integrates field-based experiments, high-frequency sensor networks, stable isotope approaches, and modelling to study water, carbon, nitrogen, and energy fluxes and greenhouse gas emissions across ecosystems and watersheds.
-
-We are seeking a highly motivated Research Fellow to lead eddy covariance data analysis for our greenhouse gas flux research in Southeast Asian wetlands. The position supports NTU’s mission to advance solution-oriented environmental research and contributes to climate change mitigation and adaptation strategies.
-
-**Key Responsibilities:**
-
-  
-
-* Responsible for regular quality assurance and quality control (QA/QC) of eddy covariance and supporting meteorological data, and for producing monthly data reports.
-* Improve, standardize, and automate EC pre- and post-processing workflows (e.g. flux calculation, filtering, gap-filling, flux partitioning, uncertainty estimation), ensuring rigorous documentation and reproducibility.
-* Prepare and contribute to peer-reviewed publications, research proposals, technical reports, and internal technical notes, and present findings at scientific meetings.
-Contribute to the development of a Southeast Asian flux tower network, including data harmonization and partner engagement.  
-
-**Job Requirements:**
-
-  
-
-* PhD in Environmental Science, Atmospheric Science, Micrometeorology, Biogeochemistry, Ecology, or a closely related field
-* Strong experience in eddy covariance measurements of greenhouse gas (CO2, CH4) and energy fluxes.
-* In-depth knowledge of eddy covariance theory and instrumentation, and of standard processing software.
-* Analytical and modelling skills with R or Python; experience building automated, reproducible data pipelines.
-* Excellent scientific communication and interpersonal skills
-Proactive, independent, and team-oriented  
-
-  
-
-ASE seeks a diverse and inclusive workforce and is committed to equality of opportunity. We welcome applications from all and recruit based on merit, regardless of age, race, gender, religion, marital status and family responsibilities, or disability.
-
-  
-
-We regret that only shortlisted candidates will be notified.
-
-Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
 "in-f5b8479fc9a5659c","indeed","https://sg.indeed.com/viewjob?jk=f5b8479fc9a5659c","https://jobs.standardchartered.com/job/WRB-Sustainable-Finance-specialist/63223-en_GB","WRB Sustainable Finance specialist","Standard Chartered Bank","Singapore, S00, SG","2026-10-09","","","","","","",False,"","","","","Requisition Number: 63223
 
 Job Location: Singapore, SGP
@@ -55,10 +21,15 @@ Posting End Date: 25/10/2026
 
 :
 
-**Key Responsibilities**
-------------------------
+**Short Description**
+---------------------
+
+**JobSummary**
 
 This role sits within the Sustainable Finance team in the Wealth and Retail Bank (WRB), and supports the wider team across the initiatives being rolled out across the private bank, wealth management and SME bank. In particular, the role will focus on building up the bank’s profile as a leader in carbon markets among private banking and SME clients. The candidate will focus on the development of the HNW and SME carbon markets proposition, materials development and business development. He/she will support in the education of frontline, COO and risk colleagues, to support the onboarding of SME carbon project developers and the accompanying solutions to meet their needs.
+
+**Key Responsibilities**
+------------------------
 
 **Business**
 
@@ -133,7 +104,7 @@ This role sits within the Sustainable Finance team in the Wealth and Retail Bank
   
 • Training: 5 years experience in Sustainable Finance, Wealth Management
   
-• Languages: Business Communication, Mandarin an advantage
+• Languages: Business Communication
 
 **Role Specific Technical Competencies**
 ----------------------------------------
@@ -179,17 +150,79 @@ Together we:
 Some of our roles use assessments to help us understand how suitable you are for the role you've applied to. If you are invited to take an assessment, this is great news. It means your application has progressed to an important stage of our recruitment process.
 
 Visit our careers website www.sc.com/careers","Banks And Financial Services","https://sg.indeed.com/cmp/Standard-Chartered-Bank","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/f352beb47acbe281bb3534e44e8ae048","http://www.sc.com/careers","London London, United Kingdom","10,000+","more than $10B (USD)","If you’re looking for a career with purpose and want to work for a bank making a difference, we’d love to hear from you.","","","","","",""
+"in-16f927b2fee33163","indeed","https://sg.indeed.com/viewjob?jk=16f927b2fee33163","https://ntu.wd3.myworkdayjobs.com/en-US/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Environmental-Sciences-_R00025991","Research Fellow (Environmental Sciences)","Nanyang Technological University","Nanyang Avenue, S00, SG","2026-10-09","fulltime","","","","","",False,"","","","","The Asian School of the Environment (ASE) at Nanyang Technological University is an interdisciplinary school that aims to be a world leader in environmental research focused on Asian environmental challenges. The ASE integrates earth and environmental life science, ecology, engineering and technology, human ecology, humanities, and the social sciences to address key issues of the environment and sustainability. For more details, please view https://www.ntu.edu.sg/ase .
+
+  
+
+The Wetland Carbon Lab at NTU’s Asian School of the Environment (ASE) focuses on understanding the role of wetlands and aquatic ecosystems, including mangroves peatlands, and streams, as natural climate solutions. The lab integrates field-based experiments, high-frequency sensor networks, stable isotope approaches, and modelling to study water, carbon, nitrogen, and energy fluxes and greenhouse gas emissions across ecosystems and watersheds.
+
+We are seeking a highly motivated Research Fellow to lead eddy covariance data analysis for our greenhouse gas flux research in Southeast Asian wetlands. The position supports NTU’s mission to advance solution-oriented environmental research and contributes to climate change mitigation and adaptation strategies.
+
+**Key Responsibilities:**
+
+  
+
+* Responsible for regular quality assurance and quality control (QA/QC) of eddy covariance and supporting meteorological data, and for producing monthly data reports.
+* Improve, standardize, and automate EC pre- and post-processing workflows (e.g. flux calculation, filtering, gap-filling, flux partitioning, uncertainty estimation), ensuring rigorous documentation and reproducibility.
+* Prepare and contribute to peer-reviewed publications, research proposals, technical reports, and internal technical notes, and present findings at scientific meetings.
+Contribute to the development of a Southeast Asian flux tower network, including data harmonization and partner engagement.  
+
+**Job Requirements:**
+
+  
+
+* PhD in Environmental Science, Atmospheric Science, Micrometeorology, Biogeochemistry, Ecology, or a closely related field
+* Strong experience in eddy covariance measurements of greenhouse gas (CO2, CH4) and energy fluxes.
+* In-depth knowledge of eddy covariance theory and instrumentation, and of standard processing software.
+* Analytical and modelling skills with R or Python; experience building automated, reproducible data pipelines.
+* Excellent scientific communication and interpersonal skills
+Proactive, independent, and team-oriented  
+
+  
+
+ASE seeks a diverse and inclusive workforce and is committed to equality of opportunity. We welcome applications from all and recruit based on merit, regardless of age, race, gender, religion, marital status and family responsibilities, or disability.
+
+  
+
+We regret that only shortlisted candidates will be notified.
+
+Hiring Institution: NTU","","https://sg.indeed.com/cmp/Nanyang-Technological-University","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ac54b5b16e1e07cf13a72862bd86367","","Singapore","Decline to state","Decline to state","","","","","","",""
+"li-4476238918","linkedin","https://www.linkedin.com/jobs/view/4476238918","","Associate Director / Manager (Climate & Liveability)","Temasek Foundation","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasekfoundation","","","","","","","","","","","",""
 "li-4470867800","linkedin","https://www.linkedin.com/jobs/view/4470867800","","Communications and CSR Director East Asia","Alstom","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/alstom","","","","","","","","","","","",""
-"li-4476294886","linkedin","https://www.linkedin.com/jobs/view/4476294886","","Environmental Analyst","Resorts World Sentosa","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/resorts-world-sentosa","","","","","","","","","","","",""
-"li-4477808386","linkedin","https://www.linkedin.com/jobs/view/4477808386","","Senior Assistant Director, Group Sustainability","Frasers Property Limited","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/frasers-property-limited","","","","","","","","","","","",""
-"li-4476289221","linkedin","https://www.linkedin.com/jobs/view/4476289221","","Senior / Public Health Officer (Contact and Environmental Diseases)","Communicable Diseases Agency (CDA)","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/cdasgp","","","","","","","","","","","",""
 "li-4448991058","linkedin","https://www.linkedin.com/jobs/view/4448991058","","Product Success Manager - Sustainability","Workiva","","2026-10-09","","","","","","",False,"","","","","","","https://www.linkedin.com/company/workiva","","","","","","","","","","","",""
 "li-4476294221","linkedin","https://www.linkedin.com/jobs/view/4476294221","","WRB Sustainable Finance specialist","Standard Chartered Singapore","Singapore, Singapore","2026-10-09","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/standard-chartered-singapore","","","","","","","","","","","",""
 "li-4467190398","linkedin","https://www.linkedin.com/jobs/view/4467190398","","Associate / Senior Associate, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-10-08","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","2026-10-08","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
-"li-4457290114","linkedin","https://www.linkedin.com/jobs/view/4457290114","","Associate/Senior Associate (12 months contract), Sustainability (Ecosperity)","Temasek","Singapore, Singapore","2026-10-08","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasek-holdings","","","","","","","","","","","",""
 "li-4477195252","linkedin","https://www.linkedin.com/jobs/view/4477195252","","Senior Sales Trader / Originator – Environmental Commodities, APAC","STX Group","","2026-10-08","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/stxgroup","","","","","","","","","","","",""
-"li-4476591447","linkedin","https://www.linkedin.com/jobs/view/4476591447","","Senior Environmental Markets Analyst – Biofuels, Feedstock & White Certificates (Singapore)","OTC FLOW ASIA PTE. LTD.","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://www.linkedin.com/company/otc-flow-asia-pte-ltd","","","","","","","","","","","",""
+"li-4355700166","linkedin","https://www.linkedin.com/jobs/view/4355700166","","Lecturer/Senior Lecturer (Sustainability Finance)","Temasek Polytechnic","Singapore, Singapore","2026-10-08","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/temasek-polytechnic/","","","","","","","","","","","",""
+"li-4475182175","linkedin","https://www.linkedin.com/jobs/view/4475182175","","Sustainability Lead - Transaction Banking","BNP Paribas","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/bnp-paribas","","","","","","","","","","","",""
+"in-1308e9db791f9a03","indeed","https://sg.indeed.com/viewjob?jk=1308e9db791f9a03","https://www.rsm.global/singapore/job-posts/esg-consultant-business-consulting","ESG Consultant, Business Consulting","RSM Chio Lim LLP","Singapore, S00, SG","2026-10-07","","","","","","",False,"","","","","**Job Description:**
+
+* Support the preparation of sustainability reports (SR) using GRI & other relevant Standards, including the report production, data collection, external assurance (if applicable), SR design and SR socialization processes;
+* Support the preparation of climate change reports using TCFD Recommendations
+* Conduct research on sustainability-related matters, where required and provide insights and recommendations accordingly
+* Support with Strategy projects on ESG, where required
+* Support with ESG events involving the whole company, working together with relevant stakeholders in the company
+* Support with all ESG events/dialogues and internal/external socialization
+* Identify areas of improvements in client’s ESG practices to enhance current ESG practices and monitor progress against long-term sustainability objectives
+  
+
+**Requirements:**
+
+* Background preferably in sustainability (environmental science or related discipline preferred)
+* Relevant working experience in sustainability, climate change, social performance, and environmental assessment preferably in a consulting role
+* Well versed with sustainability and climate change-related frameworks (prior experience with carbon accounting, carbon tax regulation & carbon credit trading will be advantageous)
+* Familiar with the development around formation of International Sustainability Standards Board, compliance with GRI/TCFD, emerging reporting requirements in various jurisdictions
+* Working towards a GRI is an added advantage
+* Knowledgeable about international, regional and country-specific climate change goals, actions and regulations
+* Kept abreast with the latest and future developments on sustainability
+* Candidates with a minimum of 2 years related experience will be considered for more senior positions
+
+  
+
+Apply now
+
+We regret that only shortlisted candidates will be notified.","","https://sg.indeed.com/cmp/Rsm-Chio-Lim-LLP","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/dd76ced88e2c389219da350d0a0f60af","https://www.rsm.global","Singapore","1,001 to 5,000","$5B to $10B (USD)","","","","","","",""
+"li-4474418561","linkedin","https://www.linkedin.com/jobs/view/4474418561","","Centre for Impact Investing and Practices","Temasek Trust","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasektrust","","","","","","","","","","","",""
 "in-d468e339c41eb9ae","indeed","https://sg.indeed.com/viewjob?jk=d468e339c41eb9ae","https://group.bnpparibas/en/careers/job-offer/tb-as-sustainability-lead-transaction-banking","Sustainability Lead - Transaction Banking","BNP Paribas","Singapore, S00, SG","2026-10-07","fulltime","","","","","",False,"","","","","**Position Purpose**
 
 * The role reports Head of Sustainability & Structured Trade Solutions for TB APAC.
@@ -231,127 +264,9 @@ Worldwide, BNP Paribas has a presence in 68 markets with more than 193,000 emplo
 * excluding partnerships
 
 At BNP Paribas, we passionately embrace diversity and are committed to fostering an inclusive workplace where all employees are valued, respected and can bring their authentic selves to work. We prohibit Discrimination and Harassment of any kind and our policies promote equal employment opportunity for all employees and applicants, irrespective of, but not limited to their gender, gender identity, sex, sexual orientation, ethnicity, race, colour, national origin, age, religion, social status, mental or physical disabilities, veteran status etc. As a global Bank, we truly believe that inclusion and diversity of our teams is key to our success in serving our clients and the communities we operate in.","","https://sg.indeed.com/cmp/Bnp-Paribas","","http://www.group.bnpparibas","Paris","10,000+","more than $10B (USD)","BNP Paribas is one of the best rated banks in the world. The Group has a presence in more than 75 countries and more than 189,000 employees.","","","","","",""
-"in-1308e9db791f9a03","indeed","https://sg.indeed.com/viewjob?jk=1308e9db791f9a03","https://www.rsm.global/singapore/job-posts/esg-consultant-business-consulting","ESG Consultant, Business Consulting","RSM Chio Lim LLP","Singapore, S00, SG","2026-10-07","","","","","","",False,"","","","","**Job Description:**
-
-* Support the preparation of sustainability reports (SR) using GRI & other relevant Standards, including the report production, data collection, external assurance (if applicable), SR design and SR socialization processes;
-* Support the preparation of climate change reports using TCFD Recommendations
-* Conduct research on sustainability-related matters, where required and provide insights and recommendations accordingly
-* Support with Strategy projects on ESG, where required
-* Support with ESG events involving the whole company, working together with relevant stakeholders in the company
-* Support with all ESG events/dialogues and internal/external socialization
-* Identify areas of improvements in client’s ESG practices to enhance current ESG practices and monitor progress against long-term sustainability objectives
-  
-
-**Requirements:**
-
-* Background preferably in sustainability (environmental science or related discipline preferred)
-* Relevant working experience in sustainability, climate change, social performance, and environmental assessment preferably in a consulting role
-* Well versed with sustainability and climate change-related frameworks (prior experience with carbon accounting, carbon tax regulation & carbon credit trading will be advantageous)
-* Familiar with the development around formation of International Sustainability Standards Board, compliance with GRI/TCFD, emerging reporting requirements in various jurisdictions
-* Working towards a GRI is an added advantage
-* Knowledgeable about international, regional and country-specific climate change goals, actions and regulations
-* Kept abreast with the latest and future developments on sustainability
-* Candidates with a minimum of 2 years related experience will be considered for more senior positions
-
-  
-
-Apply now
-
-We regret that only shortlisted candidates will be notified.","","https://sg.indeed.com/cmp/Rsm-Chio-Lim-LLP","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/dd76ced88e2c389219da350d0a0f60af","https://www.rsm.global","Singapore","1,001 to 5,000","$5B to $10B (USD)","","","","","","",""
-"li-4475413045","linkedin","https://www.linkedin.com/jobs/view/4475413045","","Manager, Sustainability (6-Month Contract)","Sentosa Development Corporation","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/sentosa-development-corporation","","","","","","","","","","","",""
-"li-4474418561","linkedin","https://www.linkedin.com/jobs/view/4474418561","","Centre for Impact Investing and Practices","Temasek Trust","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasektrust","","","","","","","","","","","",""
-"li-4475182175","linkedin","https://www.linkedin.com/jobs/view/4475182175","","Sustainability Lead - Transaction Banking","BNP Paribas","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/bnp-paribas","","","","","","","","","","","",""
-"li-4476165125","linkedin","https://www.linkedin.com/jobs/view/4476165125","","Environmental & Sustainable Design Engineer, ESD","Ramboll","Singapore, Singapore","2026-10-06","","","","","","",False,"","","","","","","https://dk.linkedin.com/company/ramboll","","","","","","","","","","","",""
+"li-4476591447","linkedin","https://www.linkedin.com/jobs/view/4476591447","","Senior Environmental Markets Analyst – Biofuels, Feedstock & White Certificates (Singapore)","OTC FLOW ASIA PTE. LTD.","Singapore, Singapore","2026-10-07","","","","","","",False,"","","","","","","https://www.linkedin.com/company/otc-flow-asia-pte-ltd","","","","","","","","","","","",""
 "li-4474936995","linkedin","https://www.linkedin.com/jobs/view/4474936995","","Internship - ESG Consulting & Sustainability","CBRE Asia Pacific","Singapore, Singapore","2026-10-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/cbre-asia-pacific","","","","","","","","","","","",""
 "li-4465568286","linkedin","https://www.linkedin.com/jobs/view/4465568286","","Sustainability Manager (Data Centre Infrastructure)","Turner & Townsend","Singapore, Singapore","2026-10-06","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/turner-&-townsend","","","","","","","","","","","",""
-"li-4474664812","linkedin","https://www.linkedin.com/jobs/view/4474664812","","Sustainability Office - Executive / Senior Executive / Assistant Manager Sustainability","Singapore Airlines","Singapore, Singapore","2026-10-06","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singapore-airlines","","","","","","","","","","","",""
-"li-4475594355","linkedin","https://www.linkedin.com/jobs/view/4475594355","","Sustainability Director, APAC","Vantage","Singapore, Singapore","2026-10-05","","","","","","",False,"","","","","","","https://www.linkedin.com/company/vantage-global","","","","","","","","","","","",""
-"in-e50b0b2c9070812d","indeed","https://sg.indeed.com/viewjob?jk=e50b0b2c9070812d","https://vantagedc.wd1.myworkdayjobs.com/Vantage/job/Singapore-Singapore/Sustainability-Director--APAC_R24976","Sustainability Director, APAC","Vantage","Singapore, S00, SG","2026-10-05","fulltime","","","","","",False,"","","","","**About Vantage**
-=================
-
-Vantage powers, cools, protects and connects the technology of the world’s well-known hyperscalers, cloud providers and large enterprises. Developing and operating across North America, EMEA and Asia Pacific, Vantage has evolved data center design in innovative ways to deliver dramatic gains in reliability, efficiency and sustainability in flexible environments that can scale as quickly as the market demands.
-
-**Position Overview**
-
-Vantage is seeking an experienced and strategic regional Sustainability Director to lead Vantage’s sustainability program in the APAC region. As the regional subject matter expert, this leader partners closely with cross-functional teams to align global strategy with local priorities, guide the integration of sustainability into major development and operational decisions, and support key stakeholder engagement. The Director will shape and drive regional sustainability strategy that aligns and enables regional business strategy. The Director will work closely with the Global Sustainability Center of Excellence (COE) who serves to support and enable regional implementation of sustainability initiatives and stakeholder engagement.
-
-**Essential Job Functions**:
-
-  
-
-* Advise and partner with APAC functional and regional executives to embed sustainability into business operations and drive transformational change.
-* Serve as the region’s sustainability subject matter expert (SME), guiding cross-functional partners across site selection, design, construction, procurement, and operations.
-* Align with the Global Sustainability team to integrate global strategy with regional priorities and contribute regional insights to global strategic development.
-* Work with the Global Sustainability COE to set regional sustainability goals, develop roadmaps, and localize global initiatives to fit market conditions, regulation, customer needs, and community expectations.
-* Advise regional leadership on sustainability-related risks, including regulatory, climate, water, social responsibility, innovation, reputational, and greenwashing risks, and help shape mitigation plans.
-* Collaborate with Public Policy to shape and support policy frameworks aligned with the company’s sustainability strategy across the region.
-* Support regional Public Policy and Communications in engaging communities, local government, and NGOs on environmental and social sustainability topics.
-* Represent Vantage’s sustainability efforts in regional customer engagements, industry forums, and thought-leadership platforms.
-* Partner with Sales and Commercial teams to develop sustainability-related sales enablement materials and support customer RFP responses, audits, and strategic sustainability discussions.
-* Proactively engage external stakeholders—including customers, investors, suppliers, community partners, and industry groups—to advance sustainability objectives and strengthen Vantage’s reputation.
-* Collaborate with the regional Sustainability Engineer to lead implementation of regional sustainability programs, performance improvement initiatives, and impact-reduction efforts.
-* Support sustainability risk and opportunity assessments for new market entry and expansion
-* Support development of regional and site-specific sustainability communication materials for customers, communities, and public stakeholders.
-* Support regional implementation of a sustainable supply chain engagement strategy
-* Support Global Sustainability COE with regional data collection and verify data quality for global sustainability reporting, disclosure, and assurance requirements.
-* Lead sustainability training, capability-building efforts, and awareness initiatives across regional teams with support from the Global Sustainability COE.
-
-**Job Requirements**:
-
-* 10+ years of experience in corporate sustainability, environmental strategy, ESG, or related fields, with demonstrated impact in complex, multinational organizations.
-* Bachelor’s degree in Business, Engineering, Finance, Sustainability, Data Science, or a related discipline, or equivalent experience.
-* Experience in the data center, energy, infrastructure, or technology sector, particularly with large-scale development projects preferred but not required.
-* Proven ability to lead and influence cross-functional initiatives across technical and non-technical teams, including engineering, construction, operations, procurement, commercial, and public policy.
-* Experience integrating sustainability into large capital projects (infrastructure, energy, manufacturing, real estate, or data centers).
-* Experience engaging directly with customers on sustainability topics (e.g., RFP responses, audits, strategic sustainability discussions).
-
-We operate with No Ego and No Arrogance. We work to build each other up and support one another, appreciating each other’s strengths and respecting each other’s weaknesses. We find joy in our work and each other, actively seeking opportunities to inject fun into what we do. Our hard and efficient work is rewarded with an above market total compensation package. We offer a comprehensive suite of health and welfare, retirement, and paid leave benefits exceeding local expectations.
-
-Throughout the year, the advantage of being part of the Vantage team is evident with an array of benefits, recognition, training and development, and the knowledge that your contribution adds value to the company and our community.
-
-Don't meet all the requirements? Please still apply if you think you are the right person for the position. We are always keen to speak to people who connect with our mission and values.
-
-Vantage is an Equal Opportunity Employer.
-
-Vantage does not accept unsolicited resumes from search firm agencies. Fees will not be paid in the event a candidate submitted by a recruiter without an agreement in place is hired; such resumes will be deemed the sole property of Vantage.","","https://sg.indeed.com/cmp/Vantage-97fb75f2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/1221cef38fc86cf275d113cce951bef4","https://vantage-dc.com","Denver, CO","501 to 1,000","Decline to state","Vantage offers a workplace where inclusion, equity, respect and acceptance are deeply valued.","","","","","",""
-"li-4475821696","linkedin","https://www.linkedin.com/jobs/view/4475821696","","Environment, Climate & Regulatory Engineer - Associate","ExxonMobil","Singapore, Singapore","2026-10-05","","","","","","",False,"","","","","","","https://www.linkedin.com/company/exxonmobil","","","","","","","","","","","",""
-"li-4447697844","linkedin","https://www.linkedin.com/jobs/view/4447697844","","Senior Sustainability Manager - Circular Systems and Innovation","CHANEL","Singapore, Singapore","2026-10-05","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/chanel","","","","","","","","","","","",""
-"in-34a5c06eee690fce","indeed","https://sg.indeed.com/viewjob?jk=34a5c06eee690fce","https://careers.singaporeair.com/sia/job/Sustainability-Office-Executive-Senior-Executive-Assistant-Manager-Sustainability/59298244/","Sustainability Office - Executive / Senior Executive / Assistant Manager Sustainability","Singapore Airlines","SG","2026-09-26","","","","","","",False,"","","","","**Job Description**
--------------------
-
-The successful candidate will join the Sustainability Office under the Corporate Planning Division to coordinate, execute, and report on SIA Group’s sustainability initiatives to elevate SIA’s sustainability performance. He/she will also be involved in monitoring market developments and ensuring compliance with existing and new regulatory requirements.
-
-  
-
-**Key Responsibilities:**
-
-* Oversee SIA Group’s Voluntary Carbon Offset Programme and engage stakeholders to ensure smooth IT and sales operations.
-* Manage the SIA Group’s Voluntary Carbon Offset Programme’s offerings to ensure continued relevance of the platform for our customers.
-* Support the procurement of CORSIA compliance carbon credits by evaluating potential suppliers, projects and offers based on SIA’s requirements.
-* Conduct due diligence on voluntary and compliance carbon projects.
-* Coordinate and manage carbon credit purchase agreements; review project documentation and delivery details to ensure CORSIA compliance, quality alignment and to mitigate greenwashing/reputational risks.
-* Proactive monitoring of market development on sustainability matters and develop appropriate strategies to address the developments accordingly.
-* Proactive monitoring of existing and upcoming sustainability policies; evaluate these developments and develop actionable steps to ensure timely compliance.
-* Support efforts to strengthen sustainability communication across internal stakeholders.
-* Engage internal and external stakeholders to share about SIA’s Sustainability focus and ambition, and seek potential collaborations for a collective effort in aviation decarbonisation and stay abreast of best practices and emerging trends.
-Support the preparation of SIA’s annual Sustainability Report.  
-
-**Requirements**
-
-* Bachelor's Degree, preferably in Environmental / Climate Science, Chemistry, Statistics, Business or Communications.
-* Knowledge in environment, climate change, carbon footprint and/or energy efficiency matters.
-* Strong project and stakeholder management skills and experience in managing conflicting stakeholders’ requirement and executing structured delivery across multiple workstreams.
-* Strong analytical and IT skills, good writing and presentation skills.
-* Experience in the following areas would be beneficial:
-    
-  + Sustainable Aviation Fuel
-  + Carbon Markets & Offsetting
-  + Aviation Emissions & Reporting
-  + Sustainability Communications
-  + Sustainability Reporting Standards (e.g. ISSB, GRI, SASB etc.)
-  + Emissions Compliance Schemes such as CORSIA, EU ETS and/or UK ETS
-
-We thank all candidates for your interest in Singapore Airlines, and regret that only shortlisted candidates will be notified.","Transport And Freight","https://sg.indeed.com/cmp/Singapore-Airlines","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/63ee6c2e4fa6278c5d4c2536ca8b8d53","http://www.singaporeair.com","SINGAPORE, SN","10,000+","more than $10B (USD)","","","","","","",""
 "in-3d213aeadb198bd5","indeed","https://sg.indeed.com/viewjob?jk=3d213aeadb198bd5","https://career4.successfactors.com/career?career%5fns=job%5flisting&company=exxonmobilP&navBarLevel=JOB%5fSEARCH&rcm%5fsite%5flocale=en%5fUS&career_job_req_id=109426&selected_lang=en_US&jobAlertController_jobAlertId=&jobAlertController_jobAlertName=&browserTimeZone=America/Chicago&_s.crb=J32RXnsOCln%2fRigjVP46AAiRbV9KFAcgV7l9tsSVfHA%3d","Environment, Climate & Regulatory Engineer - Associate","ExxonMobil","Boon Lay, S00, SG","2026-05-10","","","","","","",False,"","","","","**About us**
 
   
@@ -480,6 +395,6 @@ Nothing herein is intended to override the corporate separateness of local entit
 
 Exxon Mobil Corporation has numerous affiliates, many with names that include ExxonMobil, Exxon, Esso and Mobil. For convenience and simplicity, those terms and terms like corporation, company, our, we and its are sometimes used as abbreviated references to specific affiliates or affiliate groups. Abbreviated references describing global or regional operational organizations and global or regional business lines are also sometimes used for convenience and simplicity. Similarly, ExxonMobil has business relationships with thousands of customers, suppliers, governments, and others. For convenience and simplicity, words like venture, joint venture, partnership, co-venturer, and partner are used to indicate business relationships involving common activities and interests, and those words may not indicate precise legal relationships.","Energy And Utilities, Energy And Utilities","https://sg.indeed.com/cmp/Exxonmobil","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/ddcc56ff6793303a9a17d0014feaf448","https://jobs.exxonmobil.com/","22777 Springwoods Village Parkway
 Spring, TX 77389-1425","10,000+","more than $10B (USD)","Based in Irving, Texas, ExxonMobil is the largest publicly-traded international oil and gas company in the world.","","","","","",""
-"li-4478366883","linkedin","https://www.linkedin.com/jobs/view/4478366883","","Manager, Environment & Sustainability","Changi Airport Group","Changi, East Region, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/changiairportgroup","","","","","","","","","","","",""
-"li-4475668986","linkedin","https://www.linkedin.com/jobs/view/4475668986","","Senior Director, ESG & Sustainability","Randstad Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/randstad-singapore","","","","","","","","","","","",""
-"li-4433209956","linkedin","https://www.linkedin.com/jobs/view/4433209956","","Senior/Staff Program Manager - Sustainability Operations","Micron Technology","Singapore, Singapore","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/micron-technology","","","","","","","","","","","",""
+"li-4441318484","linkedin","https://www.linkedin.com/jobs/view/4441318484","","Strategy and Sustainability Professional","Siemens","Singapore, Singapore","","","","","","","",False,"","","","","","","https://de.linkedin.com/company/siemens","","","","","","","","","","","",""
+"li-4477957414","linkedin","https://www.linkedin.com/jobs/view/4477957414","","Senior Assistant Director, Group Sustainability","Frasers Property Limited","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/frasers-property-limited","","","","","","","","","","","",""
+"li-4476165125","linkedin","https://www.linkedin.com/jobs/view/4476165125","","Environmental & Sustainable Design Engineer, ESD","Ramboll","Singapore, Singapore","","","","","","","",False,"","","","","","","https://dk.linkedin.com/company/ramboll","","","","","","","","","","","",""
