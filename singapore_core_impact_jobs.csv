@@ -1,5 +1,59 @@
 "id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type"
-"li-4474724884","linkedin","https://www.linkedin.com/jobs/view/4474724884","","Senior Manager, Group Sustainability (Social Impact)","Singtel","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singtel","","","","","","","","","","","",""
+"li-4489701762","linkedin","https://www.linkedin.com/jobs/view/4489701762","","Director, Knowledge Products and Impact","AVPN","Singapore, Singapore","2026-11-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/avpn","","","","","","","","","","","",""
+"in-12b948a89df7da15","indeed","https://sg.indeed.com/viewjob?jk=12b948a89df7da15","http://sg.indeed.com/job/sustainability-data-analyst-intern-12b948a89df7da15","Sustainability Data Analyst Intern","EDHEC BUSINESS SCHOOL LONDON","SG","2026-11-16","internship","","","","","",False,"","","","","**Title:** Sustainability Data Analyst Intern
+
+**Location:** Singapore
+
+Join a **growing and global team** focused on **measuring climate risks** and bringing new data and rating services to investors. As climate **physical and transition risks** increasingly impact investors’ portfolios and corporate balance sheets, the need for **high-quality climate risk data and assessment tools** is rising.
+
+EDHEC Climate Institute is looking for a **Sustainability Data Analyst Intern** to support our team in **collecting, processing, and analysing sustainability-related data** for infrastructure assets. This internship offers a unique opportunity to gain hands-on experience in data extraction, carbon emissions analysis, and geospatial analysis.
+
+Beyond core data processing tasks, the internship can be tailored to the candidate’s interests and expertise. This could include **research projects and case studies** on climate risk assessment and financial materiality analysis, allowing you to contribute meaningfully while expanding your expertise.
+
+**Duration:** 3 to 6 months
+
+**Key Responsibilities**
+
+* **Data Collection & Cleaning:** Verify, clean, and structure sustainability- and climate-related data from reports and other sources.
+* **Data Quality & Accuracy Checks:** Conduct detailed data validation and consistency checks to ensure high data quality across datasets.
+* **Accuracy Verification:** Ensure the precision of extracted data, including asset attributes and boundaries.
+* **Geospatial Analysis:** Use tools such as QGIS or ArcGIS to extract, review, and analyse asset boundaries and spatial data.
+* **Knowledge Management & Documentation:** Support the setup and maintenance of team documentation, including Notion workspaces, internal wikis, and process guides to improve data workflows and knowledge sharing.
+
+**Ideal Candidate**
+
+We are looking for candidates who:
+
+* Have a strong interest in sustainability, climate risks, and environmental data.
+* Have some experience and/or a strong interest in climate-related research or data work.
+* Are highly detail-oriented, with a strong eye for identifying data inconsistencies and errors.
+* Are organised and methodical, with an interest in improving processes and documentation.
+
+· At least a bachelor’s degree in a technical curriculum such as computer science, finance, economics, or physics
+
+* Can work independently, take ownership of tasks, and are eager to learn new skills.
+* Preferably have basic proficiency in Python for data processing or analysis.
+* **Preferably** have prior exposure to geospatial data and tools such as QGIS or ArcGIS.
+* **Preferably** have experience setting up or maintaining documentation tools (e.g. Notion, Confluence, or internal wikis).
+
+**What You’ll Gain**
+
+* Practical experience in sustainability data analysis and climate risk research.
+* Hands-on exposure to geospatial analysis and real-world asset data.
+* Experience working with data quality assurance and internal knowledge systems.
+* A flexible internship experience tailored to your skills, interests, and performance.
+* The opportunity to contribute meaningfully to a mission-driven and growing team.
+
+**Interested?** Apply now by sending your resume (pdf format) and a brief statement of interest.
+
+*Please note: Only shortlisted candidates will be contacted. If you do not hear from us within 21 days, please assume your application has not been successful on this occasion.*
+
+Job Type: Internship
+
+Pay: $1,000.00 - $1,100.00 per month
+
+Work Location: In person","","https://sg.indeed.com/cmp/Edhec-Business-School-London","","","","","","","","","","","",""
+"li-4491284373","linkedin","https://www.linkedin.com/jobs/view/4491284373","","Senior Executive/Executive (Environmental Health)","National Environment Agency","Singapore, Singapore","2026-11-16","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/national-environment-agency","","","","","","","","","","","",""
 "in-0d5ed4650ad0c20c","indeed","https://sg.indeed.com/viewjob?jk=0d5ed4650ad0c20c","https://www.mycareersfuture.gov.sg/job/98a62f6ea7bd398042b461f8fe9378a7","Sustainability Intern","GCB COCOA SINGAPORE PTE. LTD.","Jurong Island, S00, SG","2026-11-14","internship","","","","","",False,"","","","app.reporting@favorich.com","GCB Cocoa is Asia’s largest and the world’s fourth-largest cocoa processor that is publicly listed on Bursa Malaysia’s stock exchange. We are a manufacturing company that processes cocoa beans into intermediate products and sells them to customers globally. The Singapore office is a trading company that does the marketing and procurement for its factories based in Malaysia and Indonesia.
   
   
@@ -36,20 +90,76 @@ The Sustainability team is looking for an intern to support with the in managing
 
 **How to Apply:**  
 If interested, please submit your cover letter and resume to (Ms.) Husna (app.reporting@favorich.com). Please note that we review applications on a rolling basis.","","https://sg.indeed.com/cmp/Gcb-Cocoa-Singapore-Pte.-Ltd.","","","","","","","","","","","",""
-"li-4432354867","linkedin","https://www.linkedin.com/jobs/view/4432354867","","Tenure Track Position for Assistant Professor in Industrial Ecology and Environmental Systems Engineering","Nanyang Technological University Singapore","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
 "li-4456372068","linkedin","https://www.linkedin.com/jobs/view/4456372068","","Advisory - Consulting, ESG | Graduate Associate 2027","KPMG Singapore","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/kpmg-singapore","","","","","","","","","","","",""
 "li-4456751178","linkedin","https://www.linkedin.com/jobs/view/4456751178","","Business Risk Manager, Sustainability (Vice President)","Bank of Singapore, Asia’s Global Private Bank","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/bank-of-singapore","","","","","","","","","","","",""
+"li-4432354867","linkedin","https://www.linkedin.com/jobs/view/4432354867","","Tenure Track Position for Assistant Professor in Industrial Ecology and Environmental Systems Engineering","Nanyang Technological University Singapore","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/ntusg/","","","","","","","","","","","",""
+"li-4474724884","linkedin","https://www.linkedin.com/jobs/view/4474724884","","Senior Manager, Group Sustainability (Social Impact)","Singtel","Singapore, Singapore","2026-11-14","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/singtel","","","","","","","","","","","",""
+"li-4489553655","linkedin","https://www.linkedin.com/jobs/view/4489553655","","Associate Director / Manager (Climate & Liveability)","Temasek Foundation","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasekfoundation","","","","","","","","","","","",""
+"li-4480620945","linkedin","https://www.linkedin.com/jobs/view/4480620945","","Manager, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
 "li-4490723064","linkedin","https://www.linkedin.com/jobs/view/4490723064","","Waste Program Manager, APAC, AWS Environmental","Amazon Web Services (AWS)","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://www.linkedin.com/company/amazon-web-services","","","","","","","","","","","",""
+"li-4490743725","linkedin","https://www.linkedin.com/jobs/view/4490743725","","Head of Foundation Communications - Philanthropy & Impact","Michael Page","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/michael-page","","","","","","","","","","","",""
+"li-4489537647","linkedin","https://www.linkedin.com/jobs/view/4489537647","","Assistant Manager/ Senior Assistant Manager, Sustainability & Vibrant Campus Management","Woodlands Hospital","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/woodlandshospitalsg","","","","","","","","","","","",""
 "li-4490589452","linkedin","https://www.linkedin.com/jobs/view/4490589452","","Manager, Partnerships, Climate & Food Systems (2-year contract)","WWF-Singapore","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/wwfsg","","","","","","","","","","","",""
 "li-4472699653","linkedin","https://www.linkedin.com/jobs/view/4472699653","","Senior Manager/Manager (Sustainability & Smart Technology)","Singapore University of Social Sciences (SUSS)","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/singapore-university-of-social-sciences/","","","","","","","","","","","",""
-"li-4490743725","linkedin","https://www.linkedin.com/jobs/view/4490743725","","Head of Foundation Communications - Philanthropy & Impact","Michael Page","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/michael-page","","","","","","","","","","","",""
-"li-4480046195","linkedin","https://www.linkedin.com/jobs/view/4480046195","","Presales Solutions Architect, Smart Building & ESG Platform","NTT DATA, Inc.","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://jp.linkedin.com/company/ntt-data-inc","","","","","","","","","","","",""
-"li-4489537647","linkedin","https://www.linkedin.com/jobs/view/4489537647","","Assistant Manager/ Senior Assistant Manager, Sustainability & Vibrant Campus Management","Woodlands Hospital","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/woodlandshospitalsg","","","","","","","","","","","",""
-"li-4480620945","linkedin","https://www.linkedin.com/jobs/view/4480620945","","Manager, Climate Change and Sustainability Services, Assurance","EY","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/ernstandyoung","","","","","","","","","","","",""
-"li-4489553655","linkedin","https://www.linkedin.com/jobs/view/4489553655","","Associate Director / Manager (Climate & Liveability)","Temasek Foundation","Singapore, Singapore","2026-11-13","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/temasekfoundation","","","","","","","","","","","",""
-"li-4490329097","linkedin","https://www.linkedin.com/jobs/view/4490329097","","Postdoctoral Fellow in Urban and Regional Climate Modeling","National University of Singapore","Singapore, Singapore","2026-11-12","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/national-university-of-singapore/","","","","","","","","","","","",""
-"li-4489089910","linkedin","https://www.linkedin.com/jobs/view/4489089910","","Environmental Consultant (Water Resource Specialist)","AECOM","Singapore, Singapore","2026-11-12","","","","","","",False,"","","","","","","https://www.linkedin.com/company/aecom","","","","","","","","","","","",""
 "li-4489946142","linkedin","https://www.linkedin.com/jobs/view/4489946142","","Research Fellow (Environmental and Cancer Epidemiology)","National University of Singapore","Singapore, Singapore","2026-11-12","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/national-university-of-singapore/","","","","","","","","","","","",""
+"li-4489089910","linkedin","https://www.linkedin.com/jobs/view/4489089910","","Environmental Consultant (Water Resource Specialist)","AECOM","Singapore, Singapore","2026-11-12","","","","","","",False,"","","","","","","https://www.linkedin.com/company/aecom","","","","","","","","","","","",""
+"in-58713e126773e623","indeed","https://sg.indeed.com/viewjob?jk=58713e126773e623","https://jobs.smartrecruiters.com/AECOM2/744000161210358-environmental-consultant-water-resource-specialist-","Environmental Consultant (Water Resource Specialist)","AECOM","Singapore, S00, SG","2026-11-12","fulltime","","","","","",False,"","","","","**Company Description**
+
+**Work with Us. Change the World.**
+
+At AECOM, we're delivering a better world. Whether improving your commute, keeping the lights on, providing access to clean water, or transforming skylines, our work helps people and communities thrive. We are the world's trusted infrastructure consulting firm, partnering with clients to solve the worldâs most complex challenges and build legacies for future generations.
+
+There has never been a better time to be at AECOM. With accelerating infrastructure investment worldwide, our services are in great demand. We invite you to bring your bold ideas and big dreams and become part of a global team of over 50,000 planners, designers, engineers, scientists, digital innovators, program and construction managers and other professionals delivering projects that create a positive and tangible impact around the world.
+
+We're one global team driven by our common purpose to deliver a better world. Join us.
+
+ **Job Description**
+
+**Responsibilities EIA Sub team (Water):**
+
+* Technical support working closely with senior staff and Project Managers.
+* Contributing to environmental projects and business growth in Singapore, SE Asia, and Asia (depending project opportunities) on technical aspects of one or more of the following: Environmental Impact Assessment, Environmental Monitoring and Management Plan(EMMP), Pollution Control Study, Environmental Health & Safety, Environmental Due Diligence, etc.
+* Includes field work contribution for baseline environmental profiling for air quality, water quality, noise, vibration, vector, etc.
+* Technical support for water related modelling works (coastal or inland)
+* Ability to work on a combination of these services will be highly regarded.
+* Contributing to project presentations and client meetings with senior staff and Project Managers.
+* Business development support for current and prospective clients.
+* Comply with quality management on all work products.
+* Task budgeting and scheduling control.
+* Coordinating with stakeholders, sub-consultants and other disciplines, as necessary.
+* Shall carry out duties in accordance with quality and environmental management system, health and safety policies and procedures of the company.
+* Shall report quality, environmental, health and safety problems or any suggestions to his/her immediate superior.
+* Task budgeting and scheduling control.
+* Coordinating with stakeholders, sub-consultants and other disciplines, as necessary.
+
+  
+**Qualifications**  
+
+* Bachelor’s / Master’s degree in Environmental Engineering, Environmental Science, Environmental Management or other related disciplines (e.g., civil engineering and environmental engineering) OR Bachelor’s degree plus equivalent years of experience in the environmental field.
+* 0-2 years of relevant experience in environmental engineering, environmental planning or environmental management sector. Qualified applicants will be considered for senior positions.
+* Ability to use modeling software/s will be highly regarded.
+* Candidates with graphic skills such as CAD, GIS, Photoshop, will be highly regarded.
+* Candidates with proven project management ability will be highly regarded.
+* Strong communication skills (writing, speaking, and presentation) are essential qualities to successfully work on our teams with diverse disciplines and cultures.
+
+  
+**Additional Information**
+
+*At AECOM, we are committed to maintaining a secure and trustworthy recruitment process and take any fraudulent hiring activity seriously.* ***To support this commitment, all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment.***
+
+**About AECOM**
+
+AECOM is proud to offer comprehensive benefits to meet the diverse needs of our employees. Depending on your employment status, AECOM benefits may include medical, dental, vision, life, AD&D, disability benefits, paid time off, leaves of absences, voluntary benefits, perks, flexible work options, well-being resources, employee assistance program, business travel insurance, service recognition awards, retirement savings plan, and employee stock purchase plan.
+
+AECOM is the global infrastructure leader, committed to delivering a better world. As a trusted professional services firm powered by deep technical abilities, we solve our clients’ complex challenges in water, environment, energy, transportation and buildings. Our teams partner with public- and private-sector clients to create innovative, sustainable and resilient solutions throughout the project lifecycle – from advisory, planning, design and engineering to program and construction management. AECOM is a Fortune 500 firm that had revenue of $16.1 billion in fiscal year 2025. Learn more at aecom.com.
+
+**What makes AECOM a great place to work**
+
+You will be part of a global team that champions your growth and career ambitions. Work on groundbreaking projects - both in your local community and on a global scale - that are transforming our industry and shaping the future. With cutting-edge technology and a network of experts, you’ll have the resources to make a real impact. Our award-winning training and development programs are designed to expand your technical expertise and leadership skills, helping you build the career you’ve always envisioned. Here, you’ll find a welcoming workplace built on respect, collaboration and community - where you have the freedom to grow in a world of opportunity.
+
+As an Equal Opportunity Employer, we believe in your potential and are here to help you achieve it. All your information will be kept confidential according to EEO guidelines.","Consulting And Business Services","https://sg.indeed.com/cmp/AECOM","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/ed95399cc8e0c3808fca1e013a71ad28","http://www.aecom.com","13355 Noel Rd 
+Suite 400
+Dallas, Texas 75240","10,000+","more than $10B (USD)","We are the trusted global infrastructure leader.","","","","","",""
 "in-b887eaf8dbed9128","indeed","https://sg.indeed.com/viewjob?jk=b887eaf8dbed9128","https://careers.nus.edu.sg/job/Postdoctoral-Fellow-in-Urban-and-Regional-Climate-Modeling/34983-en_GB","Postdoctoral Fellow in Urban and Regional Climate Modeling","National University of Singapore","Queenstown, S00, SG","2026-11-12","","","","","","",False,"","","","","**Job Title:** **Postdoctoral Fellow in Urban and Regional Climate Modeling**
 =============================================================================
 
@@ -97,7 +207,6 @@ This position is available for one year, renewable for a second year contingent 
 
 Further enquiries can be directed to Prof Matei GEORGESCU. More information can be found at: https://discovery.nus.edu.sg/31796-matei-georgescu","","https://sg.indeed.com/cmp/National-University-of-Singapore","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/de9349d7434945d15bc81274357d1574","https://www.nus.edu.sg/","Singapore","10,000+","Decline to state","","","","","","",""
 "li-4488208077","linkedin","https://www.linkedin.com/jobs/view/4488208077","","Assistant Manager/Senior Executive Sustainability","SBS Transit Ltd","Singapore, Singapore","2026-11-11","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/sbs-transit-ltd","","","","","","","","","","","",""
-"li-4488666902","linkedin","https://www.linkedin.com/jobs/view/4488666902","","Sustainability Executive, Singapore","Ethos BeathChapman","","2026-11-11","","","","","","",False,"","","","","","","https://au.linkedin.com/company/ethos-corporation","","","","","","","","","","","",""
 "in-123ef31d579aaa18","indeed","https://sg.indeed.com/viewjob?jk=123ef31d579aaa18","https://www.mycareersfuture.gov.sg/job/03754d6835384e115e203055bb426485","Environmental Control Officer (LTA)","CHINA COMMUNICATIONS CONSTRUCTION COMPANY LIMITED (SINGAPORE BRANCH)","Jurong Island, S00, SG","2026-11-11","fulltime","","","","","",False,"","","","","Job Description & Requirements
   
   
@@ -158,6 +267,71 @@ China Communications Construction Company Ltd. is a world leading super large in
   
   
 We are mainly engaged in infrastructure investment, construction and operation, equipment manufacturing, real estate and urban development, etc., and offer clients package solutions and integrated services such as investment, financing, consultation, planning, design, construction, management and operation.","","https://sg.indeed.com/cmp/China-Communications-Construction-Company-Limited-(singapore-Branch)","","","","","","","","","","","",""
+"in-80d9ac126143557b","indeed","https://sg.indeed.com/viewjob?jk=80d9ac126143557b","https://careers.nus.edu.sg/job/Research-Fellow-%28Environmental-and-Cancer-Epidemiology%29/26984-en_GB","Research Fellow (Environmental and Cancer Epidemiology)","National University of Singapore","Queenstown, S00, SG","2026-11-11","fulltime","","","","","",False,"","","","","**Job Title:** **Research Fellow (Environmental and Cancer Epidemiology)**
+==========================================================================
+
+University-Level Unit: Saw Swee Hock School of Public Health
+
+Faculty/Department-Level Unit: Saw Swee Hock School of Public Health
+
+Employee Category: Research Staff
+
+Location\\_ONB: Kent Ridge Campus
+
+Posting Start Date: 11/11/2026
+
+**Job Description**
+-------------------
+
+Applications are invited for the following full-time position in the Saw Swee Hock School of Public Health:
+
+  
+
+A research fellow position is available in the Saw Swee Hock School of Public Health to support the Principal Investigators in research projects in the areas of Environmental and Cancer Epidemiology.
+
+  
+
+Major duties and responsibility of the position include but are not limited to:
+  
+
+* Data collection and management
+* Data analysis using software such as R, Stata or SAS.
+* Preparation of reports, presentations, manuscripts.
+* Writing grant proposals
+* Provide mentorship to graduate students and research assistants
+
+  
+
+The candidate must be an independent, highly motivated, and mature worker who is well-organized and demonstrates a growth mindset. Strong written and verbal communication skills are required, along with a record of relevant publications in peer-reviewed journals. He/She must have strong interpersonal skills and the ability to work effectively with colleagues to achieve team goals. Excellent proficiency in the following areas is preferred:
+  
+1. Microsoft Office Applications, particularly MS Word, Excel, Powerpoint
+  
+2. Experience in R, Python
+
+  
+
+The successful applicant is expected to possess at least a PhD Degree in Epidemiology, Public Health, Environmental Health, Biological Sciences, Biostatistics, Data Science, preferably with relevant experience. Prior experience with machine learning is a plus.
+
+  
+
+Recruitment is open immediately and will continue until the position is filled. Applicants should send a brief statement of interest, CV, three named references, and other supporting documents during the application. In your statement of interest, please highlight your relevant experience and interest in environmental and cancer epidemiology research.
+
+  
+
+We regret that only shortlisted candidates will be notified.
+
+**More Information**
+--------------------
+
+Location: Kent Ridge Campus
+
+Organization: Saw Swee Hock School of Public Health
+
+Department : Saw Swee Hock School of Public Health
+
+Employee Referral Eligible: No
+
+Job requisition ID : 26984","","https://sg.indeed.com/cmp/National-University-of-Singapore","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/de9349d7434945d15bc81274357d1574","https://www.nus.edu.sg/","Singapore","10,000+","Decline to state","","","","","","",""
 "in-846c703fbd37589d","indeed","https://sg.indeed.com/viewjob?jk=846c703fbd37589d","https://www.mycareersfuture.gov.sg/job/9cfa6906517db3de68b952fdfd2ec28d","Environmental Health & Safety (EHS) Executive","Panasonic","Bedok, S00, SG","2026-11-11","fulltime","","","","","",False,"","","","","The
   
   
@@ -284,73 +458,10 @@ Panasonic Industry
   
   
 Panasonic Industry fields electronic and industrial devices for a broad range of applications, including industry, telecommunications, and automobiles. We also go beyond devices to provide solutions to issues facing our customers.","Computers And Electronics","https://sg.indeed.com/cmp/Panasonic-a3e6d439","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/3c51a5587db241e67c4c2c9cf12c845c","https://www.panasonic.com/global/home.html","Kadoma, 32","10,000+","more than $10B (USD)","","","","","","",""
-"in-80d9ac126143557b","indeed","https://sg.indeed.com/viewjob?jk=80d9ac126143557b","https://careers.nus.edu.sg/job/Research-Fellow-%28Environmental-and-Cancer-Epidemiology%29/26984-en_GB","Research Fellow (Environmental and Cancer Epidemiology)","National University of Singapore","Queenstown, S00, SG","2026-11-11","fulltime","","","","","",False,"","","","","**Job Title:** **Research Fellow (Environmental and Cancer Epidemiology)**
-==========================================================================
-
-University-Level Unit: Saw Swee Hock School of Public Health
-
-Faculty/Department-Level Unit: Saw Swee Hock School of Public Health
-
-Employee Category: Research Staff
-
-Location\\_ONB: Kent Ridge Campus
-
-Posting Start Date: 11/11/2026
-
-**Job Description**
--------------------
-
-Applications are invited for the following full-time position in the Saw Swee Hock School of Public Health:
-
-  
-
-A research fellow position is available in the Saw Swee Hock School of Public Health to support the Principal Investigators in research projects in the areas of Environmental and Cancer Epidemiology.
-
-  
-
-Major duties and responsibility of the position include but are not limited to:
-  
-
-* Data collection and management
-* Data analysis using software such as R, Stata or SAS.
-* Preparation of reports, presentations, manuscripts.
-* Writing grant proposals
-* Provide mentorship to graduate students and research assistants
-
-  
-
-The candidate must be an independent, highly motivated, and mature worker who is well-organized and demonstrates a growth mindset. Strong written and verbal communication skills are required, along with a record of relevant publications in peer-reviewed journals. He/She must have strong interpersonal skills and the ability to work effectively with colleagues to achieve team goals. Excellent proficiency in the following areas is preferred:
-  
-1. Microsoft Office Applications, particularly MS Word, Excel, Powerpoint
-  
-2. Experience in R, Python
-
-  
-
-The successful applicant is expected to possess at least a PhD Degree in Epidemiology, Public Health, Environmental Health, Biological Sciences, Biostatistics, Data Science, preferably with relevant experience. Prior experience with machine learning is a plus.
-
-  
-
-Recruitment is open immediately and will continue until the position is filled. Applicants should send a brief statement of interest, CV, three named references, and other supporting documents during the application. In your statement of interest, please highlight your relevant experience and interest in environmental and cancer epidemiology research.
-
-  
-
-We regret that only shortlisted candidates will be notified.
-
-**More Information**
---------------------
-
-Location: Kent Ridge Campus
-
-Organization: Saw Swee Hock School of Public Health
-
-Department : Saw Swee Hock School of Public Health
-
-Employee Referral Eligible: No
-
-Job requisition ID : 26984","","https://sg.indeed.com/cmp/National-University-of-Singapore","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/de9349d7434945d15bc81274357d1574","https://www.nus.edu.sg/","Singapore","10,000+","Decline to state","","","","","","",""
-"li-4489688852","linkedin","https://www.linkedin.com/jobs/view/4489688852","","Manager, Environment & Sustainability","Changi Airport Group","Changi, East Region, Singapore","2026-11-11","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/changiairportgroup","","","","","","","","","","","",""
 "li-4488681872","linkedin","https://www.linkedin.com/jobs/view/4488681872","","Vice President, Sustainability Lead - Transaction Banking","BNP Paribas","Singapore, Singapore","2026-11-11","","","","","","",False,"","","","","","","https://fr.linkedin.com/company/bnp-paribas","","","","","","","","","","","",""
+"li-4489688852","linkedin","https://www.linkedin.com/jobs/view/4489688852","","Manager, Environment & Sustainability","Changi Airport Group","Changi, East Region, Singapore","2026-11-11","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/changiairportgroup","","","","","","","","","","","",""
+"li-4484814405","linkedin","https://www.linkedin.com/jobs/view/4484814405","","Environmental Engineer, APAC","GlobalFoundries","Singapore, Singapore","2026-11-10","","","","","","",False,"","","","","","","https://www.linkedin.com/company/globalfoundries","","","","","","","","","","","",""
+"li-4488326103","linkedin","https://www.linkedin.com/jobs/view/4488326103","","Senior Software Engineer, Ministry of Sustainability and Environment (MSE)","GovTech Singapore","","2026-11-10","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/govtech-singapore","","","","","","","","","","","",""
 "in-c18c878cb426c473","indeed","https://sg.indeed.com/viewjob?jk=c18c878cb426c473","https://www.mycareersfuture.gov.sg/job/37ae9c6b359352d1eeed0d623484049e","Partnerships Manager, Climate & Food Systems (2-year contract)","WWF","Clementi, S00, SG","2026-11-10","fulltime","","","","","",False,"","","","","About WWF
   
   
@@ -471,95 +582,6 @@ a future in which humans live in harmony with nature. As one of WWF’s internat
   
   
 WWF-Singapore works closely with local stakeholders towards a greener and more sustainable Singapore and the region around us. We work to address key environmental concerns, such as climate change, sustainable finance, deforestation, illegal wildlife trade, species recovery, as well as sustainable production and consumption, through collaboration, education and outreach efforts involving the communities, businesses, and governments.","","https://sg.indeed.com/cmp/Wwf","","https://www.wwf.de","","201 to 500","","Der WWF ist eine der bekanntesten Naturschutzorganisationen der Welt. Mit Projekten in über hundert Ländern verfolgen wir das Ziel, die biologische Vielfalt unseres Planeten zu erhalten.","","","","","",""
-"li-4489451295","linkedin","https://www.linkedin.com/jobs/view/4489451295","","Senior Sales Trader / Originator – Environmental Commodities, APAC","STX Group","","2026-11-10","","","","","","",False,"","","","","","","https://nl.linkedin.com/company/stxgroup","","","","","","","","","","","",""
-"li-4484814405","linkedin","https://www.linkedin.com/jobs/view/4484814405","","Environmental Engineer, APAC","GlobalFoundries","Singapore, Singapore","2026-11-10","","","","","","",False,"","","","","","","https://www.linkedin.com/company/globalfoundries","","","","","","","","","","","",""
-"li-4488326103","linkedin","https://www.linkedin.com/jobs/view/4488326103","","Senior Software Engineer, Ministry of Sustainability and Environment (MSE)","GovTech Singapore","","2026-11-10","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/govtech-singapore","","","","","","","","","","","",""
-"in-36cea093b6a0c241","indeed","https://sg.indeed.com/viewjob?jk=36cea093b6a0c241","https://hyperiongrp.wd3.myworkdayjobs.com/en-US/hyperion_external/job/Home---USA/Environmental-Associate-Broker_R0020045","Environmental Associate Broker","Howden Group","Remote, SG","2026-11-09","fulltime","","","","","",True,"","","","","**Who are we?**
-===============
-
-Howden is a global insurance group with employee ownership at its heart. Together, we have pushed the boundaries of insurance. We are united by a shared passion and no-limits mindset, and our strength lies in our ability to collaborate as a powerful international team comprised of 24,000 employees spanning over 56 countries.
-
-People join Howden for many different reasons, but they stay for the same one: our culture. It’s what sets us apart, and the reason our employees have been turning down headhunters for years. Whatever your priorities – work / life balance, career progression, sustainability, volunteering – you’ll find like-minded people driving change at Howden.
-
-**Who are we?**
-
-Howden is a global insurance group that places people at the heart of everything it does, offering the best advice and care to clients around the world. Howden is employee-owned, which means decisions are made in the interests of clients and colleagues rather than external shareholders. With over 18,000 employees across more than 100 countries, Howden combines local expertise with the scale and resources of a global network. Howden’s success is built on the strength of its relationships, an entrepreneurial mindset, and a culture where employees share directly in the company’s achievements.
-
-**Why work at Howden?**
-
-At Howden, colleagues are encouraged to be themselves, to challenge convention, and to help shape the future of the business. Employee ownership means that everyone has a stake in Howden’s success, fostering a culture of collaboration, accountability, and long-term thinking. Howden invests in its people through structured development, mentorship, and the opportunity to work alongside industry-leading experts across a broad range of specialties. Howden is committed to building a diverse and inclusive environment where different perspectives are valued and everyone has the opportunity to thrive.
-
-**What is the role?**
-
-Howden is seeking an Environmental Associate Broker to support its Environmental practice. This role works alongside senior brokers and producers to place and manage environmental insurance programs for clients across industries including manufacturing, real estate, construction, energy, and waste management. The successful candidate will support new and renewal business through carrier marketing, policy analysis, and client service, while developing technical expertise in environmental risk and coverage.
-
-**What will you be doing?**
-
-*Marketing and Placement*
-
-* Prepare and submit marketing submissions to environmental carriers for new and renewal business, including pollution liability, contractor’s pollution liability, site pollution liability, and environmental impairment liability coverages
-* Support the negotiation of terms, conditions, and pricing with carrier partners
-* Review policy forms, endorsements, and quotes for accuracy and completeness
-
-*Account Management*
-
-* Maintain and service an assigned book of environmental accounts, acting as a day-to-day point of contact for client inquiries
-* Prepare renewal strategies, exposure summaries, and coverage comparisons in coordination with senior brokers
-* Process policy changes, endorsements, and certificates of insurance
-
-*Relationship Management*
-
-* Build and maintain working relationships with carrier underwriters in the environmental insurance market
-* Collaborate with claims, account management, and other internal teams to deliver a consistent client experience
-* Support client meetings and renewal presentations as needed
-
-*Technical Development*
-
-* Develop and maintain working knowledge of environmental coverage lines, regulatory considerations (e.g., CERCLA, RCRA), and industry trends
-* Stay current on environmental market conditions, carrier appetite, and emerging risk areas
-
-**What are we looking for?**
-
-* 1-3 years of experience in insurance brokerage, underwriting, or a related environmental/risk management field
-* Familiarity with environmental insurance coverage lines is preferred but not required
-* Active Property & Casualty insurance license, or willingness to obtain one within an agreed timeframe
-* Strong analytical, organizational, and written/verbal communication skills
-* Ability to manage multiple accounts and competing deadlines
-* Bachelor’s degree preferred
-
-**Compensation and Benefits**
-
-The expected base salary range for this role is $90,000-$100,000; actual base salary will be determined based on factors including candidate experience and work location. This role is classified as exempt under the Fair Labor Standards Act (FLSA).
-
-In addition to a competitive base salary, this position is eligible to participate in a commission-based incentive program. Howden also offers a variety of benefits and programs, subject to eligibility, including:
-
-* Medical, dental, and vision insurance, including healthcare savings and reimbursement accounts
-* 401(k) retirement plan
-* Flexible Paid Time Off and paid parental leave
-* Life and Disability insurance
-
-**Our sustainability promise**
-
-Howden is committed to operating sustainably and to supporting the communities in which it operates. The organization integrates environmental, social, and governance considerations into its business practices and encourages employee participation in sustainability initiatives.
-
-**What do we offer in return?**
-===============================
-
-A career that you define. At Howden, we value diversity – there is no one Howden type. Instead, we’re looking for individuals who share the same values as us:
-
-* Our successes have all come from someone brave enough to try something new
-* We support each other in the small everyday moments and the bigger challenges
-* We are determined to make a positive difference at work and beyond
-
-**Reasonable adjustments**
-==========================
-
-We're committed to providing reasonable accommodations at Howden to ensure that our positions align well with your needs. Besides the usual adjustments such as software, IT, and office setups, we can also accommodate other changes such as flexible hours\\* or hybrid working\\*.
-
-If you're excited by this role but have some doubts about whether it’s the right fit for you, send us your application – if your profile fits the role’s criteria, we will be in touch to assist in helping to get you set up with any reasonable adjustments you may require.
-
-* Not all positions can accommodate changes to working hours or locations. Reach out to your Recruitment Partner if you want to know more.
-
-Permanent","Insurance","https://sg.indeed.com/cmp/Howden-Group-2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/b432e919bcd24b3adccf536490e89896","https://www.howdengroup.com/uk-en/culture-and-careers","Howden Group Holdings Limited, One Creechurch Place, London EC3A 5AF","10,000+","$1B to $5B (USD)","Howden is an international insurance group made up of talented experts with the freedom and support to do what we do best.","","","","","",""
-"li-4489701762","linkedin","https://www.linkedin.com/jobs/view/4489701762","","Director, Knowledge Products and Impact","AVPN","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/avpn","","","","","","","","","","","",""
-"li-4491284373","linkedin","https://www.linkedin.com/jobs/view/4491284373","","Senior Executive/Executive (Environmental Health)","National Environment Agency","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/company/national-environment-agency","","","","","","","","","","","",""
+"li-4490943637","linkedin","https://www.linkedin.com/jobs/view/4490943637","","Risk Services, Sustainability and Climate Change Advisory - Manager/ Senior Manager","PwC Brasil","","","","","","","","",False,"","","","","","","https://br.linkedin.com/company/pwc-brasil","","","","","","","","","","","",""
+"li-4473861756","linkedin","https://www.linkedin.com/jobs/view/4473861756","","Senior Manager Global Procurement (Sustainability)","Exyte","Singapore, Singapore","","","","","","","",False,"","","","","","","https://de.linkedin.com/company/exyte-group","","","","","","","","","","","",""
+"li-4490329097","linkedin","https://www.linkedin.com/jobs/view/4490329097","","Postdoctoral Fellow in Urban and Regional Climate Modeling","National University of Singapore","Singapore, Singapore","","","","","","","",False,"","","","","","","https://sg.linkedin.com/school/national-university-of-singapore/","","","","","","","","","","","",""
